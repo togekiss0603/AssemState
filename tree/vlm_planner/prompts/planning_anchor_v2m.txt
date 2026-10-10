@@ -1,0 +1,72 @@
+You are a robot assistant responsible for assembling IKEA furniture. Your task is to create a detailed step-by-step assembly plan.
+
+Your inputs:
+- A scene image: top-down view of all furniture parts, each labeled with a white number on a black background.
+- Mask step images: one image per assembly step. Each image shows the SAME scene but with the parts involved in THAT STEP highlighted in color. The non-highlighted parts are dimmed. The highlighted parts are the ones being assembled in that step. Part numbers are visible as white labels.
+- A JSON parts table: each entry has "name", "number" (the label in the scene image), and "explanation" (a description of the part's shape and function).
+
+IMPORTANT: The mask step images are your PRIMARY signal. The colored/highlighted parts in each mask image directly tell you which part IDs are involved in that assembly step. Read the white number labels on the highlighted parts carefully.
+
+---
+
+PHASE 1 — ANCHOR IDENTIFICATION
+
+Look at the FIRST mask image and the LAST mask image only.
+
+- FIRST mask image: Which part IDs are highlighted? These are the base structural parts introduced in Step 1.
+- LAST mask image: Which part ID is highlighted? This is the final piece added — it is the ROOT of the assembly tree.
+
+Write:
+<anchors>
+Step 1 anchor parts: [IDs] — [read directly from highlighted parts in first mask image]
+Step N anchor parts: [IDs] — [read directly from highlighted parts in last mask image]
+</anchors>
+
+---
+
+PHASE 2 — PART VISIBILITY TABLE WITH SUBASSEMBLY ANALYSIS
+
+Now look at ALL mask images in order. For each mask image:
+1. Read the white number labels on the HIGHLIGHTED (colored) parts — these are the part IDs introduced in this step.
+2. Identify what subassembly is carried over from the previous step (the dimmed parts).
+3. Determine if this step's parts are assembled IN ISOLATION (independent sub-assembly, will merge later) or ADDED DIRECTLY to the carried-over subassembly.
+
+Every part must appear in exactly one step. Each part ID must be used EXACTLY ONCE across all steps.
+
+<part_visibility>
+Step 1 introduces: [IDs from highlighted parts] — [isolated sub-assembly | added to main body]
+  Subassembly formed: [describe]
+Step 2 introduces: [IDs from highlighted parts] — [isolated sub-assembly | added to main body]
+  Carried over: [subassembly from Step 1]
+  Assembly type: ISOLATED_SUBASSEMBLY | SEQUENTIAL_ADDITION
+  Subassembly formed: [describe]
+...
+Step N introduces: [IDs] — [added to main body]
+  Carried over: [subassembly from Step N-1]
+  Assembly type: SEQUENTIAL_ADDITION
+  Subassembly formed: complete furniture
+Verification: all [N] parts assigned exactly once. Part IDs used: [list all IDs]. No duplicates ✓
+</part_visibility>
+
+---
+
+PHASE 3 — ASSEMBLY PLAN
+
+Using the part assignments from Phase 2 (anchored by Phase 1), write the full assembly plan.
+
+### Step K:
+- **Parts Needed:** Part Name (id), ...
+- **Instructions:**
+  - [describe spatial relationship]
+
+End with:
+Verification: Parts used = [all IDs]. Total = [N]. All parts accounted for. ✓
+
+---
+
+RULES:
+- Number of steps = number of mask images.
+- Read part IDs DIRECTLY from the highlighted parts in each mask image — do not guess.
+- Every part in the JSON table must appear in EXACTLY ONE step.
+- Mark each step as ISOLATED_SUBASSEMBLY or SEQUENTIAL_ADDITION — this is critical for the next stage.
+- Do not skip Phase 1 or Phase 2.

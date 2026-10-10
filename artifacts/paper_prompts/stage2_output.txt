@@ -1,0 +1,46 @@
+<anchors>  
+Step 1 anchor parts: [0, 1, 2] — The first mask highlights the long side rail, slatted bed base, and headboard/end frame as the base structure.  
+Step 2 anchor parts: [3] — The last mask highlights the footboard/end frame as the final piece added.  
+</anchors>
+
+<part_visibility>  
+Step 1 introduces: [0, 1, 2] — isolated sub-assembly  
+  Subassembly formed: Main bed assembly consisting of the headboard/end frame, the long side rail, and the slatted bed base.
+
+Step 2 introduces: [3] — added to main body  
+  Carried over: Bed assembly formed in Step 1, consisting of parts [0, 1, 2].  
+  Assembly type: SEQUENTIAL_ADDITION  
+  Subassembly formed: Complete bed frame with both end frames, the side rail, and the slatted bed base.
+
+Verification: all 4 parts assigned exactly once. Part IDs used: [0, 1, 2, 3]. No duplicates ✓  
+</part_visibility>
+
+## Assembly Plan
+
+### Step 1:
+- **Parts Needed:**  
+  - Long side rail (0)  
+  - Slatted bed base (1)  
+  - Headboard/end frame (2)
+
+- **Instructions:**
+  1. Place the headboard/end frame (2) upright or supported on its side, with its side-rail connection points facing toward the open length of the bed.
+  2. Position the long side rail (0) perpendicular to the headboard/end frame, aligning the rail’s end fittings with the corresponding sockets or mounting points on the headboard.
+  3. Insert or engage the end of the long side rail into the headboard connection. Ensure the rail is level and fully seated.
+  4. Lay the slatted bed base (1) inside the partially formed bed frame. The slats should run across the bed width, with their ends resting on the support ledges of the headboard and long side rail.
+  5. Align the slatted base so it is centered lengthwise and does not extend beyond the frame. Confirm that all slats are supported and that the base sits flat.
+  6. Tighten or secure the available connections sufficiently to hold this subassembly together, but do not force any misaligned fittings.
+
+### Step 2:
+- **Parts Needed:**  
+  - Footboard/end frame (3)
+
+- **Instructions:**
+  1. Position the footboard/end frame (3) at the open end of the bed, opposite the headboard/end frame (2).
+  2. Align both ends of the long side rail (0) and the slatted bed base (1) with the corresponding connection points and support ledges on the footboard.
+  3. Attach the long side rail to the footboard, ensuring the rail is straight and level along the bed length.
+  4. Seat the ends of the slatted bed base into the footboard supports. Check that the slatted base remains centered and flat between the two end frames.
+  5. Fully tighten all end-frame and side-rail fasteners. Tighten gradually on both sides so the frame remains square.
+  6. Inspect the completed bed frame: both end frames should be parallel, the long side rail should be securely connected, and the slatted bed base should be supported continuously along its edges.
+
+Verification: Parts used = [0, 1, 2, 3]. Total = 4. All parts accounted for. ✓

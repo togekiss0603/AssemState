@@ -1,0 +1,22 @@
+[
+  {
+    "name": "long side rail",
+    "number": [0],
+    "explanation": "Forms the long side of the bed frame and supports the slatted bed base."
+  },
+  {
+    "name": "slatted bed base",
+    "number": [1],
+    "explanation": "Provides the flexible sleeping surface that supports the mattress."
+  },
+  {
+    "name": "headboard/end frame",
+    "number": [2],
+    "explanation": "Closes one end of the bed and provides the headboard structure."
+  },
+  {
+    "name": "footboard/end frame",
+    "number": [3],
+    "explanation": "Closes the opposite end of the bed and helps stabilize the frame."
+  }
+]

@@ -1,0 +1,7994 @@
+{
+  "version": "isaaclab_release_aabb.v1",
+  "note": "IsaacLab physics simulation with each OBJ part approximated as its posed axis-aligned bounding-box cuboid. Fixed parts are static colliders; the moving part is released as a dynamic rigid body. This measures physical placement/release stability, not full mesh connectors or robot insertion.",
+  "axis_mapping": "dataset XYZ (Y-up) -> Isaac XYZ as [data_x, data_z, data_y]",
+  "simulation": {
+    "device": "cuda:0",
+    "cuda_visible_devices": "4",
+    "steps": 240,
+    "dt": 0.008333333333333333,
+    "duration_s": 2.0
+  },
+  "thresholds": {
+    "drift_threshold": 0.05,
+    "z_drop_threshold": 0.05,
+    "rot_threshold_deg": 12.0
+  },
+  "aggregate": {
+    "num_operations": 243,
+    "num_stable": 40,
+    "release_stability": 0.1646090534979424,
+    "mean_drift": 0.4249052903287981,
+    "mean_z_drop": 0.16959749024606657,
+    "mean_rot_drift_deg": 2.996793811776651
+  },
+  "cases": {
+    "Bench/applaro": {
+      "num_operations": 3,
+      "num_stable": 1,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.40159457384001057,
+      "mean_z_drop": 0.2803338353211681,
+      "mean_rot_drift_deg": 0.05925792678567136
+    },
+    "Bench/sjalland": {
+      "num_operations": 3,
+      "num_stable": 1,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.4388608880312581,
+      "mean_z_drop": 0.43886084606250125,
+      "mean_rot_drift_deg": 0.0008690113640306452
+    },
+    "Chair/applaro": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.48409527338713343,
+      "mean_z_drop": 0.0,
+      "mean_rot_drift_deg": 1.983342921070515
+    },
+    "Chair/applaro_2": {
+      "num_operations": 6,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.6779639707309147,
+      "mean_z_drop": 0.5298718431343635,
+      "mean_rot_drift_deg": 0.010920829694689623
+    },
+    "Chair/applaro_3": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.47489209756925665,
+      "mean_z_drop": 0.1302495263516903,
+      "mean_rot_drift_deg": 0.25462677995281224
+    },
+    "Chair/bekvam_3017": {
+      "num_operations": 7,
+      "num_stable": 1,
+      "release_stability": 0.14285714285714285,
+      "mean_drift": 0.43573154771173117,
+      "mean_z_drop": 0.33235690982214044,
+      "mean_rot_drift_deg": 0.01850913180064868
+    },
+    "Chair/bernhard": {
+      "num_operations": 2,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.5569170975978759,
+      "mean_z_drop": 0.44713637605309486,
+      "mean_rot_drift_deg": 0.1487476390662255
+    },
+    "Chair/borje": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.12570341208128472,
+      "mean_z_drop": 0.04178535472601652,
+      "mean_rot_drift_deg": 0.07853996008257225
+    },
+    "Chair/ekenas": {
+      "num_operations": 4,
+      "num_stable": 2,
+      "release_stability": 0.5,
+      "mean_drift": 0.0957414359008065,
+      "mean_z_drop": 4.2188912630081177e-07,
+      "mean_rot_drift_deg": 0.13331998266810408
+    },
+    "Chair/froset": {
+      "num_operations": 7,
+      "num_stable": 1,
+      "release_stability": 0.14285714285714285,
+      "mean_drift": 0.322015527215195,
+      "mean_z_drop": 0.16825186354773386,
+      "mean_rot_drift_deg": 0.016630564268890168
+    },
+    "Chair/glenn": {
+      "num_operations": 3,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4077944155568891,
+      "mean_z_drop": 0.37823859229683876,
+      "mean_rot_drift_deg": 0.0055209192872368
+    },
+    "Chair/grubban": {
+      "num_operations": 5,
+      "num_stable": 1,
+      "release_stability": 0.2,
+      "mean_drift": 0.49285729620634733,
+      "mean_z_drop": 0.0016703512519598007,
+      "mean_rot_drift_deg": 0.03822759588681442
+    },
+    "Chair/herman": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.3909711236830049,
+      "mean_z_drop": 0.11775687243789434,
+      "mean_rot_drift_deg": 3.834013536666645
+    },
+    "Chair/ingolf": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.5364408268995537,
+      "mean_z_drop": 0.0,
+      "mean_rot_drift_deg": 5.033625082534647
+    },
+    "Chair/ingolf_2": {
+      "num_operations": 4,
+      "num_stable": 2,
+      "release_stability": 0.5,
+      "mean_drift": 0.07452710480903427,
+      "mean_z_drop": 0.003265769686549902,
+      "mean_rot_drift_deg": 0.036308235323042434
+    },
+    "Chair/ivar": {
+      "num_operations": 6,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.7623893145393047,
+      "mean_z_drop": 0.0,
+      "mean_rot_drift_deg": 2.8446625201162075
+    },
+    "Chair/jules_2": {
+      "num_operations": 2,
+      "num_stable": 1,
+      "release_stability": 0.5,
+      "mean_drift": 0.1460235679071438,
+      "mean_z_drop": 8.493661880493164e-07,
+      "mean_rot_drift_deg": 0.13771647800945586
+    },
+    "Chair/klappsta": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.3426276888374224,
+      "mean_z_drop": 0.29485589265823364,
+      "mean_rot_drift_deg": 0.10535868831432381
+    },
+    "Chair/kyrre": {
+      "num_operations": 3,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.5514878566933206,
+      "mean_z_drop": 0.03471565246582031,
+      "mean_rot_drift_deg": 29.723443855155853
+    },
+    "Chair/leifarne": {
+      "num_operations": 1,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4459313020302319,
+      "mean_z_drop": 0.13115382194519043,
+      "mean_rot_drift_deg": 0.536975582308314
+    },
+    "Chair/lisabo": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.35094471611248595,
+      "mean_z_drop": 0.00013313442468643188,
+      "mean_rot_drift_deg": 0.31624478458081123
+    },
+    "Chair/mammut_1": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.7104253825340386,
+      "mean_z_drop": 0.11137294173240661,
+      "mean_rot_drift_deg": 0.6474319942168975
+    },
+    "Chair/mammut_2": {
+      "num_operations": 4,
+      "num_stable": 2,
+      "release_stability": 0.5,
+      "mean_drift": 0.24007525223085852,
+      "mean_z_drop": 0.1203656941652298,
+      "mean_rot_drift_deg": 0.008515065806592413
+    },
+    "Chair/marius": {
+      "num_operations": 2,
+      "num_stable": 1,
+      "release_stability": 0.5,
+      "mean_drift": 0.07492937784951856,
+      "mean_z_drop": 0.061498403549194336,
+      "mean_rot_drift_deg": 0.02192903733249782
+    },
+    "Chair/nilsove": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.9057956692741481,
+      "mean_z_drop": 0.8450085073709488,
+      "mean_rot_drift_deg": 0.008047020767717211
+    },
+    "Chair/norraryd": {
+      "num_operations": 4,
+      "num_stable": 2,
+      "release_stability": 0.5,
+      "mean_drift": 0.1670823646709323,
+      "mean_z_drop": 0.1670823646709323,
+      "mean_rot_drift_deg": 0.0002867157356898338
+    },
+    "Chair/omtanksam": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.4335214890154864,
+      "mean_z_drop": 0.32500914484262466,
+      "mean_rot_drift_deg": 0.03698344291287069
+    },
+    "Chair/poang_1": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.5465245221038597,
+      "mean_z_drop": 0.0007004113867878914,
+      "mean_rot_drift_deg": 0.7756462297626368
+    },
+    "Chair/preben": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.3071471196280784,
+      "mean_z_drop": 0.027734259888529778,
+      "mean_rot_drift_deg": 18.076682400507362
+    },
+    "Chair/reidar": {
+      "num_operations": 5,
+      "num_stable": 2,
+      "release_stability": 0.4,
+      "mean_drift": 0.3258144995758111,
+      "mean_z_drop": 0.05952530577778816,
+      "mean_rot_drift_deg": 8.574302982489737
+    },
+    "Chair/ronninge": {
+      "num_operations": 7,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.5619901811957091,
+      "mean_z_drop": 0.2914675995707512,
+      "mean_rot_drift_deg": 0.03454279076985225
+    },
+    "Chair/skogsta": {
+      "num_operations": 6,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4797494323689076,
+      "mean_z_drop": 0.14794729401667914,
+      "mean_rot_drift_deg": 6.078616298359337
+    },
+    "Chair/skogsta_2": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.8501709188308548,
+      "mean_z_drop": 0.8070501424372196,
+      "mean_rot_drift_deg": 0.01904442619124577
+    },
+    "Chair/sundvik": {
+      "num_operations": 5,
+      "num_stable": 1,
+      "release_stability": 0.2,
+      "mean_drift": 0.3562248266493895,
+      "mean_z_drop": 0.10828510336577893,
+      "mean_rot_drift_deg": 0.26670642512601284
+    },
+    "Chair/tobias": {
+      "num_operations": 1,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.33806285263920527,
+      "mean_z_drop": 0.0,
+      "mean_rot_drift_deg": 1.991633149982159
+    },
+    "Chair/trogen": {
+      "num_operations": 5,
+      "num_stable": 1,
+      "release_stability": 0.2,
+      "mean_drift": 0.14274780867752676,
+      "mean_z_drop": 0.06471176892518997,
+      "mean_rot_drift_deg": 0.019710374834219297
+    },
+    "Chair/vedbo": {
+      "num_operations": 3,
+      "num_stable": 1,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.2171527733793135,
+      "mean_z_drop": 0.08071073393026988,
+      "mean_rot_drift_deg": 0.1351064422846835
+    },
+    "Chair/voxlov": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4265625209465285,
+      "mean_z_drop": 0.2912490822374821,
+      "mean_rot_drift_deg": 0.012763435334996787
+    },
+    "Chair/yngvar": {
+      "num_operations": 2,
+      "num_stable": 2,
+      "release_stability": 1.0,
+      "mean_drift": 0.031572710516511795,
+      "mean_z_drop": 0.01306067407131195,
+      "mean_rot_drift_deg": 0.023478691708496955
+    },
+    "Misc/lantliv": {
+      "num_operations": 7,
+      "num_stable": 2,
+      "release_stability": 0.2857142857142857,
+      "mean_drift": 0.4091280163472614,
+      "mean_z_drop": 0.19689348260206835,
+      "mean_rot_drift_deg": 0.26417363020596046
+    },
+    "Misc/lantliv_2": {
+      "num_operations": 5,
+      "num_stable": 1,
+      "release_stability": 0.2,
+      "mean_drift": 0.38395370939281925,
+      "mean_z_drop": 0.09897038489580154,
+      "mean_rot_drift_deg": 18.267720521955162
+    },
+    "Misc/satsumas": {
+      "num_operations": 6,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.6699354807448037,
+      "mean_z_drop": 0.04196712871392568,
+      "mean_rot_drift_deg": 15.881428181991831
+    },
+    "Misc/vittsjo_2": {
+      "num_operations": 6,
+      "num_stable": 1,
+      "release_stability": 0.16666666666666666,
+      "mean_drift": 0.41595683541087675,
+      "mean_z_drop": 0.19782671984285116,
+      "mean_rot_drift_deg": 0.4686500629059336
+    },
+    "Shelf/pinnig": {
+      "num_operations": 6,
+      "num_stable": 1,
+      "release_stability": 0.16666666666666666,
+      "mean_drift": 0.5208948014134184,
+      "mean_z_drop": 0.4948283648118377,
+      "mean_rot_drift_deg": 0.00297116103570323
+    },
+    "Table/applaro": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.5101740876079706,
+      "mean_z_drop": 0.009572112932801247,
+      "mean_rot_drift_deg": 1.494253864191809
+    },
+    "Table/bjorkudden_2": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.3110628733912018,
+      "mean_z_drop": 0.1638347938656807,
+      "mean_rot_drift_deg": 0.39743973516030046
+    },
+    "Table/falholmen": {
+      "num_operations": 3,
+      "num_stable": 1,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.258689125006272,
+      "mean_z_drop": 0.17654716968536377,
+      "mean_rot_drift_deg": 0.04130394504951241
+    },
+    "Table/fjallbo": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4433991788605193,
+      "mean_z_drop": 0.12110558152198792,
+      "mean_rot_drift_deg": 0.8598981978892786
+    },
+    "Table/gladom": {
+      "num_operations": 3,
+      "num_stable": 1,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.15066789059589306,
+      "mean_z_drop": 0.15066789059589306,
+      "mean_rot_drift_deg": 0.00015280745642568992
+    },
+    "Table/jokkmokk": {
+      "num_operations": 4,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.5678355962032585,
+      "mean_z_drop": 0.32995330821722746,
+      "mean_rot_drift_deg": 7.817198633306606
+    },
+    "Table/klingsbo_1": {
+      "num_operations": 6,
+      "num_stable": 2,
+      "release_stability": 0.3333333333333333,
+      "mean_drift": 0.6522634117420859,
+      "mean_z_drop": 0.004864627417797844,
+      "mean_rot_drift_deg": 0.9668064644436937
+    },
+    "Table/lack": {
+      "num_operations": 5,
+      "num_stable": 0,
+      "release_stability": 0.0,
+      "mean_drift": 0.4234148759583308,
+      "mean_z_drop": 0.0,
+      "mean_rot_drift_deg": 0.26399216239009393
+    },
+    "Table/satsumas": {
+      "num_operations": 7,
+      "num_stable": 2,
+      "release_stability": 0.2857142857142857,
+      "mean_drift": 0.28958855281824947,
+      "mean_z_drop": 0.11140952339129788,
+      "mean_rot_drift_deg": 12.871909547361588
+    },
+    "Table/vittsjo_2": {
+      "num_operations": 7,
+      "num_stable": 1,
+      "release_stability": 0.14285714285714285,
+      "mean_drift": 0.43569281612883193,
+      "mean_z_drop": 0.12597788770550064,
+      "mean_rot_drift_deg": 8.079087479547312
+    },
+    "Table/voxlov": {
+      "num_operations": 4,
+      "num_stable": 1,
+      "release_stability": 0.25,
+      "mean_drift": 0.19857109462214081,
+      "mean_z_drop": 0.07662159041501582,
+      "mean_rot_drift_deg": 0.5923504711312445
+    }
+  },
+  "operations": [
+    {
+      "case": "Bench/applaro",
+      "category": "Bench",
+      "name": "applaro",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.7975675240159035,
+      "z_drop": 0.7975675240159035,
+      "rot_drift_deg": 3.2933979493559765e-05,
+      "start_pos_isaac": [
+        -0.713691,
+        -0.932248,
+        0.844057
+      ],
+      "end_pos_isaac": [
+        -0.713691,
+        -0.932248,
+        0.046489
+      ],
+      "moving_aabb_size_isaac": [
+        0.891769,
+        0.899092,
+        0.092978
+      ]
+    },
+    {
+      "case": "Bench/applaro",
+      "category": "Bench",
+      "name": "applaro",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.3637820844054734,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.1720244781382081,
+      "start_pos_isaac": [
+        21.128145,
+        -0.711794,
+        -0.348289
+      ],
+      "end_pos_isaac": [
+        21.128088,
+        -0.711696,
+        0.015493
+      ],
+      "moving_aabb_size_isaac": [
+        1.70711,
+        0.178021,
+        0.030992
+      ]
+    },
+    {
+      "case": "Bench/applaro",
+      "category": "Bench",
+      "name": "applaro",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "2",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.04343411309865485,
+      "z_drop": 0.04343398194760084,
+      "rot_drift_deg": 0.005716368239312443,
+      "start_pos_isaac": [
+        40.392124,
+        2.047888,
+        0.048914
+      ],
+      "end_pos_isaac": [
+        40.392094,
+        2.047786,
+        0.00548
+      ],
+      "moving_aabb_size_isaac": [
+        0.092978,
+        0.670796,
+        0.69292
+      ]
+    },
+    {
+      "case": "Bench/sjalland",
+      "category": "Bench",
+      "name": "sjalland",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.48876386880874634,
+      "z_drop": 0.48876386880874634,
+      "rot_drift_deg": 0.000106417328310896,
+      "start_pos_isaac": [
+        59.994129,
+        2.162115,
+        0.892559
+      ],
+      "end_pos_isaac": [
+        59.994129,
+        2.162115,
+        0.403795
+      ],
+      "moving_aabb_size_isaac": [
+        0.052792,
+        0.835577,
+        0.807609
+      ]
+    },
+    {
+      "case": "Bench/sjalland",
+      "category": "Bench",
+      "name": "sjalland",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.8179413147185264,
+      "z_drop": 0.8179411888122559,
+      "rot_drift_deg": 0.0024308367619700223,
+      "start_pos_isaac": [
+        79.650826,
+        2.174314,
+        1.162014
+      ],
+      "end_pos_isaac": [
+        79.651161,
+        2.174008,
+        0.344073
+      ],
+      "moving_aabb_size_isaac": [
+        0.554313,
+        1.791141,
+        0.688172
+      ]
+    },
+    {
+      "case": "Bench/sjalland",
+      "category": "Bench",
+      "name": "sjalland",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.009877480566501617,
+      "z_drop": 0.009877480566501617,
+      "rot_drift_deg": 6.978000181101706e-05,
+      "start_pos_isaac": [
+        1.16428,
+        20.073561,
+        0.11124
+      ],
+      "end_pos_isaac": [
+        1.16428,
+        20.073561,
+        0.101363
+      ],
+      "moving_aabb_size_isaac": [
+        0.800156,
+        1.58773,
+        0.202725
+      ]
+    },
+    {
+      "case": "Chair/applaro",
+      "category": "Chair",
+      "name": "applaro",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.5372094493701559,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0674578982420712,
+      "start_pos_isaac": [
+        20.757797,
+        22.201141,
+        -0.512424
+      ],
+      "end_pos_isaac": [
+        20.757574,
+        22.201303,
+        0.024785
+      ],
+      "moving_aabb_size_isaac": [
+        0.149934,
+        0.833552,
+        0.049576
+      ]
+    },
+    {
+      "case": "Chair/applaro",
+      "category": "Chair",
+      "name": "applaro",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "3",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.401534328579791,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0448477101947588,
+      "start_pos_isaac": [
+        41.271072,
+        20.714069,
+        -0.380744
+      ],
+      "end_pos_isaac": [
+        41.271008,
+        20.714159,
+        0.02079
+      ],
+      "moving_aabb_size_isaac": [
+        0.548043,
+        0.744386,
+        0.041589
+      ]
+    },
+    {
+      "case": "Chair/applaro",
+      "category": "Chair",
+      "name": "applaro",
+      "operation_index": 2,
+      "moving_part": "1",
+      "fixed_parts": [
+        "3",
+        "0",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.983034079326973,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.3128986673039783,
+      "start_pos_isaac": [
+        63.443344,
+        19.512417,
+        -0.468004
+      ],
+      "end_pos_isaac": [
+        63.441139,
+        19.511921,
+        0.515028
+      ],
+      "moving_aabb_size_isaac": [
+        0.44468,
+        0.857759,
+        1.027203
+      ]
+    },
+    {
+      "case": "Chair/applaro",
+      "category": "Chair",
+      "name": "applaro",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "3",
+        "0",
+        "4",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.16897378845409536,
+      "z_drop": 0.0,
+      "rot_drift_deg": 9.453953927292698,
+      "start_pos_isaac": [
+        83.429497,
+        22.281004,
+        -0.032483
+      ],
+      "end_pos_isaac": [
+        83.417221,
+        22.2812,
+        0.136045
+      ],
+      "moving_aabb_size_isaac": [
+        1.032203,
+        1.075059,
+        0.099486
+      ]
+    },
+    {
+      "case": "Chair/applaro",
+      "category": "Chair",
+      "name": "applaro",
+      "operation_index": 4,
+      "moving_part": "2",
+      "fixed_parts": [
+        "3",
+        "0",
+        "4",
+        "1",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.3297247212046522,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.037556402319067,
+      "start_pos_isaac": [
+        2.243802,
+        40.554943,
+        -0.304884
+      ],
+      "end_pos_isaac": [
+        2.243771,
+        40.554943,
+        0.024841
+      ],
+      "moving_aabb_size_isaac": [
+        0.882439,
+        0.870081,
+        0.049682
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 1.0561987273395061,
+      "z_drop": 1.0561987273395061,
+      "rot_drift_deg": 0.00014662055454807844,
+      "start_pos_isaac": [
+        20.086321,
+        42.628746,
+        1.100848
+      ],
+      "end_pos_isaac": [
+        20.086321,
+        42.628746,
+        0.044649
+      ],
+      "moving_aabb_size_isaac": [
+        0.105878,
+        0.310261,
+        0.089303
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "2",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.6945260018634083,
+      "z_drop": 0.6945260018110275,
+      "rot_drift_deg": 0.00202504454439581,
+      "start_pos_isaac": [
+        39.690807,
+        40.734436,
+        0.739171
+      ],
+      "end_pos_isaac": [
+        39.6908,
+        40.734432,
+        0.044645
+      ],
+      "moving_aabb_size_isaac": [
+        0.242006,
+        0.297424,
+        0.089303
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "2",
+        "0",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.26877042656590705,
+      "z_drop": 0.2687704265117645,
+      "rot_drift_deg": 0.0012896764565460733,
+      "start_pos_isaac": [
+        60.857857,
+        42.416374,
+        0.480193
+      ],
+      "end_pos_isaac": [
+        60.857853,
+        42.416378,
+        0.211423
+      ],
+      "moving_aabb_size_isaac": [
+        0.089303,
+        0.118577,
+        0.422864
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 3,
+      "moving_part": "6",
+      "fixed_parts": [
+        "2",
+        "0",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 1.1597359031438828,
+      "z_drop": 1.1597359031438828,
+      "rot_drift_deg": 0.0006244862539075854,
+      "start_pos_isaac": [
+        79.713936,
+        43.954594,
+        1.315176
+      ],
+      "end_pos_isaac": [
+        79.713936,
+        43.954594,
+        0.15544
+      ],
+      "moving_aabb_size_isaac": [
+        0.089303,
+        0.149503,
+        0.3109
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 4,
+      "moving_part": "3",
+      "fixed_parts": [
+        "2",
+        "0",
+        "4",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.3767001562850364,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03155260053322012,
+      "start_pos_isaac": [
+        1.500633,
+        61.550591,
+        0.316505
+      ],
+      "end_pos_isaac": [
+        1.500644,
+        61.551186,
+        0.693205
+      ],
+      "moving_aabb_size_isaac": [
+        1.425766,
+        0.342329,
+        1.38641
+      ]
+    },
+    {
+      "case": "Chair/applaro_2",
+      "category": "Chair",
+      "name": "applaro_2",
+      "operation_index": 5,
+      "moving_part": "1",
+      "fixed_parts": [
+        "2",
+        "0",
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.5118526091877474,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.029886549825520064,
+      "start_pos_isaac": [
+        22.179821,
+        60.221497,
+        0.277671
+      ],
+      "end_pos_isaac": [
+        22.179564,
+        60.221863,
+        0.789523
+      ],
+      "moving_aabb_size_isaac": [
+        1.40278,
+        0.323345,
+        1.335604
+      ]
+    },
+    {
+      "case": "Chair/applaro_3",
+      "category": "Chair",
+      "name": "applaro_3",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.14896331766579896,
+      "z_drop": 0.1489633172750473,
+      "rot_drift_deg": 0.002362494580307802,
+      "start_pos_isaac": [
+        41.327091,
+        62.356098,
+        0.362753
+      ],
+      "end_pos_isaac": [
+        41.327084,
+        62.356106,
+        0.213789
+      ],
+      "moving_aabb_size_isaac": [
+        0.095999,
+        0.119144,
+        0.427588
+      ]
+    },
+    {
+      "case": "Chair/applaro_3",
+      "category": "Chair",
+      "name": "applaro_3",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "5",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.3891284770170368,
+      "z_drop": 0.3891284763813019,
+      "rot_drift_deg": 0.002554233919787695,
+      "start_pos_isaac": [
+        60.622166,
+        60.048141,
+        0.60275
+      ],
+      "end_pos_isaac": [
+        60.622154,
+        60.048161,
+        0.213622
+      ],
+      "moving_aabb_size_isaac": [
+        0.116663,
+        0.095999,
+        0.427264
+      ]
+    },
+    {
+      "case": "Chair/applaro_3",
+      "category": "Chair",
+      "name": "applaro_3",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "5",
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.7150906695210469,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.11073946099782181,
+      "start_pos_isaac": [
+        83.187126,
+        61.95591,
+        -0.558013
+      ],
+      "end_pos_isaac": [
+        83.187256,
+        61.956032,
+        0.157077
+      ],
+      "moving_aabb_size_isaac": [
+        0.397427,
+        0.095999,
+        0.314174
+      ]
+    },
+    {
+      "case": "Chair/applaro_3",
+      "category": "Chair",
+      "name": "applaro_3",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "5",
+        "0",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.11315583810216508,
+      "z_drop": 0.11315583810210228,
+      "rot_drift_deg": 4.217330709397059e-05,
+      "start_pos_isaac": [
+        1.08435,
+        81.055786,
+        0.161155
+      ],
+      "end_pos_isaac": [
+        1.08435,
+        81.055786,
+        0.047999
+      ],
+      "moving_aabb_size_isaac": [
+        0.311808,
+        0.402444,
+        0.095999
+      ]
+    },
+    {
+      "case": "Chair/applaro_3",
+      "category": "Chair",
+      "name": "applaro_3",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "5",
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 1.0081221855402356,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.1574355369590499,
+      "start_pos_isaac": [
+        24.666103,
+        78.657715,
+        -0.871999
+      ],
+      "end_pos_isaac": [
+        24.667015,
+        78.643227,
+        0.136019
+      ],
+      "moving_aabb_size_isaac": [
+        1.444053,
+        0.58544,
+        1.429163
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 0,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.32208335772156715,
+      "z_drop": 0.32208335772156715,
+      "rot_drift_deg": 0.00015082582647997755,
+      "start_pos_isaac": [
+        43.208801,
+        80.021156,
+        0.367863
+      ],
+      "end_pos_isaac": [
+        43.208801,
+        80.021156,
+        0.04578
+      ],
+      "moving_aabb_size_isaac": [
+        0.40857,
+        0.641798,
+        0.09157
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 1,
+      "moving_part": "6",
+      "fixed_parts": [
+        "1",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.3972970377216911,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.1003263187085952,
+      "start_pos_isaac": [
+        62.855576,
+        82.956787,
+        -0.372585
+      ],
+      "end_pos_isaac": [
+        62.855503,
+        82.957161,
+        0.024712
+      ],
+      "moving_aabb_size_isaac": [
+        0.673779,
+        0.30885,
+        0.049442
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.3467266485095024,
+      "z_drop": 0.3467266485095024,
+      "rot_drift_deg": 0.0011098991726223933,
+      "start_pos_isaac": [
+        80.760872,
+        82.890495,
+        0.413269
+      ],
+      "end_pos_isaac": [
+        80.760872,
+        82.890495,
+        0.066542
+      ],
+      "moving_aabb_size_isaac": [
+        0.78716,
+        0.049442,
+        0.13311
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.9936793498838977,
+      "z_drop": 0.9936786890029907,
+      "rot_drift_deg": 0.01601966706276479,
+      "start_pos_isaac": [
+        2.997394,
+        101.937897,
+        1.213636
+      ],
+      "end_pos_isaac": [
+        2.998517,
+        101.937668,
+        0.219957
+      ],
+      "moving_aabb_size_isaac": [
+        0.348564,
+        0.695758,
+        0.439915
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 4,
+      "moving_part": "7",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.6640096381334042,
+      "z_drop": 0.6640096381306648,
+      "rot_drift_deg": 0.00016061840089568323,
+      "start_pos_isaac": [
+        20.409191,
+        103.162979,
+        0.684438
+      ],
+      "end_pos_isaac": [
+        20.409193,
+        103.162979,
+        0.020428
+      ],
+      "moving_aabb_size_isaac": [
+        0.936065,
+        0.461568,
+        0.040862
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 5,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "2",
+        "3",
+        "7"
+      ],
+      "release_stable": false,
+      "drift": 0.326324766621798,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.011614173349993472,
+      "start_pos_isaac": [
+        41.634529,
+        101.801414,
+        0.109087
+      ],
+      "end_pos_isaac": [
+        41.63459,
+        101.801414,
+        0.435412
+      ],
+      "moving_aabb_size_isaac": [
+        0.144099,
+        1.117532,
+        0.870838
+      ]
+    },
+    {
+      "case": "Chair/bekvam_3017",
+      "category": "Chair",
+      "name": "bekvam_3017",
+      "operation_index": 6,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "2",
+        "3",
+        "7",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 3.5390257835388184e-08,
+      "z_drop": 3.5390257835388184e-08,
+      "rot_drift_deg": 0.0001824200831892569,
+      "start_pos_isaac": [
+        60.344402,
+        99.982224,
+        0.020401
+      ],
+      "end_pos_isaac": [
+        60.344402,
+        99.982224,
+        0.020401
+      ],
+      "moving_aabb_size_isaac": [
+        0.973574,
+        0.900742,
+        0.040816
+      ]
+    },
+    {
+      "case": "Chair/bernhard",
+      "category": "Chair",
+      "name": "bernhard",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.27751542663486495,
+      "z_drop": 0.057953983545303345,
+      "rot_drift_deg": 0.29744138884886784,
+      "start_pos_isaac": [
+        82.004547,
+        100.049721,
+        0.329746
+      ],
+      "end_pos_isaac": [
+        82.007767,
+        100.321098,
+        0.271792
+      ],
+      "moving_aabb_size_isaac": [
+        0.541897,
+        0.173607,
+        0.543606
+      ]
+    },
+    {
+      "case": "Chair/bernhard",
+      "category": "Chair",
+      "name": "bernhard",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "2",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.8363187685608868,
+      "z_drop": 0.8363187685608864,
+      "rot_drift_deg": 5.388928358319936e-05,
+      "start_pos_isaac": [
+        0.42954,
+        122.365311,
+        0.903388
+      ],
+      "end_pos_isaac": [
+        0.42954,
+        122.365311,
+        0.067069
+      ],
+      "moving_aabb_size_isaac": [
+        0.509121,
+        0.533367,
+        0.134138
+      ]
+    },
+    {
+      "case": "Chair/borje",
+      "category": "Chair",
+      "name": "borje",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.16714141890406609,
+      "z_drop": 0.16714141890406609,
+      "rot_drift_deg": 0.0032852934783170703,
+      "start_pos_isaac": [
+        21.743961,
+        119.134972,
+        0.189569
+      ],
+      "end_pos_isaac": [
+        21.743961,
+        119.134972,
+        0.022428
+      ],
+      "moving_aabb_size_isaac": [
+        0.315768,
+        0.015329,
+        0.044863
+      ]
+    },
+    {
+      "case": "Chair/borje",
+      "category": "Chair",
+      "name": "borje",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "3",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.12741123218168188,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.23844614472893705,
+      "start_pos_isaac": [
+        43.814686,
+        119.918396,
+        -0.039685
+      ],
+      "end_pos_isaac": [
+        43.814606,
+        119.918755,
+        0.087725
+      ],
+      "moving_aabb_size_isaac": [
+        0.285641,
+        0.018456,
+        0.175465
+      ]
+    },
+    {
+      "case": "Chair/borje",
+      "category": "Chair",
+      "name": "borje",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "3",
+        "1",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.2082596486843029,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.07239907403516571,
+      "start_pos_isaac": [
+        60.624653,
+        120.515175,
+        -0.193445
+      ],
+      "end_pos_isaac": [
+        60.624619,
+        120.515251,
+        0.014814
+      ],
+      "moving_aabb_size_isaac": [
+        0.442075,
+        0.453988,
+        0.029641
+      ]
+    },
+    {
+      "case": "Chair/borje",
+      "category": "Chair",
+      "name": "borje",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "3",
+        "1",
+        "0",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 1.3485550880432129e-06,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.9328087869136986e-05,
+      "start_pos_isaac": [
+        79.262619,
+        122.180176,
+        0.04046
+      ],
+      "end_pos_isaac": [
+        79.262619,
+        122.180176,
+        0.040461
+      ],
+      "moving_aabb_size_isaac": [
+        0.370044,
+        0.338197,
+        0.080937
+      ]
+    },
+    {
+      "case": "Chair/ekenas",
+      "category": "Chair",
+      "name": "ekenas",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.16325357191790751,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.19971926490802147,
+      "start_pos_isaac": [
+        2.034185,
+        139.584366,
+        -0.13151
+      ],
+      "end_pos_isaac": [
+        2.034539,
+        139.584259,
+        0.031744
+      ],
+      "moving_aabb_size_isaac": [
+        0.155267,
+        0.157535,
+        0.063488
+      ]
+    },
+    {
+      "case": "Chair/ekenas",
+      "category": "Chair",
+      "name": "ekenas",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.00482058119189115,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.1731755221470998,
+      "start_pos_isaac": [
+        21.224253,
+        139.0504,
+        0.027709
+      ],
+      "end_pos_isaac": [
+        21.224268,
+        139.050247,
+        0.032527
+      ],
+      "moving_aabb_size_isaac": [
+        0.165172,
+        0.113599,
+        0.065057
+      ]
+    },
+    {
+      "case": "Chair/ekenas",
+      "category": "Chair",
+      "name": "ekenas",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.21488990293692212,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.15873564055923806,
+      "start_pos_isaac": [
+        40.456192,
+        139.82399,
+        -0.183029
+      ],
+      "end_pos_isaac": [
+        40.456039,
+        139.823837,
+        0.03186
+      ],
+      "moving_aabb_size_isaac": [
+        0.123351,
+        0.184139,
+        0.063731
+      ]
+    },
+    {
+      "case": "Chair/ekenas",
+      "category": "Chair",
+      "name": "ekenas",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 1.687556505203247e-06,
+      "z_drop": 1.687556505203247e-06,
+      "rot_drift_deg": 0.0016495030580570163,
+      "start_pos_isaac": [
+        60.198006,
+        142.577911,
+        0.031801
+      ],
+      "end_pos_isaac": [
+        60.198006,
+        142.577911,
+        0.031799
+      ],
+      "moving_aabb_size_isaac": [
+        0.168999,
+        0.094954,
+        0.063619
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.6346730853999577,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.05017874041413728,
+      "start_pos_isaac": [
+        83.513992,
+        142.098526,
+        -0.299619
+      ],
+      "end_pos_isaac": [
+        83.513992,
+        142.098709,
+        0.335054
+      ],
+      "moving_aabb_size_isaac": [
+        0.578913,
+        0.220039,
+        0.670132
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "2",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.40043428540316744,
+      "z_drop": 0.400434285402298,
+      "rot_drift_deg": 0.0004903158942426435,
+      "start_pos_isaac": [
+        1.147225,
+        162.442001,
+        0.8011
+      ],
+      "end_pos_isaac": [
+        1.147226,
+        162.442001,
+        0.400665
+      ],
+      "moving_aabb_size_isaac": [
+        0.376444,
+        0.220039,
+        0.801333
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "2",
+        "0",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.39261430501937866,
+      "z_drop": 0.39261430501937866,
+      "rot_drift_deg": 0.00024397020775857386,
+      "start_pos_isaac": [
+        20.881811,
+        159.95134,
+        0.474166
+      ],
+      "end_pos_isaac": [
+        20.881811,
+        159.95134,
+        0.081552
+      ],
+      "moving_aabb_size_isaac": [
+        0.455798,
+        0.202103,
+        0.163112
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 3,
+      "moving_part": "6",
+      "fixed_parts": [
+        "2",
+        "0",
+        "3",
+        "5"
+      ],
+      "release_stable": true,
+      "drift": 0.013357182152512045,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03477837562180796,
+      "start_pos_isaac": [
+        39.937817,
+        163.553528,
+        0.159904
+      ],
+      "end_pos_isaac": [
+        39.937908,
+        163.553482,
+        0.173261
+      ],
+      "moving_aabb_size_isaac": [
+        0.202103,
+        0.335171,
+        0.346534
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 4,
+      "moving_part": "7",
+      "fixed_parts": [
+        "2",
+        "0",
+        "3",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.12531422078609467,
+      "z_drop": 0.12531422078609467,
+      "rot_drift_deg": 0.0001648645532632617,
+      "start_pos_isaac": [
+        59.559628,
+        163.448898,
+        0.258699
+      ],
+      "end_pos_isaac": [
+        59.559628,
+        163.448898,
+        0.133385
+      ],
+      "moving_aabb_size_isaac": [
+        0.467097,
+        1.034316,
+        0.266794
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 5,
+      "moving_part": "4",
+      "fixed_parts": [
+        "2",
+        "0",
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "release_stable": false,
+      "drift": 0.25940023362636566,
+      "z_drop": 0.25940023362636566,
+      "rot_drift_deg": 0.0001922337297179224,
+      "start_pos_isaac": [
+        80.014076,
+        159.724594,
+        0.318809
+      ],
+      "end_pos_isaac": [
+        80.014076,
+        159.724594,
+        0.059409
+      ],
+      "moving_aabb_size_isaac": [
+        0.490025,
+        1.047024,
+        0.118834
+      ]
+    },
+    {
+      "case": "Chair/froset",
+      "category": "Chair",
+      "name": "froset",
+      "operation_index": 6,
+      "moving_part": "1",
+      "fixed_parts": [
+        "2",
+        "0",
+        "3",
+        "5",
+        "6",
+        "7",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.42831537811888887,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.030365449461303543,
+      "start_pos_isaac": [
+        1.028141,
+        179.593765,
+        -0.218037
+      ],
+      "end_pos_isaac": [
+        1.028126,
+        179.594543,
+        0.210278
+      ],
+      "moving_aabb_size_isaac": [
+        0.99564,
+        0.549425,
+        0.420556
+      ]
+    },
+    {
+      "case": "Chair/glenn",
+      "category": "Chair",
+      "name": "glenn",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.409894526009229,
+      "z_drop": 0.40989452600479126,
+      "rot_drift_deg": 9.940506765523588e-05,
+      "start_pos_isaac": [
+        21.236551,
+        181.923813,
+        1.025237
+      ],
+      "end_pos_isaac": [
+        21.236553,
+        181.923813,
+        0.615343
+      ],
+      "moving_aabb_size_isaac": [
+        0.456569,
+        1.117881,
+        1.230691
+      ]
+    },
+    {
+      "case": "Chair/glenn",
+      "category": "Chair",
+      "name": "glenn",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.7248212510563757,
+      "z_drop": 0.724821250885725,
+      "rot_drift_deg": 0.00030802657596779715,
+      "start_pos_isaac": [
+        40.536034,
+        180.379501,
+        0.737889
+      ],
+      "end_pos_isaac": [
+        40.536037,
+        180.379486,
+        0.013067
+      ],
+      "moving_aabb_size_isaac": [
+        0.41019,
+        0.590787,
+        0.026146
+      ]
+    },
+    {
+      "case": "Chair/glenn",
+      "category": "Chair",
+      "name": "glenn",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.0886674696050627,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.01615532621808737,
+      "start_pos_isaac": [
+        62.441696,
+        181.125641,
+        0.234527
+      ],
+      "end_pos_isaac": [
+        62.441566,
+        181.125687,
+        0.323194
+      ],
+      "moving_aabb_size_isaac": [
+        0.780116,
+        0.733681,
+        0.646413
+      ]
+    },
+    {
+      "case": "Chair/grubban",
+      "category": "Chair",
+      "name": "grubban",
+      "operation_index": 0,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.8545508375488626,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.030794674809036145,
+      "start_pos_isaac": [
+        82.169052,
+        181.315872,
+        -0.526892
+      ],
+      "end_pos_isaac": [
+        82.168839,
+        181.315811,
+        0.327659
+      ],
+      "moving_aabb_size_isaac": [
+        0.044967,
+        0.809671,
+        0.655319
+      ]
+    },
+    {
+      "case": "Chair/grubban",
+      "category": "Chair",
+      "name": "grubban",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.2014238591491441,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0138870836420216,
+      "start_pos_isaac": [
+        -0.343059,
+        200.644135,
+        0.12513
+      ],
+      "end_pos_isaac": [
+        -0.343048,
+        200.644089,
+        0.326554
+      ],
+      "moving_aabb_size_isaac": [
+        0.044967,
+        0.810741,
+        0.653109
+      ]
+    },
+    {
+      "case": "Chair/grubban",
+      "category": "Chair",
+      "name": "grubban",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.8822271211160289,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.11760512683063915,
+      "start_pos_isaac": [
+        21.953037,
+        199.328644,
+        -0.859746
+      ],
+      "end_pos_isaac": [
+        21.952736,
+        199.328537,
+        0.022481
+      ],
+      "moving_aabb_size_isaac": [
+        0.882346,
+        0.278636,
+        0.044967
+      ]
+    },
+    {
+      "case": "Chair/grubban",
+      "category": "Chair",
+      "name": "grubban",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "3",
+        "4",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.008351756259799004,
+      "z_drop": 0.008351756259799004,
+      "rot_drift_deg": 3.878801828098024e-05,
+      "start_pos_isaac": [
+        40.530479,
+        202.005432,
+        0.025663
+      ],
+      "end_pos_isaac": [
+        40.530479,
+        202.005432,
+        0.017311
+      ],
+      "moving_aabb_size_isaac": [
+        0.097049,
+        0.883271,
+        0.034632
+      ]
+    },
+    {
+      "case": "Chair/grubban",
+      "category": "Chair",
+      "name": "grubban",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.517732906957902,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.028812306134094228,
+      "start_pos_isaac": [
+        61.798195,
+        199.660782,
+        -0.479073
+      ],
+      "end_pos_isaac": [
+        61.798153,
+        199.660858,
+        0.03866
+      ],
+      "moving_aabb_size_isaac": [
+        1.146347,
+        1.360383,
+        0.077331
+      ]
+    },
+    {
+      "case": "Chair/herman",
+      "category": "Chair",
+      "name": "herman",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.3148628309166827,
+      "z_drop": 0.31486183032393456,
+      "rot_drift_deg": 0.22749052253328025,
+      "start_pos_isaac": [
+        82.118736,
+        200.066681,
+        0.057964
+      ],
+      "end_pos_isaac": [
+        82.117981,
+        200.066925,
+        -0.256898
+      ],
+      "moving_aabb_size_isaac": [
+        0.249504,
+        0.422388,
+        0.512937
+      ]
+    },
+    {
+      "case": "Chair/herman",
+      "category": "Chair",
+      "name": "herman",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.16006053899145326,
+      "z_drop": 0.15616565942764282,
+      "rot_drift_deg": 15.021390035568542,
+      "start_pos_isaac": [
+        1.564567,
+        220.020401,
+        0.027039
+      ],
+      "end_pos_isaac": [
+        1.529551,
+        220.022751,
+        -0.129127
+      ],
+      "moving_aabb_size_isaac": [
+        0.879232,
+        1.62436,
+        0.307855
+      ]
+    },
+    {
+      "case": "Chair/herman",
+      "category": "Chair",
+      "name": "herman",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.3773377656302068,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03695487882954364,
+      "start_pos_isaac": [
+        20.568983,
+        221.550354,
+        -0.14739
+      ],
+      "end_pos_isaac": [
+        20.568811,
+        221.549393,
+        0.229946
+      ],
+      "moving_aabb_size_isaac": [
+        0.282979,
+        0.672898,
+        0.459898
+      ]
+    },
+    {
+      "case": "Chair/herman",
+      "category": "Chair",
+      "name": "herman",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.7116233591936767,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.05021870973521395,
+      "start_pos_isaac": [
+        36.736115,
+        220.540665,
+        -0.646196
+      ],
+      "end_pos_isaac": [
+        36.736809,
+        220.540253,
+        0.065427
+      ],
+      "moving_aabb_size_isaac": [
+        0.786604,
+        0.663074,
+        0.130864
+      ]
+    },
+    {
+      "case": "Chair/ingolf",
+      "category": "Chair",
+      "name": "ingolf",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.9772308314244637,
+      "z_drop": 0.0,
+      "rot_drift_deg": 19.871825297817022,
+      "start_pos_isaac": [
+        61.809155,
+        218.861176,
+        -1.09193
+      ],
+      "end_pos_isaac": [
+        61.797474,
+        218.864044,
+        -0.114773
+      ],
+      "moving_aabb_size_isaac": [
+        0.042148,
+        0.409802,
+        0.078852
+      ]
+    },
+    {
+      "case": "Chair/ingolf",
+      "category": "Chair",
+      "name": "ingolf",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.43325644401946106,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.1518531862128695,
+      "start_pos_isaac": [
+        83.6483,
+        220.406647,
+        -0.415615
+      ],
+      "end_pos_isaac": [
+        83.648483,
+        220.406418,
+        0.017642
+      ],
+      "moving_aabb_size_isaac": [
+        0.374337,
+        0.239688,
+        0.035311
+      ]
+    },
+    {
+      "case": "Chair/ingolf",
+      "category": "Chair",
+      "name": "ingolf",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "1",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.48313499739706545,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0457794913288975,
+      "start_pos_isaac": [
+        0.849078,
+        238.801514,
+        -0.454574
+      ],
+      "end_pos_isaac": [
+        0.848984,
+        238.801804,
+        0.028561
+      ],
+      "moving_aabb_size_isaac": [
+        0.725323,
+        0.721076,
+        0.057122
+      ]
+    },
+    {
+      "case": "Chair/ingolf",
+      "category": "Chair",
+      "name": "ingolf",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "1",
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.2521410347572246,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.06504235477980212,
+      "start_pos_isaac": [
+        20.693653,
+        242.045685,
+        -0.229708
+      ],
+      "end_pos_isaac": [
+        20.693659,
+        242.0457,
+        0.022433
+      ],
+      "moving_aabb_size_isaac": [
+        0.545075,
+        0.498588,
+        0.044872
+      ]
+    },
+    {
+      "case": "Chair/ingolf_2",
+      "category": "Chair",
+      "name": "ingolf_2",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.192848449750041,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.09849300737161736,
+      "start_pos_isaac": [
+        40.788342,
+        239.663788,
+        -0.147902
+      ],
+      "end_pos_isaac": [
+        40.788448,
+        239.66362,
+        0.044946
+      ],
+      "moving_aabb_size_isaac": [
+        0.360591,
+        0.280812,
+        0.089906
+      ]
+    },
+    {
+      "case": "Chair/ingolf_2",
+      "category": "Chair",
+      "name": "ingolf_2",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.013063078746199608,
+      "z_drop": 0.013063078746199608,
+      "rot_drift_deg": 0.00018909110725650536,
+      "start_pos_isaac": [
+        61.825371,
+        241.845566,
+        0.031937
+      ],
+      "end_pos_isaac": [
+        61.825371,
+        241.845566,
+        0.018874
+      ],
+      "moving_aabb_size_isaac": [
+        0.114074,
+        0.383522,
+        0.037756
+      ]
+    },
+    {
+      "case": "Chair/ingolf_2",
+      "category": "Chair",
+      "name": "ingolf_2",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 2.1420419216156006e-06,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0003597660724869615,
+      "start_pos_isaac": [
+        82.304344,
+        241.616745,
+        0.060512
+      ],
+      "end_pos_isaac": [
+        82.304344,
+        241.616745,
+        0.060515
+      ],
+      "moving_aabb_size_isaac": [
+        0.68599,
+        0.472599,
+        0.121048
+      ]
+    },
+    {
+      "case": "Chair/ingolf_2",
+      "category": "Chair",
+      "name": "ingolf_2",
+      "operation_index": 3,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.09219474869797482,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.04619107674080892,
+      "start_pos_isaac": [
+        2.964801,
+        259.812408,
+        -0.071298
+      ],
+      "end_pos_isaac": [
+        2.964807,
+        259.812439,
+        0.020897
+      ],
+      "moving_aabb_size_isaac": [
+        0.661096,
+        0.7216,
+        0.041795
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 0,
+      "moving_part": "5",
+      "fixed_parts": [
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.24639946942629481,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.024264601736756437,
+      "start_pos_isaac": [
+        20.02969,
+        262.344147,
+        -0.206633
+      ],
+      "end_pos_isaac": [
+        20.029749,
+        262.344208,
+        0.039766
+      ],
+      "moving_aabb_size_isaac": [
+        0.715557,
+        1.534619,
+        0.079536
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "6",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.7718197875474526,
+      "z_drop": 0.0,
+      "rot_drift_deg": 13.711886767354475,
+      "start_pos_isaac": [
+        40.07555,
+        261.829376,
+        -0.522417
+      ],
+      "end_pos_isaac": [
+        40.134483,
+        261.831238,
+        0.247147
+      ],
+      "moving_aabb_size_isaac": [
+        0.053088,
+        0.115337,
+        0.495273
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 2,
+      "moving_part": "1",
+      "fixed_parts": [
+        "6",
+        "5",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.9837313613914321,
+      "z_drop": 0.0,
+      "rot_drift_deg": 3.0546294952983852,
+      "start_pos_isaac": [
+        63.370705,
+        258.669037,
+        -1.085861
+      ],
+      "end_pos_isaac": [
+        63.3685,
+        258.676605,
+        -0.102162
+      ],
+      "moving_aabb_size_isaac": [
+        0.05363,
+        0.472113,
+        0.315627
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "6",
+        "5",
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.9415597027600875,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.19861192927619806,
+      "start_pos_isaac": [
+        81.895134,
+        259.959045,
+        -0.918061
+      ],
+      "end_pos_isaac": [
+        81.894653,
+        259.958344,
+        0.023498
+      ],
+      "moving_aabb_size_isaac": [
+        0.094246,
+        0.521137,
+        0.047015
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 4,
+      "moving_part": "3",
+      "fixed_parts": [
+        "6",
+        "5",
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.9129427928844407,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03929393664931459,
+      "start_pos_isaac": [
+        2.142727,
+        281.911011,
+        -0.741629
+      ],
+      "end_pos_isaac": [
+        2.142764,
+        281.910797,
+        0.171314
+      ],
+      "moving_aabb_size_isaac": [
+        0.055544,
+        0.445249,
+        0.342628
+      ]
+    },
+    {
+      "case": "Chair/ivar",
+      "category": "Chair",
+      "name": "ivar",
+      "operation_index": 5,
+      "moving_part": "4",
+      "fixed_parts": [
+        "6",
+        "5",
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.7178827732261212,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03928839038211338,
+      "start_pos_isaac": [
+        20.322834,
+        279.478668,
+        -0.690796
+      ],
+      "end_pos_isaac": [
+        20.322655,
+        279.47818,
+        0.027086
+      ],
+      "moving_aabb_size_isaac": [
+        0.864688,
+        0.870884,
+        0.054179
+      ]
+    },
+    {
+      "case": "Chair/jules_2",
+      "category": "Chair",
+      "name": "jules_2",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.2920454370819115,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.2752938144870072,
+      "start_pos_isaac": [
+        41.910454,
+        280.767639,
+        0.323912
+      ],
+      "end_pos_isaac": [
+        41.910355,
+        280.961243,
+        0.542563
+      ],
+      "moving_aabb_size_isaac": [
+        0.744195,
+        1.10812,
+        1.085135
+      ]
+    },
+    {
+      "case": "Chair/jules_2",
+      "category": "Chair",
+      "name": "jules_2",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "2",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 1.6987323760986328e-06,
+      "z_drop": 1.6987323760986328e-06,
+      "rot_drift_deg": 0.0001391415319045272,
+      "start_pos_isaac": [
+        60.343136,
+        280.816711,
+        0.372125
+      ],
+      "end_pos_isaac": [
+        60.343136,
+        280.816711,
+        0.372123
+      ],
+      "moving_aabb_size_isaac": [
+        1.042501,
+        1.082433,
+        0.744266
+      ]
+    },
+    {
+      "case": "Chair/klappsta",
+      "category": "Chair",
+      "name": "klappsta",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.1498996615409851,
+      "z_drop": 0.1498996615409851,
+      "rot_drift_deg": 0.0010244273406420253,
+      "start_pos_isaac": [
+        82.536415,
+        279.592468,
+        0.503163
+      ],
+      "end_pos_isaac": [
+        82.536415,
+        279.592468,
+        0.353264
+      ],
+      "moving_aabb_size_isaac": [
+        0.713559,
+        0.215718,
+        0.706558
+      ]
+    },
+    {
+      "case": "Chair/klappsta",
+      "category": "Chair",
+      "name": "klappsta",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.19108718032796845,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.41976461328109393,
+      "start_pos_isaac": [
+        3.694608,
+        299.786682,
+        0.401529
+      ],
+      "end_pos_isaac": [
+        3.554676,
+        299.788513,
+        0.531644
+      ],
+      "moving_aabb_size_isaac": [
+        0.401483,
+        0.14575,
+        1.063291
+      ]
+    },
+    {
+      "case": "Chair/klappsta",
+      "category": "Chair",
+      "name": "klappsta",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "2",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.6631407185573351,
+      "z_drop": 0.6631407141685486,
+      "rot_drift_deg": 0.00047768616433329204,
+      "start_pos_isaac": [
+        22.376518,
+        302.085449,
+        0.874212
+      ],
+      "end_pos_isaac": [
+        22.376472,
+        302.085388,
+        0.211071
+      ],
+      "moving_aabb_size_isaac": [
+        0.163786,
+        1.068927,
+        0.422147
+      ]
+    },
+    {
+      "case": "Chair/klappsta",
+      "category": "Chair",
+      "name": "klappsta",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "2",
+        "1",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.3663831949234009,
+      "z_drop": 0.3663831949234009,
+      "rot_drift_deg": 0.00016802647122599447,
+      "start_pos_isaac": [
+        40.06189,
+        301.582001,
+        0.734803
+      ],
+      "end_pos_isaac": [
+        40.06189,
+        301.582001,
+        0.368419
+      ],
+      "moving_aabb_size_isaac": [
+        1.207676,
+        1.197206,
+        0.736846
+      ]
+    },
+    {
+      "case": "Chair/kyrre",
+      "category": "Chair",
+      "name": "kyrre",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.8288687406151019,
+      "z_drop": 0.0524199903011322,
+      "rot_drift_deg": 88.8747179124951,
+      "start_pos_isaac": [
+        61.72168,
+        299.823639,
+        0.25929
+      ],
+      "end_pos_isaac": [
+        61.721531,
+        298.996429,
+        0.20687
+      ],
+      "moving_aabb_size_isaac": [
+        0.55924,
+        0.413755,
+        1.281398
+      ]
+    },
+    {
+      "case": "Chair/kyrre",
+      "category": "Chair",
+      "name": "kyrre",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.7738678623685312,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.2955677075738339,
+      "start_pos_isaac": [
+        80.910461,
+        302.565308,
+        -0.120969
+      ],
+      "end_pos_isaac": [
+        80.913849,
+        302.565765,
+        0.652891
+      ],
+      "moving_aabb_size_isaac": [
+        0.117648,
+        0.430796,
+        1.305213
+      ]
+    },
+    {
+      "case": "Chair/kyrre",
+      "category": "Chair",
+      "name": "kyrre",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "2",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.051726967096328735,
+      "z_drop": 0.051726967096328735,
+      "rot_drift_deg": 4.5945398631873294e-05,
+      "start_pos_isaac": [
+        2.84313,
+        322.334625,
+        0.391023
+      ],
+      "end_pos_isaac": [
+        2.84313,
+        322.334625,
+        0.339296
+      ],
+      "moving_aabb_size_isaac": [
+        1.121671,
+        0.413754,
+        0.678593
+      ]
+    },
+    {
+      "case": "Chair/leifarne",
+      "category": "Chair",
+      "name": "leifarne",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.4459313020302319,
+      "z_drop": 0.13115382194519043,
+      "rot_drift_deg": 0.536975582308314,
+      "start_pos_isaac": [
+        20.500355,
+        320.393402,
+        0.568274
+      ],
+      "end_pos_isaac": [
+        20.926561,
+        320.392242,
+        0.43712
+      ],
+      "moving_aabb_size_isaac": [
+        0.977878,
+        0.96793,
+        0.874246
+      ]
+    },
+    {
+      "case": "Chair/lisabo",
+      "category": "Chair",
+      "name": "lisabo",
+      "operation_index": 0,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.9908262250771452,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.1460612888618091,
+      "start_pos_isaac": [
+        40.66563,
+        321.628815,
+        -0.972083
+      ],
+      "end_pos_isaac": [
+        40.66396,
+        321.637543,
+        0.018703
+      ],
+      "moving_aabb_size_isaac": [
+        1.509362,
+        0.943408,
+        0.834332
+      ]
+    },
+    {
+      "case": "Chair/lisabo",
+      "category": "Chair",
+      "name": "lisabo",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.1320986555672865,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.08555076297152232,
+      "start_pos_isaac": [
+        61.318691,
+        322.060944,
+        -0.072353
+      ],
+      "end_pos_isaac": [
+        61.318745,
+        322.060974,
+        0.059745
+      ],
+      "moving_aabb_size_isaac": [
+        0.022353,
+        0.32838,
+        0.119512
+      ]
+    },
+    {
+      "case": "Chair/lisabo",
+      "category": "Chair",
+      "name": "lisabo",
+      "operation_index": 2,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "4",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.0005325376987457275,
+      "z_drop": 0.0005325376987457275,
+      "rot_drift_deg": 0.0004454440758846689,
+      "start_pos_isaac": [
+        83.014549,
+        319.89502,
+        0.166801
+      ],
+      "end_pos_isaac": [
+        83.014549,
+        319.89502,
+        0.166268
+      ],
+      "moving_aabb_size_isaac": [
+        0.847928,
+        0.218428,
+        0.332555
+      ]
+    },
+    {
+      "case": "Chair/lisabo",
+      "category": "Chair",
+      "name": "lisabo",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "4",
+        "3",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.2803214461067663,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.032921642414028604,
+      "start_pos_isaac": [
+        0.012925,
+        340.218506,
+        -0.255456
+      ],
+      "end_pos_isaac": [
+        0.012938,
+        340.218628,
+        0.024865
+      ],
+      "moving_aabb_size_isaac": [
+        1.000872,
+        1.000125,
+        0.04973
+      ]
+    },
+    {
+      "case": "Chair/mammut_1",
+      "category": "Chair",
+      "name": "mammut_1",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.8998098979334532,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.24829841365450456,
+      "start_pos_isaac": [
+        22.025684,
+        340.069397,
+        -0.605922
+      ],
+      "end_pos_isaac": [
+        22.025803,
+        340.068268,
+        0.293887
+      ],
+      "moving_aabb_size_isaac": [
+        0.232185,
+        0.231896,
+        0.586652
+      ]
+    },
+    {
+      "case": "Chair/mammut_1",
+      "category": "Chair",
+      "name": "mammut_1",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.9927837821673502,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.7376652904949856,
+      "start_pos_isaac": [
+        43.044998,
+        341.61261,
+        -0.804377
+      ],
+      "end_pos_isaac": [
+        43.037888,
+        341.621277,
+        0.188344
+      ],
+      "moving_aabb_size_isaac": [
+        0.232185,
+        0.576416,
+        0.469448
+      ]
+    },
+    {
+      "case": "Chair/mammut_1",
+      "category": "Chair",
+      "name": "mammut_1",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.5568647086620331,
+      "z_drop": 0.5568647086620331,
+      "rot_drift_deg": 6.569065594953265e-05,
+      "start_pos_isaac": [
+        60.145435,
+        339.53006,
+        0.845432
+      ],
+      "end_pos_isaac": [
+        60.145435,
+        339.53006,
+        0.288568
+      ],
+      "moving_aabb_size_isaac": [
+        0.232185,
+        0.467904,
+        0.577147
+      ]
+    },
+    {
+      "case": "Chair/mammut_1",
+      "category": "Chair",
+      "name": "mammut_1",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.10073718042529552,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0468152256123025,
+      "start_pos_isaac": [
+        79.787193,
+        340.732147,
+        0.194032
+      ],
+      "end_pos_isaac": [
+        79.78727,
+        340.732574,
+        0.294768
+      ],
+      "moving_aabb_size_isaac": [
+        0.232185,
+        0.231603,
+        0.58955
+      ]
+    },
+    {
+      "case": "Chair/mammut_1",
+      "category": "Chair",
+      "name": "mammut_1",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 1.001931343482061,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.20431535066674494,
+      "start_pos_isaac": [
+        2.993832,
+        358.811188,
+        -0.719825
+      ],
+      "end_pos_isaac": [
+        2.992343,
+        358.811188,
+        0.282105
+      ],
+      "moving_aabb_size_isaac": [
+        1.058891,
+        0.65727,
+        0.904061
+      ]
+    },
+    {
+      "case": "Chair/mammut_2",
+      "category": "Chair",
+      "name": "mammut_2",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.04389083385467529,
+      "z_drop": 0.04389083385467529,
+      "rot_drift_deg": 0.00013173591797424586,
+      "start_pos_isaac": [
+        23.028116,
+        359.400879,
+        0.603165
+      ],
+      "end_pos_isaac": [
+        23.028116,
+        359.400879,
+        0.559274
+      ],
+      "moving_aabb_size_isaac": [
+        0.663014,
+        0.483442,
+        1.118559
+      ]
+    },
+    {
+      "case": "Chair/mammut_2",
+      "category": "Chair",
+      "name": "mammut_2",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.43757128715515137,
+      "z_drop": 0.43757128715515137,
+      "rot_drift_deg": 0.00016782679620450607,
+      "start_pos_isaac": [
+        41.217079,
+        360.653625,
+        1.016039
+      ],
+      "end_pos_isaac": [
+        41.217079,
+        360.653625,
+        0.578468
+      ],
+      "moving_aabb_size_isaac": [
+        0.357222,
+        0.646784,
+        1.156947
+      ]
+    },
+    {
+      "case": "Chair/mammut_2",
+      "category": "Chair",
+      "name": "mammut_2",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.4788382322625148,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03342473434458532,
+      "start_pos_isaac": [
+        63.98843,
+        361.202484,
+        0.13347
+      ],
+      "end_pos_isaac": [
+        63.9879,
+        361.203094,
+        0.612307
+      ],
+      "moving_aabb_size_isaac": [
+        0.355955,
+        0.356739,
+        1.224629
+      ]
+    },
+    {
+      "case": "Chair/mammut_2",
+      "category": "Chair",
+      "name": "mammut_2",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 6.556510925292969e-07,
+      "z_drop": 6.556510925292969e-07,
+      "rot_drift_deg": 0.00033596616760557557,
+      "start_pos_isaac": [
+        83.347137,
+        362.385345,
+        0.607971
+      ],
+      "end_pos_isaac": [
+        83.347137,
+        362.385345,
+        0.60797
+      ],
+      "moving_aabb_size_isaac": [
+        0.419486,
+        0.379143,
+        1.215966
+      ]
+    },
+    {
+      "case": "Chair/marius",
+      "category": "Chair",
+      "name": "marius",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.12299680709861975,
+      "z_drop": 0.12299680709838867,
+      "rot_drift_deg": 3.0161298710667534e-05,
+      "start_pos_isaac": [
+        -0.887974,
+        382.312347,
+        0.690453
+      ],
+      "end_pos_isaac": [
+        -0.887974,
+        382.312347,
+        0.567456
+      ],
+      "moving_aabb_size_isaac": [
+        0.06412,
+        1.196048,
+        1.134911
+      ]
+    },
+    {
+      "case": "Chair/marius",
+      "category": "Chair",
+      "name": "marius",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": true,
+      "drift": 0.026861948600417355,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.04382791336628497,
+      "start_pos_isaac": [
+        20.909719,
+        379.933472,
+        -0.005004
+      ],
+      "end_pos_isaac": [
+        20.909721,
+        379.933441,
+        0.021858
+      ],
+      "moving_aabb_size_isaac": [
+        0.744782,
+        0.747013,
+        0.043723
+      ]
+    },
+    {
+      "case": "Chair/nilsove",
+      "category": "Chair",
+      "name": "nilsove",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.3626050378979391,
+      "z_drop": 0.1194564700126648,
+      "rot_drift_deg": 0.02063052267602315,
+      "start_pos_isaac": [
+        43.7286,
+        380.148468,
+        0.525465
+      ],
+      "end_pos_isaac": [
+        43.386242,
+        380.146515,
+        0.406009
+      ],
+      "moving_aabb_size_isaac": [
+        0.191602,
+        0.431774,
+        0.812026
+      ]
+    },
+    {
+      "case": "Chair/nilsove",
+      "category": "Chair",
+      "name": "nilsove",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 1.3506896648763103,
+      "z_drop": 1.3506896644830704,
+      "rot_drift_deg": 0.0014502787325384732,
+      "start_pos_isaac": [
+        61.143555,
+        379.914551,
+        1.503474
+      ],
+      "end_pos_isaac": [
+        61.143543,
+        379.914581,
+        0.152784
+      ],
+      "moving_aabb_size_isaac": [
+        0.91172,
+        0.276067,
+        0.30558
+      ]
+    },
+    {
+      "case": "Chair/nilsove",
+      "category": "Chair",
+      "name": "nilsove",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.29236241128491686,
+      "z_drop": 0.2923623323440552,
+      "rot_drift_deg": 0.0019532908067096035,
+      "start_pos_isaac": [
+        83.203819,
+        381.627472,
+        0.476344
+      ],
+      "end_pos_isaac": [
+        83.203796,
+        381.627686,
+        0.183981
+      ],
+      "moving_aabb_size_isaac": [
+        0.745225,
+        0.641391,
+        0.36799
+      ]
+    },
+    {
+      "case": "Chair/nilsove",
+      "category": "Chair",
+      "name": "nilsove",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 1.6175255630374261,
+      "z_drop": 1.6175255626440048,
+      "rot_drift_deg": 0.008153990855597619,
+      "start_pos_isaac": [
+        -0.787492,
+        401.541229,
+        1.770315
+      ],
+      "end_pos_isaac": [
+        -0.787511,
+        401.54126,
+        0.15279
+      ],
+      "moving_aabb_size_isaac": [
+        0.500449,
+        0.769366,
+        0.305579
+      ]
+    },
+    {
+      "case": "Chair/norraryd",
+      "category": "Chair",
+      "name": "norraryd",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.016311421990394592,
+      "z_drop": 0.016311421990394592,
+      "rot_drift_deg": 0.00021445869505638235,
+      "start_pos_isaac": [
+        21.631638,
+        399.930176,
+        0.191396
+      ],
+      "end_pos_isaac": [
+        21.631638,
+        399.930176,
+        0.175084
+      ],
+      "moving_aabb_size_isaac": [
+        0.145502,
+        0.5326,
+        0.350175
+      ]
+    },
+    {
+      "case": "Chair/norraryd",
+      "category": "Chair",
+      "name": "norraryd",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.09207363799214363,
+      "z_drop": 0.09207363799214363,
+      "rot_drift_deg": 0.0003398705493932707,
+      "start_pos_isaac": [
+        43.019054,
+        400.006134,
+        0.105909
+      ],
+      "end_pos_isaac": [
+        43.019054,
+        400.006134,
+        0.013835
+      ],
+      "moving_aabb_size_isaac": [
+        0.053492,
+        0.524928,
+        0.02768
+      ]
+    },
+    {
+      "case": "Chair/norraryd",
+      "category": "Chair",
+      "name": "norraryd",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "2",
+        "1"
+      ],
+      "release_stable": true,
+      "drift": 0.02056685835123062,
+      "z_drop": 0.02056685835123062,
+      "rot_drift_deg": 0.00017032730748047496,
+      "start_pos_isaac": [
+        62.67556,
+        402.486786,
+        0.133555
+      ],
+      "end_pos_isaac": [
+        62.67556,
+        402.486786,
+        0.112988
+      ],
+      "moving_aabb_size_isaac": [
+        0.956333,
+        0.828993,
+        0.225996
+      ]
+    },
+    {
+      "case": "Chair/norraryd",
+      "category": "Chair",
+      "name": "norraryd",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "2",
+        "1",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.5393775403499603,
+      "z_drop": 0.5393775403499603,
+      "rot_drift_deg": 0.00042220639082920705,
+      "start_pos_isaac": [
+        81.237625,
+        401.874634,
+        0.955832
+      ],
+      "end_pos_isaac": [
+        81.237625,
+        401.874634,
+        0.416455
+      ],
+      "moving_aabb_size_isaac": [
+        0.95181,
+        0.872075,
+        0.832935
+      ]
+    },
+    {
+      "case": "Chair/omtanksam",
+      "category": "Chair",
+      "name": "omtanksam",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.33782308313749404,
+      "z_drop": 0.17424193024635315,
+      "rot_drift_deg": 0.04560481957742165,
+      "start_pos_isaac": [
+        3.626194,
+        420.279694,
+        0.565558
+      ],
+      "end_pos_isaac": [
+        3.336776,
+        420.280762,
+        0.391316
+      ],
+      "moving_aabb_size_isaac": [
+        0.179425,
+        0.161312,
+        0.782634
+      ]
+    },
+    {
+      "case": "Chair/omtanksam",
+      "category": "Chair",
+      "name": "omtanksam",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 1.1257946491241455,
+      "z_drop": 1.1257946491241455,
+      "rot_drift_deg": 0.00013821643439981593,
+      "start_pos_isaac": [
+        19.572027,
+        419.686066,
+        1.376744
+      ],
+      "end_pos_isaac": [
+        19.572027,
+        419.686066,
+        0.250949
+      ],
+      "moving_aabb_size_isaac": [
+        0.178531,
+        0.687561,
+        0.501902
+      ]
+    },
+    {
+      "case": "Chair/omtanksam",
+      "category": "Chair",
+      "name": "omtanksam",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.003859559077988253,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.023681861833587888,
+      "start_pos_isaac": [
+        44.562431,
+        423.261047,
+        0.376684
+      ],
+      "end_pos_isaac": [
+        44.562428,
+        423.2612,
+        0.380541
+      ],
+      "moving_aabb_size_isaac": [
+        0.105495,
+        0.337367,
+        0.761093
+      ]
+    },
+    {
+      "case": "Chair/omtanksam",
+      "category": "Chair",
+      "name": "omtanksam",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.26660866472231803,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0785088738060734,
+      "start_pos_isaac": [
+        62.810959,
+        422.243622,
+        0.12728
+      ],
+      "end_pos_isaac": [
+        62.810844,
+        422.244049,
+        0.393888
+      ],
+      "moving_aabb_size_isaac": [
+        0.212758,
+        0.157143,
+        0.787796
+      ]
+    },
+    {
+      "case": "Chair/poang_1",
+      "category": "Chair",
+      "name": "poang_1",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.604638143685839,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.06969394793393938,
+      "start_pos_isaac": [
+        81.432617,
+        419.705261,
+        -0.563243
+      ],
+      "end_pos_isaac": [
+        81.432465,
+        419.703461,
+        0.041393
+      ],
+      "moving_aabb_size_isaac": [
+        0.177494,
+        1.023594,
+        0.082808
+      ]
+    },
+    {
+      "case": "Chair/poang_1",
+      "category": "Chair",
+      "name": "poang_1",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.6027180903281399,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.014926106809679748,
+      "start_pos_isaac": [
+        -0.63199,
+        440.354706,
+        -0.271394
+      ],
+      "end_pos_isaac": [
+        -0.631952,
+        440.35437,
+        0.331324
+      ],
+      "moving_aabb_size_isaac": [
+        0.062132,
+        0.903478,
+        0.662647
+      ]
+    },
+    {
+      "case": "Chair/poang_1",
+      "category": "Chair",
+      "name": "poang_1",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.002803011901020601,
+      "z_drop": 0.0028016455471515656,
+      "rot_drift_deg": 0.02742977684655589,
+      "start_pos_isaac": [
+        20.488096,
+        441.955597,
+        -0.054899
+      ],
+      "end_pos_isaac": [
+        20.488178,
+        441.955566,
+        -0.057701
+      ],
+      "moving_aabb_size_isaac": [
+        0.867896,
+        1.079642,
+        0.11546
+      ]
+    },
+    {
+      "case": "Chair/poang_1",
+      "category": "Chair",
+      "name": "poang_1",
+      "operation_index": 3,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.9759388425004393,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.990535087460372,
+      "start_pos_isaac": [
+        44.822823,
+        438.603638,
+        -1.039541
+      ],
+      "end_pos_isaac": [
+        44.821945,
+        438.60553,
+        -0.063605
+      ],
+      "moving_aabb_size_isaac": [
+        0.950453,
+        1.162773,
+        0.143515
+      ]
+    },
+    {
+      "case": "Chair/preben",
+      "category": "Chair",
+      "name": "preben",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.7614449435354966,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.04675890918951689,
+      "start_pos_isaac": [
+        61.89859,
+        439.63269,
+        -0.654566
+      ],
+      "end_pos_isaac": [
+        61.898598,
+        439.632568,
+        0.106879
+      ],
+      "moving_aabb_size_isaac": [
+        0.839256,
+        0.786664,
+        0.213775
+      ]
+    },
+    {
+      "case": "Chair/preben",
+      "category": "Chair",
+      "name": "preben",
+      "operation_index": 1,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.385543857908606,
+      "z_drop": 0.07881482690572739,
+      "rot_drift_deg": 90.12764084151561,
+      "start_pos_isaac": [
+        80.453903,
+        441.576385,
+        0.162761
+      ],
+      "end_pos_isaac": [
+        80.831299,
+        441.578583,
+        0.083946
+      ],
+      "moving_aabb_size_isaac": [
+        0.167913,
+        0.139264,
+        0.47219
+      ]
+    },
+    {
+      "case": "Chair/preben",
+      "category": "Chair",
+      "name": "preben",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.16159387628890134,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.016568729986613583,
+      "start_pos_isaac": [
+        -0.314395,
+        460.026886,
+        0.032096
+      ],
+      "end_pos_isaac": [
+        -0.314437,
+        460.026764,
+        0.19369
+      ],
+      "moving_aabb_size_isaac": [
+        0.047611,
+        0.344799,
+        0.38738
+      ]
+    },
+    {
+      "case": "Chair/preben",
+      "category": "Chair",
+      "name": "preben",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1",
+        "5",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.1672964478704666,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.19214151276763214,
+      "start_pos_isaac": [
+        21.799328,
+        459.15033,
+        -0.142761
+      ],
+      "end_pos_isaac": [
+        21.79932,
+        459.150238,
+        0.024535
+      ],
+      "moving_aabb_size_isaac": [
+        0.471648,
+        0.058197,
+        0.049076
+      ]
+    },
+    {
+      "case": "Chair/preben",
+      "category": "Chair",
+      "name": "preben",
+      "operation_index": 4,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "5",
+        "4",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.0598564725369215,
+      "z_drop": 0.0598564725369215,
+      "rot_drift_deg": 0.0003020090774256079,
+      "start_pos_isaac": [
+        41.788277,
+        462.277588,
+        0.083656
+      ],
+      "end_pos_isaac": [
+        41.788277,
+        462.277588,
+        0.0238
+      ],
+      "moving_aabb_size_isaac": [
+        0.296496,
+        0.408952,
+        0.047611
+      ]
+    },
+    {
+      "case": "Chair/reidar",
+      "category": "Chair",
+      "name": "reidar",
+      "operation_index": 0,
+      "moving_part": "5",
+      "fixed_parts": [
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.42630214823401613,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.04431143034808732,
+      "start_pos_isaac": [
+        62.553349,
+        460.954773,
+        -0.342764
+      ],
+      "end_pos_isaac": [
+        62.553253,
+        460.954895,
+        0.083538
+      ],
+      "moving_aabb_size_isaac": [
+        0.763359,
+        0.85657,
+        0.167091
+      ]
+    },
+    {
+      "case": "Chair/reidar",
+      "category": "Chair",
+      "name": "reidar",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "2",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.8798735948225785,
+      "z_drop": 0.0,
+      "rot_drift_deg": 35.55585532406188,
+      "start_pos_isaac": [
+        82.708572,
+        461.501831,
+        -0.565771
+      ],
+      "end_pos_isaac": [
+        82.704681,
+        461.301697,
+        0.29103
+      ],
+      "moving_aabb_size_isaac": [
+        0.337711,
+        0.041608,
+        0.685905
+      ]
+    },
+    {
+      "case": "Chair/reidar",
+      "category": "Chair",
+      "name": "reidar",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "2",
+        "5",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.023311190973316343,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0593848548688567,
+      "start_pos_isaac": [
+        0.259014,
+        479.990906,
+        -0.002361
+      ],
+      "end_pos_isaac": [
+        0.25902,
+        479.990906,
+        0.02095
+      ],
+      "moving_aabb_size_isaac": [
+        0.559811,
+        0.548307,
+        0.0419
+      ]
+    },
+    {
+      "case": "Chair/reidar",
+      "category": "Chair",
+      "name": "reidar",
+      "operation_index": 3,
+      "moving_part": "0",
+      "fixed_parts": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.2965607885271311,
+      "z_drop": 0.2965607885271311,
+      "rot_drift_deg": 0.00012923324381575686,
+      "start_pos_isaac": [
+        20.263449,
+        481.782776,
+        0.313148
+      ],
+      "end_pos_isaac": [
+        20.263449,
+        481.782776,
+        0.016587
+      ],
+      "moving_aabb_size_isaac": [
+        0.077671,
+        0.727333,
+        0.033178
+      ]
+    },
+    {
+      "case": "Chair/reidar",
+      "category": "Chair",
+      "name": "reidar",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "2",
+        "5",
+        "3",
+        "4",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.0030247753220136236,
+      "z_drop": 0.0010657403618097305,
+      "rot_drift_deg": 7.211834069926033,
+      "start_pos_isaac": [
+        42.584274,
+        480.501495,
+        0.017316
+      ],
+      "end_pos_isaac": [
+        42.586697,
+        480.50296,
+        0.016251
+      ],
+      "moving_aabb_size_isaac": [
+        0.380189,
+        0.655533,
+        0.033178
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 1.4149757474660873,
+      "z_drop": 1.4149757474660873,
+      "rot_drift_deg": 0.0018433224130956216,
+      "start_pos_isaac": [
+        57.713184,
+        481.583313,
+        1.524616
+      ],
+      "end_pos_isaac": [
+        57.713184,
+        481.583313,
+        0.10964
+      ],
+      "moving_aabb_size_isaac": [
+        0.80115,
+        0.083346,
+        0.219292
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "3",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.13701560243939612,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.10148656157676429,
+      "start_pos_isaac": [
+        82.3694,
+        481.843872,
+        -0.118421
+      ],
+      "end_pos_isaac": [
+        82.369431,
+        481.843719,
+        0.018595
+      ],
+      "moving_aabb_size_isaac": [
+        0.092983,
+        0.781764,
+        0.03722
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "3",
+        "2",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.5174029969843092,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.007089853567445035,
+      "start_pos_isaac": [
+        3.991489,
+        500.075989,
+        -0.150208
+      ],
+      "end_pos_isaac": [
+        3.991372,
+        500.076477,
+        0.367195
+      ],
+      "moving_aabb_size_isaac": [
+        0.042856,
+        0.456994,
+        0.73439
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 3,
+      "moving_part": "7",
+      "fixed_parts": [
+        "3",
+        "2",
+        "0",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.7161654734019807,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.12288145010768005,
+      "start_pos_isaac": [
+        20.689144,
+        503.321716,
+        -0.694736
+      ],
+      "end_pos_isaac": [
+        20.688862,
+        503.323822,
+        0.021426
+      ],
+      "moving_aabb_size_isaac": [
+        0.788033,
+        0.255526,
+        0.042857
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 4,
+      "moving_part": "4",
+      "fixed_parts": [
+        "3",
+        "2",
+        "0",
+        "5",
+        "7"
+      ],
+      "release_stable": false,
+      "drift": 0.5230739985490193,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.007828321843395726,
+      "start_pos_isaac": [
+        42.689339,
+        500.77597,
+        0.08532
+      ],
+      "end_pos_isaac": [
+        42.689411,
+        500.775818,
+        0.608394
+      ],
+      "moving_aabb_size_isaac": [
+        0.141424,
+        1.583315,
+        1.216795
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 5,
+      "moving_part": "1",
+      "fixed_parts": [
+        "3",
+        "2",
+        "0",
+        "5",
+        "7",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.0963558666408062,
+      "z_drop": 0.0963558666408062,
+      "rot_drift_deg": 0.0004437323743790172,
+      "start_pos_isaac": [
+        64.047951,
+        500.876892,
+        0.157841
+      ],
+      "end_pos_isaac": [
+        64.047951,
+        500.876892,
+        0.061485
+      ],
+      "moving_aabb_size_isaac": [
+        0.940661,
+        0.339839,
+        0.122988
+      ]
+    },
+    {
+      "case": "Chair/ronninge",
+      "category": "Chair",
+      "name": "ronninge",
+      "operation_index": 6,
+      "moving_part": "6",
+      "fixed_parts": [
+        "3",
+        "2",
+        "0",
+        "5",
+        "7",
+        "4",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.5289415828883648,
+      "z_drop": 0.5289415828883648,
+      "rot_drift_deg": 0.00022629350620602235,
+      "start_pos_isaac": [
+        82.28833,
+        504.201508,
+        0.561307
+      ],
+      "end_pos_isaac": [
+        82.28833,
+        504.201508,
+        0.032366
+      ],
+      "moving_aabb_size_isaac": [
+        1.054052,
+        1.008009,
+        0.064753
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.7969211512766622,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.055460307662349925,
+      "start_pos_isaac": [
+        1.678744,
+        520.0,
+        -0.729831
+      ],
+      "end_pos_isaac": [
+        1.678423,
+        519.997986,
+        0.067087
+      ],
+      "moving_aabb_size_isaac": [
+        0.348342,
+        0.933584,
+        0.134175
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.9707687978713951,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.7693498735881232,
+      "start_pos_isaac": [
+        21.55386,
+        519.60083,
+        -0.931108
+      ],
+      "end_pos_isaac": [
+        21.553953,
+        519.601379,
+        0.039661
+      ],
+      "moving_aabb_size_isaac": [
+        0.938049,
+        0.938049,
+        0.117403
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.18394064903259277,
+      "z_drop": 0.18394064903259277,
+      "rot_drift_deg": 0.0002230425438233489,
+      "start_pos_isaac": [
+        40.307537,
+        522.328979,
+        1.445879
+      ],
+      "end_pos_isaac": [
+        40.307537,
+        522.328979,
+        1.261938
+      ],
+      "moving_aabb_size_isaac": [
+        1.3956,
+        0.763319,
+        0.44417
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.34859809287100696,
+      "z_drop": 0.3453960120677948,
+      "rot_drift_deg": 8.696946568527757,
+      "start_pos_isaac": [
+        59.596279,
+        521.227966,
+        0.782866
+      ],
+      "end_pos_isaac": [
+        59.588966,
+        521.181396,
+        0.43747
+      ],
+      "moving_aabb_size_isaac": [
+        0.950669,
+        1.106475,
+        0.725054
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 4,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.41937450915158375,
+      "z_drop": 0.32519863545894623,
+      "rot_drift_deg": 17.931894487300433,
+      "start_pos_isaac": [
+        80.378136,
+        522.719788,
+        0.508779
+      ],
+      "end_pos_isaac": [
+        80.642776,
+        522.71051,
+        0.18358
+      ],
+      "moving_aabb_size_isaac": [
+        0.378545,
+        1.418371,
+        0.367188
+      ]
+    },
+    {
+      "case": "Chair/skogsta",
+      "category": "Chair",
+      "name": "skogsta",
+      "operation_index": 5,
+      "moving_part": "6",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.15889339401020494,
+      "z_drop": 0.03314846754074097,
+      "rot_drift_deg": 7.017823510533533,
+      "start_pos_isaac": [
+        -0.363977,
+        542.351013,
+        0.593397
+      ],
+      "end_pos_isaac": [
+        -0.518188,
+        542.331848,
+        0.560248
+      ],
+      "moving_aabb_size_isaac": [
+        1.236289,
+        0.646482,
+        0.876459
+      ]
+    },
+    {
+      "case": "Chair/skogsta_2",
+      "category": "Chair",
+      "name": "skogsta_2",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.5620449855923653,
+      "z_drop": 0.5620449855923653,
+      "rot_drift_deg": 0.00046449680571428127,
+      "start_pos_isaac": [
+        22.217215,
+        539.892761,
+        0.652827
+      ],
+      "end_pos_isaac": [
+        22.217215,
+        539.892761,
+        0.090782
+      ],
+      "moving_aabb_size_isaac": [
+        0.62173,
+        0.150545,
+        0.18157
+      ]
+    },
+    {
+      "case": "Chair/skogsta_2",
+      "category": "Chair",
+      "name": "skogsta_2",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.17248309843958987,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.07150050583958976,
+      "start_pos_isaac": [
+        42.291271,
+        541.274048,
+        -0.097216
+      ],
+      "end_pos_isaac": [
+        42.291252,
+        541.273987,
+        0.075267
+      ],
+      "moving_aabb_size_isaac": [
+        0.602173,
+        0.311829,
+        0.150545
+      ]
+    },
+    {
+      "case": "Chair/skogsta_2",
+      "category": "Chair",
+      "name": "skogsta_2",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.30463781955246366,
+      "z_drop": 0.3046378195285797,
+      "rot_drift_deg": 0.0013589180173942423,
+      "start_pos_isaac": [
+        62.788258,
+        541.750244,
+        0.622719
+      ],
+      "end_pos_isaac": [
+        62.788254,
+        541.750244,
+        0.318081
+      ],
+      "moving_aabb_size_isaac": [
+        0.148631,
+        0.19439,
+        0.63618
+      ]
+    },
+    {
+      "case": "Chair/skogsta_2",
+      "category": "Chair",
+      "name": "skogsta_2",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 2.3615177717390003,
+      "z_drop": 2.3615177646279335,
+      "rot_drift_deg": 0.002853784102284789,
+      "start_pos_isaac": [
+        76.572594,
+        543.505615,
+        2.436784
+      ],
+      "end_pos_isaac": [
+        76.572586,
+        543.505798,
+        0.075267
+      ],
+      "moving_aabb_size_isaac": [
+        0.621221,
+        0.185293,
+        0.150545
+      ]
+    },
+    {
+      "case": "Chair/sundvik",
+      "category": "Chair",
+      "name": "sundvik",
+      "operation_index": 0,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.15185253324819678,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.007483276089395421,
+      "start_pos_isaac": [
+        4.222972,
+        561.402832,
+        0.219568
+      ],
+      "end_pos_isaac": [
+        4.22297,
+        561.402832,
+        0.37142
+      ],
+      "moving_aabb_size_isaac": [
+        0.086237,
+        0.670792,
+        0.742842
+      ]
+    },
+    {
+      "case": "Chair/sundvik",
+      "category": "Chair",
+      "name": "sundvik",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.0015686233092303743,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.026585577555436685,
+      "start_pos_isaac": [
+        21.14875,
+        559.509094,
+        0.198869
+      ],
+      "end_pos_isaac": [
+        21.148785,
+        559.508972,
+        0.200432
+      ],
+      "moving_aabb_size_isaac": [
+        0.538577,
+        0.482274,
+        0.400869
+      ]
+    },
+    {
+      "case": "Chair/sundvik",
+      "category": "Chair",
+      "name": "sundvik",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.09105797952718818,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.06214611078892578,
+      "start_pos_isaac": [
+        42.173405,
+        562.528625,
+        0.225834
+      ],
+      "end_pos_isaac": [
+        42.173328,
+        562.528992,
+        0.316891
+      ],
+      "moving_aabb_size_isaac": [
+        0.058752,
+        0.190336,
+        0.633793
+      ]
+    },
+    {
+      "case": "Chair/sundvik",
+      "category": "Chair",
+      "name": "sundvik",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.9952194803334374,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.236997389056013,
+      "start_pos_isaac": [
+        62.60667,
+        559.984497,
+        -0.164854
+      ],
+      "end_pos_isaac": [
+        62.610588,
+        559.967163,
+        0.830207
+      ],
+      "moving_aabb_size_isaac": [
+        0.862452,
+        0.101921,
+        1.654472
+      ]
+    },
+    {
+      "case": "Chair/sundvik",
+      "category": "Chair",
+      "name": "sundvik",
+      "operation_index": 4,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.5414255168288946,
+      "z_drop": 0.5414255168288946,
+      "rot_drift_deg": 0.0003197721402932401,
+      "start_pos_isaac": [
+        79.887787,
+        562.319458,
+        0.556102
+      ],
+      "end_pos_isaac": [
+        79.887787,
+        562.319458,
+        0.014676
+      ],
+      "moving_aabb_size_isaac": [
+        0.891367,
+        0.863682,
+        0.029376
+      ]
+    },
+    {
+      "case": "Chair/tobias",
+      "category": "Chair",
+      "name": "tobias",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.33806285263920527,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.991633149982159,
+      "start_pos_isaac": [
+        1.126957,
+        578.972412,
+        0.025922
+      ],
+      "end_pos_isaac": [
+        1.107056,
+        578.948059,
+        0.362519
+      ],
+      "moving_aabb_size_isaac": [
+        1.161001,
+        1.147183,
+        0.725038
+      ]
+    },
+    {
+      "case": "Chair/trogen",
+      "category": "Chair",
+      "name": "trogen",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.3279675167731662,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.06315472211240172,
+      "start_pos_isaac": [
+        21.380651,
+        581.888123,
+        -0.303257
+      ],
+      "end_pos_isaac": [
+        21.380619,
+        581.887573,
+        0.02471
+      ],
+      "moving_aabb_size_isaac": [
+        1.156619,
+        0.509924,
+        0.049424
+      ]
+    },
+    {
+      "case": "Chair/trogen",
+      "category": "Chair",
+      "name": "trogen",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.07704208604991436,
+      "z_drop": 0.07704208604991436,
+      "rot_drift_deg": 9.906717906123557e-05,
+      "start_pos_isaac": [
+        41.30756,
+        580.28717,
+        0.101747
+      ],
+      "end_pos_isaac": [
+        41.30756,
+        580.28717,
+        0.024705
+      ],
+      "moving_aabb_size_isaac": [
+        1.00321,
+        1.188512,
+        0.049424
+      ]
+    },
+    {
+      "case": "Chair/trogen",
+      "category": "Chair",
+      "name": "trogen",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "0",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.062212538564841234,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.034614452319412445,
+      "start_pos_isaac": [
+        63.435162,
+        581.542175,
+        0.067297
+      ],
+      "end_pos_isaac": [
+        63.435143,
+        581.541687,
+        0.129508
+      ],
+      "moving_aabb_size_isaac": [
+        1.122438,
+        0.29351,
+        0.259037
+      ]
+    },
+    {
+      "case": "Chair/trogen",
+      "category": "Chair",
+      "name": "trogen",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1",
+        "0",
+        "4",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.2465167585760355,
+      "z_drop": 0.2465167585760355,
+      "rot_drift_deg": 0.0006465744563416473,
+      "start_pos_isaac": [
+        82.682228,
+        582.014954,
+        0.266881
+      ],
+      "end_pos_isaac": [
+        82.682228,
+        582.014954,
+        0.020364
+      ],
+      "moving_aabb_size_isaac": [
+        1.138179,
+        0.189363,
+        0.040746
+      ]
+    },
+    {
+      "case": "Chair/trogen",
+      "category": "Chair",
+      "name": "trogen",
+      "operation_index": 4,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "0",
+        "4",
+        "3",
+        "5"
+      ],
+      "release_stable": true,
+      "drift": 1.434236764907837e-07,
+      "z_drop": 0.0,
+      "rot_drift_deg": 3.7058103879442906e-05,
+      "start_pos_isaac": [
+        2.472293,
+        599.986633,
+        0.023355
+      ],
+      "end_pos_isaac": [
+        2.472293,
+        599.986633,
+        0.023355
+      ],
+      "moving_aabb_size_isaac": [
+        1.159891,
+        1.00279,
+        0.04671
+      ]
+    },
+    {
+      "case": "Chair/vedbo",
+      "category": "Chair",
+      "name": "vedbo",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.1997571868231733,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.05876971551983452,
+      "start_pos_isaac": [
+        21.121059,
+        602.276184,
+        -0.181839
+      ],
+      "end_pos_isaac": [
+        21.121054,
+        602.276306,
+        0.017918
+      ],
+      "moving_aabb_size_isaac": [
+        0.89668,
+        0.564242,
+        0.03584
+      ]
+    },
+    {
+      "case": "Chair/vedbo",
+      "category": "Chair",
+      "name": "vedbo",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.4128465194145825,
+      "z_drop": 0.203277587890625,
+      "rot_drift_deg": 0.3464914543690517,
+      "start_pos_isaac": [
+        41.265953,
+        600.510498,
+        0.435717
+      ],
+      "end_pos_isaac": [
+        40.90662,
+        600.510986,
+        0.23244
+      ],
+      "moving_aabb_size_isaac": [
+        1.048582,
+        1.032648,
+        0.46489
+      ]
+    },
+    {
+      "case": "Chair/vedbo",
+      "category": "Chair",
+      "name": "vedbo",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.03885461390018463,
+      "z_drop": 0.03885461390018463,
+      "rot_drift_deg": 5.8156965164257276e-05,
+      "start_pos_isaac": [
+        60.869637,
+        602.554504,
+        0.106992
+      ],
+      "end_pos_isaac": [
+        60.869637,
+        602.554504,
+        0.068137
+      ],
+      "moving_aabb_size_isaac": [
+        0.966748,
+        0.818285,
+        0.136294
+      ]
+    },
+    {
+      "case": "Chair/voxlov",
+      "category": "Chair",
+      "name": "voxlov",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.3391899988055229,
+      "z_drop": 0.3391899988055229,
+      "rot_drift_deg": 0.00023976298980446915,
+      "start_pos_isaac": [
+        83.037796,
+        600.087158,
+        0.35498
+      ],
+      "end_pos_isaac": [
+        83.037796,
+        600.087158,
+        0.01579
+      ],
+      "moving_aabb_size_isaac": [
+        0.092439,
+        0.694622,
+        0.031595
+      ]
+    },
+    {
+      "case": "Chair/voxlov",
+      "category": "Chair",
+      "name": "voxlov",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.7677840106189251,
+      "z_drop": 0.7677840106189251,
+      "rot_drift_deg": 6.965453571885133e-05,
+      "start_pos_isaac": [
+        4.186442,
+        622.061768,
+        0.787779
+      ],
+      "end_pos_isaac": [
+        4.186442,
+        622.061768,
+        0.019995
+      ],
+      "moving_aabb_size_isaac": [
+        0.495599,
+        0.364664,
+        0.039991
+      ]
+    },
+    {
+      "case": "Chair/voxlov",
+      "category": "Chair",
+      "name": "voxlov",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.3492714017681703,
+      "z_drop": 0.34927140176296234,
+      "rot_drift_deg": 8.081588812691843e-05,
+      "start_pos_isaac": [
+        21.644344,
+        619.762512,
+        0.441719
+      ],
+      "end_pos_isaac": [
+        21.644346,
+        619.762512,
+        0.092448
+      ],
+      "moving_aabb_size_isaac": [
+        1.115732,
+        1.723862,
+        0.184901
+      ]
+    },
+    {
+      "case": "Chair/voxlov",
+      "category": "Chair",
+      "name": "voxlov",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.16079699934452624,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.023917563890540405,
+      "start_pos_isaac": [
+        42.530613,
+        621.466675,
+        0.105902
+      ],
+      "end_pos_isaac": [
+        42.53067,
+        621.466736,
+        0.266699
+      ],
+      "moving_aabb_size_isaac": [
+        0.139596,
+        0.888502,
+        0.533407
+      ]
+    },
+    {
+      "case": "Chair/voxlov",
+      "category": "Chair",
+      "name": "voxlov",
+      "operation_index": 4,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.5157701941954982,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03950937937079328,
+      "start_pos_isaac": [
+        61.2924,
+        622.47699,
+        -0.483031
+      ],
+      "end_pos_isaac": [
+        61.292332,
+        622.476501,
+        0.032739
+      ],
+      "moving_aabb_size_isaac": [
+        0.76728,
+        0.896475,
+        0.065486
+      ]
+    },
+    {
+      "case": "Chair/yngvar",
+      "category": "Chair",
+      "name": "yngvar",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.03702407283708453,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.04680256056443916,
+      "start_pos_isaac": [
+        82.131096,
+        619.835754,
+        -0.004784
+      ],
+      "end_pos_isaac": [
+        82.131096,
+        619.835754,
+        0.03224
+      ],
+      "moving_aabb_size_isaac": [
+        0.693033,
+        0.693033,
+        0.064496
+      ]
+    },
+    {
+      "case": "Chair/yngvar",
+      "category": "Chair",
+      "name": "yngvar",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.02612134819593906,
+      "z_drop": 0.0261213481426239,
+      "rot_drift_deg": 0.0001548228525547479,
+      "start_pos_isaac": [
+        0.503644,
+        641.257263,
+        0.361359
+      ],
+      "end_pos_isaac": [
+        0.503646,
+        641.257263,
+        0.335237
+      ],
+      "moving_aabb_size_isaac": [
+        0.345039,
+        0.73117,
+        0.670475
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.3765055947005749,
+      "z_drop": 0.3765055947005749,
+      "rot_drift_deg": 0.0014027082689052203,
+      "start_pos_isaac": [
+        20.864302,
+        641.026367,
+        0.426501
+      ],
+      "end_pos_isaac": [
+        20.864302,
+        641.026367,
+        0.049995
+      ],
+      "moving_aabb_size_isaac": [
+        0.321193,
+        0.070786,
+        0.099996
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.024236814605579065,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.17816466129511502,
+      "start_pos_isaac": [
+        41.16058,
+        639.619019,
+        -0.008054
+      ],
+      "end_pos_isaac": [
+        41.160622,
+        639.618958,
+        0.016183
+      ],
+      "moving_aabb_size_isaac": [
+        0.062675,
+        0.322973,
+        0.032379
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 2,
+      "moving_part": "6",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 1.0017487835429566,
+      "z_drop": 1.0017487835139036,
+      "rot_drift_deg": 0.0006097235119801054,
+      "start_pos_isaac": [
+        60.420681,
+        643.299744,
+        1.030257
+      ],
+      "end_pos_isaac": [
+        60.420689,
+        643.299744,
+        0.028508
+      ],
+      "moving_aabb_size_isaac": [
+        0.257969,
+        1.079928,
+        0.057033
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "6"
+      ],
+      "release_stable": true,
+      "drift": 0.0032774934671579727,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03847589130999004,
+      "start_pos_isaac": [
+        80.317955,
+        641.272949,
+        0.025226
+      ],
+      "end_pos_isaac": [
+        80.317978,
+        641.272949,
+        0.028504
+      ],
+      "moving_aabb_size_isaac": [
+        0.312025,
+        1.049849,
+        0.057034
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 4,
+      "moving_part": "7",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "6",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.8498478934171602,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.5658090339004371,
+      "start_pos_isaac": [
+        0.004113,
+        664.480774,
+        -0.305267
+      ],
+      "end_pos_isaac": [
+        -0.001838,
+        664.494263,
+        0.544453
+      ],
+      "moving_aabb_size_isaac": [
+        0.057034,
+        0.131094,
+        1.085525
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 5,
+      "moving_part": "5",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "6",
+        "2",
+        "7"
+      ],
+      "release_stable": false,
+      "drift": 0.12876336515962464,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.036111167699461044,
+      "start_pos_isaac": [
+        23.825066,
+        659.979492,
+        -0.100249
+      ],
+      "end_pos_isaac": [
+        23.825182,
+        659.97937,
+        0.028514
+      ],
+      "moving_aabb_size_isaac": [
+        0.421738,
+        1.04741,
+        0.057033
+      ]
+    },
+    {
+      "case": "Misc/lantliv",
+      "category": "Misc",
+      "name": "lantliv",
+      "operation_index": 6,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "6",
+        "2",
+        "7",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.4795161695377768,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.028642225455834728,
+      "start_pos_isaac": [
+        45.072815,
+        659.988464,
+        -0.357611
+      ],
+      "end_pos_isaac": [
+        45.072861,
+        659.988403,
+        0.121905
+      ],
+      "moving_aabb_size_isaac": [
+        1.502388,
+        1.291258,
+        0.243823
+      ]
+    },
+    {
+      "case": "Misc/lantliv_2",
+      "category": "Misc",
+      "name": "lantliv_2",
+      "operation_index": 0,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.2967378778226037,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.8433148964653698,
+      "start_pos_isaac": [
+        59.682827,
+        660.651123,
+        -0.053734
+      ],
+      "end_pos_isaac": [
+        59.682907,
+        660.643311,
+        0.242902
+      ],
+      "moving_aabb_size_isaac": [
+        0.521339,
+        0.036512,
+        0.484866
+      ]
+    },
+    {
+      "case": "Misc/lantliv_2",
+      "category": "Misc",
+      "name": "lantliv_2",
+      "operation_index": 1,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.3993500327869818,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.9297633179669745,
+      "start_pos_isaac": [
+        80.934227,
+        661.425964,
+        -0.236307
+      ],
+      "end_pos_isaac": [
+        80.934319,
+        661.423157,
+        0.163033
+      ],
+      "moving_aabb_size_isaac": [
+        0.450778,
+        0.036512,
+        0.325467
+      ]
+    },
+    {
+      "case": "Misc/lantliv_2",
+      "category": "Misc",
+      "name": "lantliv_2",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.49485192824823665,
+      "z_drop": 0.4948519244790077,
+      "rot_drift_deg": 0.0002427181024619487,
+      "start_pos_isaac": [
+        1.264983,
+        681.777344,
+        0.580523
+      ],
+      "end_pos_isaac": [
+        1.264985,
+        681.777283,
+        0.085671
+      ],
+      "moving_aabb_size_isaac": [
+        1.470856,
+        1.742649,
+        0.171343
+      ]
+    },
+    {
+      "case": "Misc/lantliv_2",
+      "category": "Misc",
+      "name": "lantliv_2",
+      "operation_index": 3,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "4",
+        "5",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 7.711350917816162e-07,
+      "z_drop": 0.0,
+      "rot_drift_deg": 4.080287782440209e-05,
+      "start_pos_isaac": [
+        20.840481,
+        679.789185,
+        0.012852
+      ],
+      "end_pos_isaac": [
+        20.840481,
+        679.789185,
+        0.012852
+      ],
+      "moving_aabb_size_isaac": [
+        0.718929,
+        0.718929,
+        0.02571
+      ]
+    },
+    {
+      "case": "Misc/lantliv_2",
+      "category": "Misc",
+      "name": "lantliv_2",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.7288279369711823,
+      "z_drop": 0.0,
+      "rot_drift_deg": 88.56524087436317,
+      "start_pos_isaac": [
+        43.182434,
+        679.878906,
+        -0.639568
+      ],
+      "end_pos_isaac": [
+        43.144806,
+        679.536377,
+        0.002653
+      ],
+      "moving_aabb_size_isaac": [
+        0.743665,
+        0.02571,
+        0.743665
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.733285446697062,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.13921186674198638,
+      "start_pos_isaac": [
+        59.963535,
+        681.438782,
+        -0.717522
+      ],
+      "end_pos_isaac": [
+        59.963234,
+        681.438293,
+        0.015764
+      ],
+      "moving_aabb_size_isaac": [
+        0.077736,
+        0.480022,
+        0.03155
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "6",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.9551855743568665,
+      "z_drop": 0.0,
+      "rot_drift_deg": 47.4412465325401,
+      "start_pos_isaac": [
+        80.863686,
+        679.30188,
+        -1.146252
+      ],
+      "end_pos_isaac": [
+        81.034943,
+        679.27832,
+        -0.20684
+      ],
+      "moving_aabb_size_isaac": [
+        0.031549,
+        0.074866,
+        0.479867
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "6",
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.13783710632130391,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.03144002825170405,
+      "start_pos_isaac": [
+        1.457084,
+        701.855103,
+        0.017665
+      ],
+      "end_pos_isaac": [
+        1.457107,
+        701.855103,
+        0.155502
+      ],
+      "moving_aabb_size_isaac": [
+        0.031549,
+        0.423875,
+        0.311004
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "6",
+        "0",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.9596538122035754,
+      "z_drop": 0.0,
+      "rot_drift_deg": 45.340860450768744,
+      "start_pos_isaac": [
+        19.294228,
+        700.519043,
+        -1.102104
+      ],
+      "end_pos_isaac": [
+        19.292692,
+        700.35498,
+        -0.156579
+      ],
+      "moving_aabb_size_isaac": [
+        0.233792,
+        0.031549,
+        0.45985
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 4,
+      "moving_part": "5",
+      "fixed_parts": [
+        "6",
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.2518027722835541,
+      "z_drop": 0.2518027722835541,
+      "rot_drift_deg": 0.000276517237142498,
+      "start_pos_isaac": [
+        40.620361,
+        702.023865,
+        0.335531
+      ],
+      "end_pos_isaac": [
+        40.620361,
+        702.023865,
+        0.083728
+      ],
+      "moving_aabb_size_isaac": [
+        0.214751,
+        0.451758,
+        0.167467
+      ]
+    },
+    {
+      "case": "Misc/satsumas",
+      "category": "Misc",
+      "name": "satsumas",
+      "operation_index": 5,
+      "moving_part": "1",
+      "fixed_parts": [
+        "6",
+        "0",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.9818481726064601,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.3355336964113245,
+      "start_pos_isaac": [
+        61.417999,
+        699.780579,
+        -2.226243
+      ],
+      "end_pos_isaac": [
+        61.416908,
+        699.791016,
+        -1.24445
+      ],
+      "moving_aabb_size_isaac": [
+        1.884932,
+        0.9251,
+        0.496537
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.9850852238986729,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.463052622146002,
+      "start_pos_isaac": [
+        82.599167,
+        698.437561,
+        -0.727608
+      ],
+      "end_pos_isaac": [
+        82.592255,
+        698.447693,
+        0.257401
+      ],
+      "moving_aabb_size_isaac": [
+        0.429094,
+        1.18948,
+        0.576788
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.5652518159393191,
+      "z_drop": 0.5652492418885231,
+      "rot_drift_deg": 0.2501694953508366,
+      "start_pos_isaac": [
+        0.028804,
+        719.990967,
+        -0.099506
+      ],
+      "end_pos_isaac": [
+        0.030509,
+        719.990967,
+        -0.664755
+      ],
+      "moving_aabb_size_isaac": [
+        0.115882,
+        0.094785,
+        1.328986
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.6217110771685839,
+      "z_drop": 0.6217110771685839,
+      "rot_drift_deg": 3.465942462776345e-05,
+      "start_pos_isaac": [
+        20.240736,
+        721.501709,
+        0.645731
+      ],
+      "end_pos_isaac": [
+        20.240736,
+        721.501709,
+        0.02402
+      ],
+      "moving_aabb_size_isaac": [
+        0.138635,
+        1.328214,
+        0.048045
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 3,
+      "moving_part": "6",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.1996129946503552,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.036924651863040184,
+      "start_pos_isaac": [
+        39.709259,
+        723.69458,
+        0.454263
+      ],
+      "end_pos_isaac": [
+        39.709198,
+        723.695007,
+        0.653876
+      ],
+      "moving_aabb_size_isaac": [
+        0.043283,
+        0.322316,
+        1.307762
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 4,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2",
+        "5",
+        "6"
+      ],
+      "release_stable": true,
+      "drift": 0.00125577533427596,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.036117154203197624,
+      "start_pos_isaac": [
+        59.849854,
+        722.112671,
+        0.09258
+      ],
+      "end_pos_isaac": [
+        59.849861,
+        722.11261,
+        0.093834
+      ],
+      "moving_aabb_size_isaac": [
+        1.23085,
+        0.82293,
+        0.187675
+      ]
+    },
+    {
+      "case": "Misc/vittsjo_2",
+      "category": "Misc",
+      "name": "vittsjo_2",
+      "operation_index": 5,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "1",
+        "2",
+        "5",
+        "6",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.12282412547405377,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.02560179444789741,
+      "start_pos_isaac": [
+        83.533356,
+        721.795227,
+        -0.116881
+      ],
+      "end_pos_isaac": [
+        83.53334,
+        721.795227,
+        0.005943
+      ],
+      "moving_aabb_size_isaac": [
+        1.175498,
+        1.28995,
+        0.011904
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 0,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.9326334148645401,
+      "z_drop": 0.9326334148645401,
+      "rot_drift_deg": 6.384491697133601e-05,
+      "start_pos_isaac": [
+        1.471014,
+        742.959778,
+        0.999281
+      ],
+      "end_pos_isaac": [
+        1.471014,
+        742.959778,
+        0.066647
+      ],
+      "moving_aabb_size_isaac": [
+        0.965066,
+        1.278426,
+        0.133295
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 1,
+      "moving_part": "6",
+      "fixed_parts": [
+        "1",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.28410714864730835,
+      "z_drop": 0.28410714864730835,
+      "rot_drift_deg": 0.00016094482453781267,
+      "start_pos_isaac": [
+        21.049358,
+        744.012146,
+        0.623836
+      ],
+      "end_pos_isaac": [
+        21.049358,
+        744.012146,
+        0.339729
+      ],
+      "moving_aabb_size_isaac": [
+        1.409117,
+        0.363358,
+        0.679463
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.5373704303056002,
+      "z_drop": 0.5373704303056002,
+      "rot_drift_deg": 0.00011702617784310966,
+      "start_pos_isaac": [
+        41.164417,
+        740.67981,
+        0.558768
+      ],
+      "end_pos_isaac": [
+        41.164417,
+        740.67981,
+        0.021397
+      ],
+      "moving_aabb_size_isaac": [
+        1.059265,
+        1.127183,
+        0.04281
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.15639861960948379,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.01735710888760381,
+      "start_pos_isaac": [
+        65.038582,
+        742.566589,
+        0.084931
+      ],
+      "end_pos_isaac": [
+        65.038582,
+        742.566772,
+        0.24133
+      ],
+      "moving_aabb_size_isaac": [
+        1.466654,
+        1.676035,
+        0.482676
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 4,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 1.2148591950535774,
+      "z_drop": 1.2148591950535774,
+      "rot_drift_deg": 0.00012142810503658496,
+      "start_pos_isaac": [
+        79.383751,
+        742.260803,
+        1.253191
+      ],
+      "end_pos_isaac": [
+        79.383751,
+        742.260803,
+        0.038332
+      ],
+      "moving_aabb_size_isaac": [
+        1.740035,
+        1.424569,
+        0.076692
+      ]
+    },
+    {
+      "case": "Shelf/pinnig",
+      "category": "Shelf",
+      "name": "pinnig",
+      "operation_index": 5,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "5",
+        "6",
+        "4",
+        "3",
+        "0"
+      ],
+      "release_stable": true,
+      "drift": 0.0,
+      "z_drop": 0.0,
+      "rot_drift_deg": 6.613302226726412e-06,
+      "start_pos_isaac": [
+        2.316008,
+        759.997498,
+        0.021405
+      ],
+      "end_pos_isaac": [
+        2.316008,
+        759.997498,
+        0.021405
+      ],
+      "moving_aabb_size_isaac": [
+        0.706562,
+        0.945478,
+        0.04281
+      ]
+    },
+    {
+      "case": "Table/applaro",
+      "category": "Table",
+      "name": "applaro",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.5660517559885088,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.043383065172581906,
+      "start_pos_isaac": [
+        25.033161,
+        758.770203,
+        -0.388465
+      ],
+      "end_pos_isaac": [
+        25.033047,
+        758.769958,
+        0.177587
+      ],
+      "moving_aabb_size_isaac": [
+        0.136792,
+        0.498846,
+        0.355183
+      ]
+    },
+    {
+      "case": "Table/applaro",
+      "category": "Table",
+      "name": "applaro",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "4",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 1.0144867598268341,
+      "z_drop": 0.0,
+      "rot_drift_deg": 5.859455387647146,
+      "start_pos_isaac": [
+        41.50845,
+        758.928528,
+        -1.165422
+      ],
+      "end_pos_isaac": [
+        41.527916,
+        758.910034,
+        -0.151291
+      ],
+      "moving_aabb_size_isaac": [
+        0.15539,
+        0.136503,
+        0.519142
+      ]
+    },
+    {
+      "case": "Table/applaro",
+      "category": "Table",
+      "name": "applaro",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1"
+      ],
+      "release_stable": true,
+      "drift": 0.03828845173120499,
+      "z_drop": 0.03828845173120499,
+      "rot_drift_deg": 0.0001818838466195233,
+      "start_pos_isaac": [
+        60.794399,
+        760.306458,
+        0.105483
+      ],
+      "end_pos_isaac": [
+        60.794399,
+        760.306458,
+        0.067194
+      ],
+      "moving_aabb_size_isaac": [
+        0.383855,
+        0.495596,
+        0.134408
+      ]
+    },
+    {
+      "case": "Table/applaro",
+      "category": "Table",
+      "name": "applaro",
+      "operation_index": 3,
+      "moving_part": "3",
+      "fixed_parts": [
+        "4",
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.42186938288533443,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0739951201008891,
+      "start_pos_isaac": [
+        80.961761,
+        761.483704,
+        -0.35468
+      ],
+      "end_pos_isaac": [
+        80.96183,
+        761.48407,
+        0.067189
+      ],
+      "moving_aabb_size_isaac": [
+        0.519628,
+        0.167573,
+        0.134405
+      ]
+    },
+    {
+      "case": "Table/bjorkudden_2",
+      "category": "Table",
+      "name": "bjorkudden_2",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.3447487317457934,
+      "z_drop": 0.34474579244852066,
+      "rot_drift_deg": 1.577289524093209,
+      "start_pos_isaac": [
+        2.587254,
+        780.355591,
+        0.418193
+      ],
+      "end_pos_isaac": [
+        2.58583,
+        780.355591,
+        0.073447
+      ],
+      "moving_aabb_size_isaac": [
+        1.423491,
+        0.894273,
+        0.107753
+      ]
+    },
+    {
+      "case": "Table/bjorkudden_2",
+      "category": "Table",
+      "name": "bjorkudden_2",
+      "operation_index": 1,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.3073118688629335,
+      "z_drop": 0.30731186270713806,
+      "rot_drift_deg": 0.0029195263906463768,
+      "start_pos_isaac": [
+        21.976669,
+        781.764954,
+        0.764911
+      ],
+      "end_pos_isaac": [
+        21.976677,
+        781.765015,
+        0.457599
+      ],
+      "moving_aabb_size_isaac": [
+        0.120723,
+        0.069723,
+        0.915203
+      ]
+    },
+    {
+      "case": "Table/bjorkudden_2",
+      "category": "Table",
+      "name": "bjorkudden_2",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "2",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.31827768535808176,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.021058660957908936,
+      "start_pos_isaac": [
+        44.001011,
+        781.965149,
+        0.119991
+      ],
+      "end_pos_isaac": [
+        44.000729,
+        781.965149,
+        0.438269
+      ],
+      "moving_aabb_size_isaac": [
+        0.215249,
+        0.394542,
+        0.87655
+      ]
+    },
+    {
+      "case": "Table/bjorkudden_2",
+      "category": "Table",
+      "name": "bjorkudden_2",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.16711631417274475,
+      "z_drop": 0.16711631417274475,
+      "rot_drift_deg": 0.0002732075668005747,
+      "start_pos_isaac": [
+        61.536938,
+        780.449036,
+        0.451156
+      ],
+      "end_pos_isaac": [
+        61.536938,
+        780.449036,
+        0.28404
+      ],
+      "moving_aabb_size_isaac": [
+        0.069723,
+        0.795741,
+        0.568094
+      ]
+    },
+    {
+      "case": "Table/bjorkudden_2",
+      "category": "Table",
+      "name": "bjorkudden_2",
+      "operation_index": 4,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1",
+        "2",
+        "0",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.4178597668164556,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.38565775679293757,
+      "start_pos_isaac": [
+        83.021515,
+        782.910767,
+        0.040132
+      ],
+      "end_pos_isaac": [
+        83.020447,
+        782.908081,
+        0.457982
+      ],
+      "moving_aabb_size_isaac": [
+        0.134153,
+        0.063384,
+        0.915377
+      ]
+    },
+    {
+      "case": "Table/falholmen",
+      "category": "Table",
+      "name": "falholmen",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.03392410639786399,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.05378691003507356,
+      "start_pos_isaac": [
+        0.266429,
+        802.384277,
+        0.458519
+      ],
+      "end_pos_isaac": [
+        0.266409,
+        802.384766,
+        0.49244
+      ],
+      "moving_aabb_size_isaac": [
+        1.014393,
+        0.150046,
+        0.984881
+      ]
+    },
+    {
+      "case": "Table/falholmen",
+      "category": "Table",
+      "name": "falholmen",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "3",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.5296415090560913,
+      "z_drop": 0.5296415090560913,
+      "rot_drift_deg": 4.154641875820248e-05,
+      "start_pos_isaac": [
+        17.863888,
+        799.055054,
+        1.152803
+      ],
+      "end_pos_isaac": [
+        17.863888,
+        799.055054,
+        0.623162
+      ],
+      "moving_aabb_size_isaac": [
+        0.699907,
+        1.381265,
+        1.246328
+      ]
+    },
+    {
+      "case": "Table/falholmen",
+      "category": "Table",
+      "name": "falholmen",
+      "operation_index": 2,
+      "moving_part": "0",
+      "fixed_parts": [
+        "3",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.21250175956486067,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.07008337869470546,
+      "start_pos_isaac": [
+        41.833103,
+        800.553101,
+        0.082347
+      ],
+      "end_pos_isaac": [
+        41.833054,
+        800.553284,
+        0.294849
+      ],
+      "moving_aabb_size_isaac": [
+        1.498106,
+        0.08216,
+        0.589708
+      ]
+    },
+    {
+      "case": "Table/fjallbo",
+      "category": "Table",
+      "name": "fjallbo",
+      "operation_index": 0,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.48442232608795166,
+      "z_drop": 0.48442232608795166,
+      "rot_drift_deg": 6.927677407759618e-05,
+      "start_pos_isaac": [
+        62.199776,
+        801.845093,
+        0.913454
+      ],
+      "end_pos_isaac": [
+        62.199776,
+        801.845093,
+        0.429032
+      ],
+      "moving_aabb_size_isaac": [
+        0.034547,
+        0.878984,
+        0.858082
+      ]
+    },
+    {
+      "case": "Table/fjallbo",
+      "category": "Table",
+      "name": "fjallbo",
+      "operation_index": 1,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.8783518355341978,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.07346217791449065,
+      "start_pos_isaac": [
+        81.692352,
+        801.649902,
+        -0.444378
+      ],
+      "end_pos_isaac": [
+        81.692863,
+        801.649048,
+        0.433974
+      ],
+      "moving_aabb_size_isaac": [
+        0.033529,
+        0.846732,
+        0.867921
+      ]
+    },
+    {
+      "case": "Table/fjallbo",
+      "category": "Table",
+      "name": "fjallbo",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.0837951952269368,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.017465430036511458,
+      "start_pos_isaac": [
+        0.501886,
+        819.794128,
+        0.16995
+      ],
+      "end_pos_isaac": [
+        0.502451,
+        819.793945,
+        0.253743
+      ],
+      "moving_aabb_size_isaac": [
+        1.515331,
+        1.793999,
+        0.507486
+      ]
+    },
+    {
+      "case": "Table/fjallbo",
+      "category": "Table",
+      "name": "fjallbo",
+      "operation_index": 3,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "3",
+        "4",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.32702735859299104,
+      "z_drop": 0.0,
+      "rot_drift_deg": 3.348595906832035,
+      "start_pos_isaac": [
+        23.574839,
+        820.501587,
+        0.024341
+      ],
+      "end_pos_isaac": [
+        23.607979,
+        820.806335,
+        0.138258
+      ],
+      "moving_aabb_size_isaac": [
+        0.903608,
+        1.639139,
+        0.223385
+      ]
+    },
+    {
+      "case": "Table/gladom",
+      "category": "Table",
+      "name": "gladom",
+      "operation_index": 0,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.34636441990733147,
+      "z_drop": 0.34636441990733147,
+      "rot_drift_deg": 0.00010960272421466987,
+      "start_pos_isaac": [
+        41.996651,
+        821.670105,
+        0.369432
+      ],
+      "end_pos_isaac": [
+        41.996651,
+        821.670105,
+        0.023067
+      ],
+      "moving_aabb_size_isaac": [
+        1.591621,
+        1.367415,
+        0.046146
+      ]
+    },
+    {
+      "case": "Table/gladom",
+      "category": "Table",
+      "name": "gladom",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.029042835347354412,
+      "z_drop": 0.029042835347354412,
+      "rot_drift_deg": 0.00015447405645030554,
+      "start_pos_isaac": [
+        60.220634,
+        819.810425,
+        0.044574
+      ],
+      "end_pos_isaac": [
+        60.220634,
+        819.810425,
+        0.015531
+      ],
+      "moving_aabb_size_isaac": [
+        1.051215,
+        1.051226,
+        0.031078
+      ]
+    },
+    {
+      "case": "Table/gladom",
+      "category": "Table",
+      "name": "gladom",
+      "operation_index": 2,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "3",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.07659641653299332,
+      "z_drop": 0.07659641653299332,
+      "rot_drift_deg": 0.00019434558861209435,
+      "start_pos_isaac": [
+        81.509583,
+        822.086487,
+        0.115893
+      ],
+      "end_pos_isaac": [
+        81.509583,
+        822.086487,
+        0.039296
+      ],
+      "moving_aabb_size_isaac": [
+        1.182254,
+        1.182256,
+        0.078624
+      ]
+    },
+    {
+      "case": "Table/jokkmokk",
+      "category": "Table",
+      "name": "jokkmokk",
+      "operation_index": 0,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.5245154080212331,
+      "z_drop": 0.5240688323974609,
+      "rot_drift_deg": 0.16874022454710288,
+      "start_pos_isaac": [
+        2.802469,
+        839.861938,
+        0.545955
+      ],
+      "end_pos_isaac": [
+        2.780857,
+        839.863037,
+        0.021886
+      ],
+      "moving_aabb_size_isaac": [
+        0.816161,
+        0.084623,
+        0.043772
+      ]
+    },
+    {
+      "case": "Table/jokkmokk",
+      "category": "Table",
+      "name": "jokkmokk",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.15685901045799255,
+      "z_drop": 0.15685901045799255,
+      "rot_drift_deg": 6.90237844045419e-05,
+      "start_pos_isaac": [
+        20.730726,
+        840.335449,
+        0.545107
+      ],
+      "end_pos_isaac": [
+        20.730726,
+        840.335449,
+        0.388248
+      ],
+      "moving_aabb_size_isaac": [
+        0.333034,
+        0.043772,
+        0.776502
+      ]
+    },
+    {
+      "case": "Table/jokkmokk",
+      "category": "Table",
+      "name": "jokkmokk",
+      "operation_index": 2,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.6388853900134563,
+      "z_drop": 0.6388853900134563,
+      "rot_drift_deg": 0.0012384945394579247,
+      "start_pos_isaac": [
+        42.409557,
+        842.27832,
+        0.689556
+      ],
+      "end_pos_isaac": [
+        42.409557,
+        842.27832,
+        0.050671
+      ],
+      "moving_aabb_size_isaac": [
+        0.043772,
+        0.816036,
+        0.101349
+      ]
+    },
+    {
+      "case": "Table/jokkmokk",
+      "category": "Table",
+      "name": "jokkmokk",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.951082576320352,
+      "z_drop": 0.0,
+      "rot_drift_deg": 31.098746790355456,
+      "start_pos_isaac": [
+        59.992138,
+        841.562439,
+        -0.565014
+      ],
+      "end_pos_isaac": [
+        60.022991,
+        841.358826,
+        0.363505
+      ],
+      "moving_aabb_size_isaac": [
+        0.08934,
+        0.043773,
+        0.816154
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 1.0069004436463156,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.2399062707939787,
+      "start_pos_isaac": [
+        80.410995,
+        841.507324,
+        -0.450382
+      ],
+      "end_pos_isaac": [
+        80.43293,
+        841.487122,
+        0.556077
+      ],
+      "moving_aabb_size_isaac": [
+        0.139038,
+        0.207899,
+        1.538056
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 1,
+      "moving_part": "1",
+      "fixed_parts": [
+        "6",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.9818298972692342,
+      "z_drop": 0.0,
+      "rot_drift_deg": 1.2377951846022968,
+      "start_pos_isaac": [
+        2.968616,
+        859.133972,
+        -1.521248
+      ],
+      "end_pos_isaac": [
+        2.967217,
+        859.143555,
+        -0.539466
+      ],
+      "moving_aabb_size_isaac": [
+        0.139038,
+        1.375835,
+        0.823689
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 2,
+      "moving_part": "2",
+      "fixed_parts": [
+        "6",
+        "0",
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 1.0067271935277338,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.2512578725809895,
+      "start_pos_isaac": [
+        22.28928,
+        859.561157,
+        -0.895325
+      ],
+      "end_pos_isaac": [
+        22.311266,
+        859.540894,
+        0.110958
+      ],
+      "moving_aabb_size_isaac": [
+        0.139041,
+        0.200306,
+        1.538222
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 3,
+      "moving_part": "4",
+      "fixed_parts": [
+        "6",
+        "0",
+        "1",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.888935171502445,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.011876896721679167,
+      "start_pos_isaac": [
+        40.37635,
+        859.027222,
+        -0.436721
+      ],
+      "end_pos_isaac": [
+        40.376369,
+        859.026917,
+        0.452214
+      ],
+      "moving_aabb_size_isaac": [
+        0.139035,
+        1.330663,
+        0.904442
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 4,
+      "moving_part": "3",
+      "fixed_parts": [
+        "6",
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "release_stable": true,
+      "drift": 0.028567859902977943,
+      "z_drop": 0.028567859902977943,
+      "rot_drift_deg": 0.00012162004841667378,
+      "start_pos_isaac": [
+        63.499371,
+        861.046753,
+        0.039894
+      ],
+      "end_pos_isaac": [
+        63.499371,
+        861.046753,
+        0.011326
+      ],
+      "moving_aabb_size_isaac": [
+        1.205054,
+        1.205054,
+        0.022669
+      ]
+    },
+    {
+      "case": "Table/klingsbo_1",
+      "category": "Table",
+      "name": "klingsbo_1",
+      "operation_index": 5,
+      "moving_part": "5",
+      "fixed_parts": [
+        "6",
+        "0",
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "release_stable": true,
+      "drift": 0.0006199046038091183,
+      "z_drop": 0.0006199046038091183,
+      "rot_drift_deg": 0.05988094191480081,
+      "start_pos_isaac": [
+        81.993729,
+        862.001953,
+        0.005608
+      ],
+      "end_pos_isaac": [
+        81.993729,
+        862.001953,
+        0.004988
+      ],
+      "moving_aabb_size_isaac": [
+        1.17917,
+        1.179172,
+        0.01
+      ]
+    },
+    {
+      "case": "Table/lack",
+      "category": "Table",
+      "name": "lack",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.3691373495271187,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.0961098062624446,
+      "start_pos_isaac": [
+        1.040134,
+        877.591125,
+        -0.018141
+      ],
+      "end_pos_isaac": [
+        1.039921,
+        877.592041,
+        0.350995
+      ],
+      "moving_aabb_size_isaac": [
+        0.08869,
+        0.123472,
+        0.701993
+      ]
+    },
+    {
+      "case": "Table/lack",
+      "category": "Table",
+      "name": "lack",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "0",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.4921884873192462,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.19577995042271504,
+      "start_pos_isaac": [
+        21.354916,
+        881.150208,
+        -0.142314
+      ],
+      "end_pos_isaac": [
+        21.353947,
+        881.150696,
+        0.349873
+      ],
+      "moving_aabb_size_isaac": [
+        0.08869,
+        0.098144,
+        0.699571
+      ]
+    },
+    {
+      "case": "Table/lack",
+      "category": "Table",
+      "name": "lack",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.528399295660493,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.9137138044521931,
+      "start_pos_isaac": [
+        40.77528,
+        880.087463,
+        -0.177789
+      ],
+      "end_pos_isaac": [
+        40.769791,
+        880.087769,
+        0.350582
+      ],
+      "moving_aabb_size_isaac": [
+        0.08869,
+        0.100965,
+        0.699886
+      ]
+    },
+    {
+      "case": "Table/lack",
+      "category": "Table",
+      "name": "lack",
+      "operation_index": 3,
+      "moving_part": "5",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.3341385070488011,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.09526367869520395,
+      "start_pos_isaac": [
+        60.709381,
+        881.667664,
+        0.017337
+      ],
+      "end_pos_isaac": [
+        60.709263,
+        881.668457,
+        0.351474
+      ],
+      "moving_aabb_size_isaac": [
+        0.08869,
+        0.137904,
+        0.70296
+      ]
+    },
+    {
+      "case": "Table/lack",
+      "category": "Table",
+      "name": "lack",
+      "operation_index": 4,
+      "moving_part": "1",
+      "fixed_parts": [
+        "0",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.39321074023599534,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.019093572117912915,
+      "start_pos_isaac": [
+        82.910194,
+        879.733948,
+        -0.382134
+      ],
+      "end_pos_isaac": [
+        82.910126,
+        879.733948,
+        0.011077
+      ],
+      "moving_aabb_size_isaac": [
+        1.437039,
+        1.751438,
+        0.022173
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 0,
+      "moving_part": "4",
+      "fixed_parts": [
+        "1"
+      ],
+      "release_stable": false,
+      "drift": 0.709235677495599,
+      "z_drop": 0.7092356774955988,
+      "rot_drift_deg": 5.4239830530157784e-05,
+      "start_pos_isaac": [
+        -0.233934,
+        900.279053,
+        0.734281
+      ],
+      "end_pos_isaac": [
+        -0.233934,
+        900.279053,
+        0.025045
+      ],
+      "moving_aabb_size_isaac": [
+        1.060238,
+        0.738841,
+        0.05009
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 1,
+      "moving_part": "5",
+      "fixed_parts": [
+        "1",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.14973972913954153,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.00663735230027256,
+      "start_pos_isaac": [
+        22.26689,
+        899.775574,
+        0.10771
+      ],
+      "end_pos_isaac": [
+        22.266872,
+        899.77594,
+        0.257449
+      ],
+      "moving_aabb_size_isaac": [
+        0.641396,
+        1.081936,
+        0.330922
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 2,
+      "moving_part": "6",
+      "fixed_parts": [
+        "1",
+        "4",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.22605662321887546,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.08009399152330494,
+      "start_pos_isaac": [
+        41.022934,
+        904.310303,
+        0.00325
+      ],
+      "end_pos_isaac": [
+        41.022903,
+        904.310791,
+        0.229306
+      ],
+      "moving_aabb_size_isaac": [
+        1.191381,
+        0.05009,
+        0.458622
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 3,
+      "moving_part": "7",
+      "fixed_parts": [
+        "1",
+        "4",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.8714568536302437,
+      "z_drop": 0.0,
+      "rot_drift_deg": 90.01626607799508,
+      "start_pos_isaac": [
+        59.9883,
+        903.46814,
+        -0.828249
+      ],
+      "end_pos_isaac": [
+        59.986107,
+        903.29303,
+        0.02543
+      ],
+      "moving_aabb_size_isaac": [
+        1.226307,
+        0.05009,
+        0.313724
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 4,
+      "moving_part": "2",
+      "fixed_parts": [
+        "1",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "release_stable": true,
+      "drift": 0.013236522674560547,
+      "z_drop": 0.013236522674560547,
+      "rot_drift_deg": 0.00013811091760117036,
+      "start_pos_isaac": [
+        80.185715,
+        901.956238,
+        0.022764
+      ],
+      "end_pos_isaac": [
+        80.185715,
+        901.956238,
+        0.009528
+      ],
+      "moving_aabb_size_isaac": [
+        0.072725,
+        0.485216,
+        0.019083
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 5,
+      "moving_part": "3",
+      "fixed_parts": [
+        "1",
+        "4",
+        "5",
+        "6",
+        "7",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.001773262396454811,
+      "z_drop": 0.001773262396454811,
+      "rot_drift_deg": 4.279101250090702e-05,
+      "start_pos_isaac": [
+        3.718207,
+        922.147156,
+        0.011314
+      ],
+      "end_pos_isaac": [
+        3.718207,
+        922.147156,
+        0.00954
+      ],
+      "moving_aabb_size_isaac": [
+        0.425428,
+        0.309694,
+        0.019082
+      ]
+    },
+    {
+      "case": "Table/satsumas",
+      "category": "Table",
+      "name": "satsumas",
+      "operation_index": 6,
+      "moving_part": "0",
+      "fixed_parts": [
+        "1",
+        "4",
+        "5",
+        "6",
+        "7",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.055621201172471046,
+      "z_drop": 0.055621201172471046,
+      "rot_drift_deg": 0.00013426795182091877,
+      "start_pos_isaac": [
+        22.022896,
+        921.635132,
+        0.084448
+      ],
+      "end_pos_isaac": [
+        22.022896,
+        921.635132,
+        0.028827
+      ],
+      "moving_aabb_size_isaac": [
+        1.516419,
+        0.577034,
+        0.057661
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 0,
+      "moving_part": "2",
+      "fixed_parts": [
+        "7"
+      ],
+      "release_stable": false,
+      "drift": 0.494387264548345,
+      "z_drop": 0.49438717029988766,
+      "rot_drift_deg": 0.008860496303608273,
+      "start_pos_isaac": [
+        39.786346,
+        922.677368,
+        0.518246
+      ],
+      "end_pos_isaac": [
+        39.786354,
+        922.677063,
+        0.023859
+      ],
+      "moving_aabb_size_isaac": [
+        0.439206,
+        0.16104,
+        0.047733
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 1,
+      "moving_part": "3",
+      "fixed_parts": [
+        "7",
+        "2"
+      ],
+      "release_stable": false,
+      "drift": 0.9760032869820574,
+      "z_drop": 0.0,
+      "rot_drift_deg": 8.417647497181465,
+      "start_pos_isaac": [
+        64.477386,
+        921.88208,
+        -1.055059
+      ],
+      "end_pos_isaac": [
+        64.477234,
+        921.882324,
+        -0.079056
+      ],
+      "moving_aabb_size_isaac": [
+        0.363732,
+        0.368377,
+        0.046836
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 2,
+      "moving_part": "5",
+      "fixed_parts": [
+        "7",
+        "2",
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.7500685797630784,
+      "z_drop": 0.0,
+      "rot_drift_deg": 6.120499583623566,
+      "start_pos_isaac": [
+        82.744118,
+        918.967102,
+        -0.227372
+      ],
+      "end_pos_isaac": [
+        82.74408,
+        918.911865,
+        0.52066
+      ],
+      "moving_aabb_size_isaac": [
+        0.863124,
+        0.078578,
+        1.038916
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 3,
+      "moving_part": "6",
+      "fixed_parts": [
+        "7",
+        "2",
+        "3",
+        "5"
+      ],
+      "release_stable": false,
+      "drift": 0.18375637174691936,
+      "z_drop": 0.17435665428638458,
+      "rot_drift_deg": 41.97758697304811,
+      "start_pos_isaac": [
+        0.316726,
+        944.037231,
+        -0.194012
+      ],
+      "end_pos_isaac": [
+        0.342331,
+        943.985168,
+        -0.368368
+      ],
+      "moving_aabb_size_isaac": [
+        0.780562,
+        0.927439,
+        0.156825
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 4,
+      "moving_part": "4",
+      "fixed_parts": [
+        "7",
+        "2",
+        "3",
+        "5",
+        "6"
+      ],
+      "release_stable": false,
+      "drift": 0.43253282050919084,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.028565357190165314,
+      "start_pos_isaac": [
+        19.795855,
+        940.18158,
+        -0.411351
+      ],
+      "end_pos_isaac": [
+        19.795858,
+        940.181396,
+        0.021182
+      ],
+      "moving_aabb_size_isaac": [
+        1.364572,
+        1.138097,
+        0.04237
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 5,
+      "moving_part": "1",
+      "fixed_parts": [
+        "7",
+        "2",
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.21309729665517807,
+      "z_drop": 0.21309729665517807,
+      "rot_drift_deg": 0.0003600050753257596,
+      "start_pos_isaac": [
+        40.697754,
+        940.091125,
+        0.252678
+      ],
+      "end_pos_isaac": [
+        40.697754,
+        940.091125,
+        0.039581
+      ],
+      "moving_aabb_size_isaac": [
+        0.445955,
+        0.502559,
+        0.079172
+      ]
+    },
+    {
+      "case": "Table/vittsjo_2",
+      "category": "Table",
+      "name": "vittsjo_2",
+      "operation_index": 6,
+      "moving_part": "0",
+      "fixed_parts": [
+        "7",
+        "2",
+        "3",
+        "5",
+        "6",
+        "4",
+        "1"
+      ],
+      "release_stable": true,
+      "drift": 4.09269705414772e-06,
+      "z_drop": 4.09269705414772e-06,
+      "rot_drift_deg": 9.2444408934408e-05,
+      "start_pos_isaac": [
+        61.886124,
+        942.015076,
+        0.004992
+      ],
+      "end_pos_isaac": [
+        61.886124,
+        942.015076,
+        0.004988
+      ],
+      "moving_aabb_size_isaac": [
+        1.32301,
+        0.539599,
+        0.01
+      ]
+    },
+    {
+      "case": "Table/voxlov",
+      "category": "Table",
+      "name": "voxlov",
+      "operation_index": 0,
+      "moving_part": "0",
+      "fixed_parts": [
+        "3"
+      ],
+      "release_stable": false,
+      "drift": 0.4783024835820033,
+      "z_drop": 0.0,
+      "rot_drift_deg": 0.029430440642091348,
+      "start_pos_isaac": [
+        82.405304,
+        940.430359,
+        -0.392975
+      ],
+      "end_pos_isaac": [
+        82.40535,
+        940.42926,
+        0.085326
+      ],
+      "moving_aabb_size_isaac": [
+        1.096371,
+        1.100893,
+        0.170679
+      ]
+    },
+    {
+      "case": "Table/voxlov",
+      "category": "Table",
+      "name": "voxlov",
+      "operation_index": 1,
+      "moving_part": "2",
+      "fixed_parts": [
+        "3",
+        "0"
+      ],
+      "release_stable": false,
+      "drift": 0.25351047515871944,
+      "z_drop": 0.2535104751586914,
+      "rot_drift_deg": 3.5326013072886896e-05,
+      "start_pos_isaac": [
+        1.489418,
+        960.33606,
+        0.81833
+      ],
+      "end_pos_isaac": [
+        1.489418,
+        960.33606,
+        0.564819
+      ],
+      "moving_aabb_size_isaac": [
+        0.941376,
+        0.769472,
+        1.129639
+      ]
+    },
+    {
+      "case": "Table/voxlov",
+      "category": "Table",
+      "name": "voxlov",
+      "operation_index": 2,
+      "moving_part": "4",
+      "fixed_parts": [
+        "3",
+        "0",
+        "2"
+      ],
+      "release_stable": true,
+      "drift": 0.009495533246468638,
+      "z_drop": 0.0,
+      "rot_drift_deg": 2.339815110702376,
+      "start_pos_isaac": [
+        21.692381,
+        961.980591,
+        0.087854
+      ],
+      "end_pos_isaac": [
+        21.69239,
+        961.983765,
+        0.096803
+      ],
+      "moving_aabb_size_isaac": [
+        0.04905,
+        1.227325,
+        0.12616
+      ]
+    },
+    {
+      "case": "Table/voxlov",
+      "category": "Table",
+      "name": "voxlov",
+      "operation_index": 3,
+      "moving_part": "1",
+      "fixed_parts": [
+        "3",
+        "0",
+        "2",
+        "4"
+      ],
+      "release_stable": false,
+      "drift": 0.05297588650137186,
+      "z_drop": 0.05297588650137186,
+      "rot_drift_deg": 0.00012100716743776447,
+      "start_pos_isaac": [
+        42.0,
+        960.196899,
+        0.067449
+      ],
+      "end_pos_isaac": [
+        42.0,
+        960.196899,
+        0.014473
+      ],
+      "moving_aabb_size_isaac": [
+        1.10583,
+        1.693064,
+        0.028955
+      ]
+    }
+  ]
+}

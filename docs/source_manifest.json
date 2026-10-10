@@ -1,0 +1,276 @@
+[
+  {
+    "path": "LICENSE",
+    "origin": "handoff_clean/LICENSE",
+    "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "path": "docs/upstream/Manual2Skill_README.md",
+    "origin": "handoff_clean/README.md",
+    "source_sha256": "6bdee064c1707111e313ff734b8a2adfc831209c2d9a561a923721850abbc324"
+  },
+  {
+    "path": "tree/vlm_planner/inference/api_client.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/api_client.py",
+    "source_sha256": "7cb63fed09e9215229e0b2a0e87dba941ab0ae4680cca127a857a5c57aa0ab22"
+  },
+  {
+    "path": "tree/vlm_planner/inference/config.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/config.py",
+    "source_sha256": "3e9a3f3e022bdfcb380217bce5aed85c1f9ad4f4a037e926db6db4f8d333a4f3"
+  },
+  {
+    "path": "tree/vlm_planner/inference/convert.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/convert.py",
+    "source_sha256": "336afae08a8559f602b47675d064bfe9b9d0f80f24e62900721e1ed39bfaf7f9"
+  },
+  {
+    "path": "tree/vlm_planner/inference/run_anchor.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/run_anchor.py",
+    "source_sha256": "b896fe821bf3459c464e09e0b95b35e12bf932d380faec313bb96d6b062e52fd"
+  },
+  {
+    "path": "tree/vlm_planner/inference/stage1_associate.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/stage1_associate.py",
+    "source_sha256": "1263afc1082571677faa1f1c34a748008328b4664aded010b31a05eb60002681"
+  },
+  {
+    "path": "tree/vlm_planner/inference/stage2_planning_anchor.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/stage2_planning_anchor.py",
+    "source_sha256": "80e87d67d08588bb4d318bcf130663f3a802c934ea87bc5f68cbd3985a7f55dd"
+  },
+  {
+    "path": "tree/vlm_planner/inference/utils.py",
+    "origin": "handoff_clean/tree/vlm_planner/inference/utils.py",
+    "source_sha256": "6b06c0611094471ab4adcc5713a4c851f55a2e3d9f0f186906e4ee3c68690c35"
+  },
+  {
+    "path": "tree/vlm_planner/prompts/generate_json.txt",
+    "origin": "handoff_clean/tree/vlm_planner/prompts/generate_json.txt",
+    "source_sha256": "1272d6737146dc31f28200e954a6063846ee584b3fd59eadf20ee94114c601fb"
+  },
+  {
+    "path": "tree/vlm_planner/prompts/select_material.txt",
+    "origin": "handoff_clean/tree/vlm_planner/prompts/select_material.txt",
+    "source_sha256": "c5f8e638983690546c4537c35e7c3d9090d5edd195dd7ea0a0decafb544f0205"
+  },
+  {
+    "path": "tree/vlm_planner/prompts/planning_anchor_v2m.txt",
+    "origin": "handoff_clean/tree/vlm_planner/prompts/planning_anchor_v2m.txt",
+    "source_sha256": "41970bead5f4c38585d382b790435f6cb80947009a5f1700a1cf3938ee4f8d0f"
+  },
+  {
+    "path": "tree/vlm_planner/prompts/tree_ikea_manual.txt",
+    "origin": "handoff_clean/tree/vlm_planner/prompts/tree_ikea_manual.txt",
+    "source_sha256": "f57bc8f4a5f8b97c2100e94f5058580f9b1d7b8ad0d3d6b2849cb68ef3fd2bc3"
+  },
+  {
+    "path": "pose_estimation/visual_agent/__init__.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/__init__.py",
+    "source_sha256": "a0d14c5f5b83b43b0bf9eb5521d549b008eb6013db39d81d98e3d04e1d850e8e"
+  },
+  {
+    "path": "pose_estimation/visual_agent/cli.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/cli.py",
+    "source_sha256": "3d13f1318d96f6506080998eec6ff85aa591cee98c12d37e92975b3d061be3c1"
+  },
+  {
+    "path": "pose_estimation/visual_agent/clients.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/clients.py",
+    "source_sha256": "3b5c4dddbc19527c9c082689dffbef5fe580d3ca12b0f490e35bef1ae1317de6"
+  },
+  {
+    "path": "pose_estimation/visual_agent/data.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/data.py",
+    "source_sha256": "f5d3960fe4348713642e96659ed60fea903c4ede26a207d43546ef5f04f8a8a4"
+  },
+  {
+    "path": "pose_estimation/visual_agent/geometry.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/geometry.py",
+    "source_sha256": "bb84489c17585aea212fcd7a52e001939449f2b5f8b590f518f1cf8935d0ef27"
+  },
+  {
+    "path": "pose_estimation/visual_agent/instruction_converter.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/instruction_converter.py",
+    "source_sha256": "9cf4d623c51bf59553585ebbd7648c6d350a57078e5972495d2d0d4e4b7a0554"
+  },
+  {
+    "path": "pose_estimation/visual_agent/pipeline.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/pipeline.py",
+    "source_sha256": "1c356e82f73935c9039dcb0e9b8792417fabe926a99174adbcb55928c91a478a"
+  },
+  {
+    "path": "pose_estimation/visual_agent/prompts.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/prompts.py",
+    "source_sha256": "08e2ae1ec49f917c7be522788074665e792c074753e4fe90823a156e9aeaca14"
+  },
+  {
+    "path": "pose_estimation/visual_agent/rendering.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/rendering.py",
+    "source_sha256": "a75e7cd76dc47e528ecdc36ef666d288275153019f0cdac1db77c583eed7dfb8"
+  },
+  {
+    "path": "pose_estimation/visual_agent/run.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/run.py",
+    "source_sha256": "cbfbac13fcc747c4865198048608ee39dbde03a6ba0748a9bce989ece72fc924"
+  },
+  {
+    "path": "pose_estimation/visual_agent/simulation.py",
+    "origin": "handoff_clean/pose_estimation/visual_agent/simulation.py",
+    "source_sha256": "0cef88b25f95cbfaa6717b64a5bfa15dc630d2351b56c782b066ddf2b66a89d0"
+  },
+  {
+    "path": "pose_estimation/vlm_pose/vlm_client.py",
+    "origin": "handoff_clean/pose_estimation/vlm_pose/vlm_client.py",
+    "source_sha256": "b1405f26b2124d02a6368a9f6718d2dc8e29011e4b24c6aeaa5e219dcb9179ca"
+  },
+  {
+    "path": "artifacts/pose/gpt_text/pose.json",
+    "origin": "assemblydata/pose_baselines/text_strong_mixed_gpt52_gt55_0525_135202/stage2_current_ops_55.json",
+    "source_sha256": "c146cc0be588702bc5453c35358121b2c58b3265e4b8eb8974c0cb4ca54e325b",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_text/release.json",
+    "origin": "assemblydata/pose_baselines/text_strong_mixed_gpt52_gt55_0525_135202/stage3_release_aabb.json",
+    "source_sha256": "e8e983b2dbc890ce96424c2ccc316c0ef03a735b3175c930c27a8cc2dda79a40",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_structured/pose.json",
+    "origin": "assemblydata/pose_baselines/open6dor_structured_k1_gt55_gpt52_0525_1735/stage2_current_ops_55.json",
+    "source_sha256": "5e3bed6dac5a13e52ccde864eb2a079a52af2055e709a2edcd290b0b353f6615",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_structured/release.json",
+    "origin": "assemblydata/pose_baselines/open6dor_structured_k1_gt55_gpt52_0525_1735/stage3_release_aabb.json",
+    "source_sha256": "84bd20658c6a5fbba5533fa415c91689c50d8c999414358ba9f234c0ea513122",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_multiview/pose.json",
+    "origin": "assemblydata/pose_baselines/open6dor_input_enhanced_k3_structured_contact_gt55_gpt52_0526_0055/stage2_55.json",
+    "source_sha256": "6f0752d933461d79d22ee48127028eb5e9dafc2216e359cc4d5360e5bce54848",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_multiview/release.json",
+    "origin": "assemblydata/pose_baselines/open6dor_input_enhanced_k3_structured_contact_gt55_gpt52_0526_0055/stage3_55.json",
+    "source_sha256": "ba4f9a617624c7b75505318fc1b0b26a735edacdfe86249bb253a8fe0aa323cb",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_selfcheck/pose.json",
+    "origin": "assemblydata/pose_baselines/structured_k3_selfcheck_constrained_3round_gt55_gpt52_0526_0304/stage2_55.json",
+    "source_sha256": "bf00d459110eedd1474d9bf2efba1e114a1f3280c848e4482ff636128b180bda",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/gpt_selfcheck/release.json",
+    "origin": "assemblydata/pose_baselines/structured_k3_selfcheck_constrained_3round_gt55_gpt52_0526_0304/stage3_55.json",
+    "source_sha256": "595898e2db192bf1c1f281ec4158bb5293eec9b12dbc3ceed25c34dfd4f6bcae",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_text/pose.json",
+    "origin": "assemblydata/pose_baselines/text_haiku45_gt55_0526/stage2_current_ops_55.json",
+    "source_sha256": "3317c92bc10d828515bad5f6edd8d2b975277f7cc757d7e97edb0ae8e339af8f",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_text/release.json",
+    "origin": "assemblydata/pose_baselines/text_haiku45_gt55_0526/stage3_release_55.json",
+    "source_sha256": "e3fd994813ba8df4334ca4ecb28d12708768c667fbbeec461da19cfd2a02fe13",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_structured/pose.json",
+    "origin": "assemblydata/pose_baselines/open6dor_haiku45_15case_0526_0526_044152/stage2_current_ops_55.json",
+    "source_sha256": "dbdf8331191857b90a0f986d2b0dbca8659043fe098fb7c1a8eac6625e05f017",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_structured/release.json",
+    "origin": "assemblydata/pose_baselines/open6dor_haiku45_15case_0526_0526_044152/stage3_release_55.json",
+    "source_sha256": "4e4e1a7f21391c49434b86bac5743325f86a80d71d6af27d52c47a2d61621955",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_selfcheck/pose.json",
+    "origin": "assemblydata/pose_baselines/structured_k3_selfcheck_constrained_3round_haiku45_gt55_0526/stage2_current_ops_eval.json",
+    "source_sha256": "72822c3c336fbae46df99ea224d39d8d106f182dd63848ea3452b0ea3cfdcf93",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/pose/haiku_selfcheck/release.json",
+    "origin": "assemblydata/pose_baselines/structured_k3_selfcheck_constrained_3round_haiku45_gt55_0526/stage3_release_aabb.json",
+    "source_sha256": "7cd19d25f94c490ebda78574fd21fa7e75d4a2c3b6487e2f14f9c1e581479c23",
+    "changes": "Removed machine-local summary/data paths; numerical values unchanged."
+  },
+  {
+    "path": "artifacts/paper_prompts/stage1_output.json",
+    "origin": "attached_paper/appendix_materials/raw/stage1_output.json",
+    "source_sha256": "27763228d7d39adaf357e370a0be6f30ab07de6515578f6f2882a0bf2af8f932"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_iter2_selected_result.json",
+    "origin": "attached_paper/appendix_materials/raw/pose_iter2_selected_result.json",
+    "source_sha256": "edf74c79cc7bb854f6cbb27b96054960d31c5d5593696df6366246b28017ca89"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_iter1_selected_result.json",
+    "origin": "attached_paper/appendix_materials/raw/pose_iter1_selected_result.json",
+    "source_sha256": "8ff90b054e98c41fe7e14a1cba217a3855a64f26d49b658b7545c3a379f050f2"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_iter0_selected_result.json",
+    "origin": "attached_paper/appendix_materials/raw/pose_iter0_selected_result.json",
+    "source_sha256": "83b9e02679374007cdfad12a9c98dcf78526e6a8701497554e14c1bea8c8d647"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_iter0_proposer_response.json",
+    "origin": "attached_paper/appendix_materials/raw/pose_iter0_proposer_response.json",
+    "source_sha256": "38bef6b486423d375160e1b0d5af9626f5a3a19d1ce140201be0a3055dde9dad"
+  },
+  {
+    "path": "artifacts/paper_prompts/tree_ikea_manual.txt",
+    "origin": "attached_paper/appendix_materials/raw/tree_ikea_manual.txt",
+    "source_sha256": "f57bc8f4a5f8b97c2100e94f5058580f9b1d7b8ad0d3d6b2849cb68ef3fd2bc3"
+  },
+  {
+    "path": "artifacts/paper_prompts/stage2_output.txt",
+    "origin": "attached_paper/appendix_materials/raw/stage2_output.txt",
+    "source_sha256": "79c4d5c86af71da7013d9d85e675f0123f3fd5af9330f012d603aff9cdad18e6"
+  },
+  {
+    "path": "artifacts/paper_prompts/select_material.txt",
+    "origin": "attached_paper/appendix_materials/raw/select_material.txt",
+    "source_sha256": "c5f8e638983690546c4537c35e7c3d9090d5edd195dd7ea0a0decafb544f0205"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_selector_prompt.txt",
+    "origin": "attached_paper/appendix_materials/raw/pose_selector_prompt.txt",
+    "source_sha256": "b4238c6ece9cbac1622847425a71f81702351250d146a4dc70a625ab1d86dcc3"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_initial_prompt.txt",
+    "origin": "attached_paper/appendix_materials/raw/pose_initial_prompt.txt",
+    "source_sha256": "41260fd5cfed4e20f02e07a02cc3fd0f9157d19b5775a855550bacc3306bf754"
+  },
+  {
+    "path": "artifacts/paper_prompts/pose_feedback_prompt.txt",
+    "origin": "attached_paper/appendix_materials/raw/pose_feedback_prompt.txt",
+    "source_sha256": "14194f11f81db5da3030540d7108cd1bd511d7a56a0b9e8229198339ff21b22b"
+  },
+  {
+    "path": "artifacts/paper_prompts/planning_anchor_v2m.txt",
+    "origin": "attached_paper/appendix_materials/raw/planning_anchor_v2m.txt",
+    "source_sha256": "41970bead5f4c38585d382b790435f6cb80947009a5f1700a1cf3938ee4f8d0f"
+  },
+  {
+    "path": "artifacts/paper_prompts/generate_json.txt",
+    "origin": "attached_paper/appendix_materials/raw/generate_json.txt",
+    "source_sha256": "1272d6737146dc31f28200e954a6063846ee584b3fd59eadf20ee94114c601fb"
+  }
+]

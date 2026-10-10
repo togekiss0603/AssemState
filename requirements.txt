@@ -1,0 +1,9 @@
+# Python 3.10; versions verified in the release smoke test.
+numpy==2.2.6
+scipy==1.15.3
+trimesh==4.9.0
+pillow==12.3.0
+matplotlib==3.10.9
+openai==2.8.0
+httpx==0.28.1
+tqdm==4.67.3

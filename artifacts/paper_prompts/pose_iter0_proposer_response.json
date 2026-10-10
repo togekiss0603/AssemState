@@ -1,0 +1,80 @@
+{
+  "selected_supporting_views": [
+    1,
+    2,
+    3
+  ],
+  "selected_supporting_view_reason": "Views 1-3 clearly show the side frame's U-shape and which face is the inner attachment side relative to the seat panel end; they also show the frame is already upright (no obvious 90° tip needed) and help disambiguate which end of the seat panel it should meet.",
+  "spatial_reasoning_3d": {
+    "moving_part": "part 2 (side frame)",
+    "fixed_contact_part": "part 1 (seat panel)",
+    "contact_region": "seat panel end face (short end) with side frame inner face",
+    "fixed_contact_face": "seat panel end face (approximately -Z end in current layout)",
+    "moving_contact_face": "inner opening face of the U-frame (the face between the two uprights)",
+    "insertion_direction": "+Z",
+    "mirror_relation": "not applicable",
+    "orientation_constraint": "frame upright/perpendicular to panel surface; inner attachment faces must face the seat panel end"
+  },
+  "metric_reasoning_three_view": {
+    "current_center_estimate": [
+      0.0,
+      0.05,
+      0.0
+    ],
+    "target_contact_plane_or_edge": {
+      "axis": "z",
+      "coordinate": 1.85,
+      "side": "seat panel near end in Right view"
+    },
+    "moving_half_extent_along_contact_axis": 0.35,
+    "target_center_estimate": [
+      0.0,
+      0.05,
+      1.5
+    ],
+    "translation_delta": [
+      0.0,
+      0.0,
+      1.5
+    ],
+    "scale_source": "front/right/top orthographic grid only"
+  },
+  "rotation_reasoning": {
+    "dominant_axis_alignment": "keep frame uprights aligned with world +Y (already upright)",
+    "connector_facing_after": "frame opening/inner face should face toward +Z (toward the seat panel end as approached)",
+    "rotation_needed": "none"
+  },
+  "candidates": [
+    {
+      "label": "A",
+      "Translation": [
+        0.0,
+        0.0,
+        1.5
+      ],
+      "Rotation matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "Dominant rotation axis": "y",
+      "Angle": 0.0,
+      "semantic_reason": "Slide the upright side frame forward in +Z to meet the near end face of the seat panel, keeping it perpendicular/upright.",
+      "expected_visual_change": "Right view: part 2 shifts from z≈0 to overlap the seat panel end around z≈1.5–2.0; Top view: part 2 moves upward toward the seat panel along +Z, aligning with the seat's end; Front view: little/no change in X/Y alignment besides closing the gap.",
+      "risk": "If the intended attachment is the opposite end of the seat panel, this +Z translation will place it on the wrong end (would need -Z instead)."
+    }
+  ],
+  "reasoning": "Orthographic Right/Top show the seat panel located at higher +Z while the side frame is near z≈0; the frame appears already upright, so the main action is translating it along +Z to the seat panel's end face to attach."
+}

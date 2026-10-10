@@ -1,0 +1,48 @@
+{
+  "iteration": 2,
+  "selected_option": "A",
+  "selected_name": "real_pose_A_Tscene=[0.0, 0.0, 0.4]_rot=matrix",
+  "selected_pose_matrix4": [
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      1.45
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "translation_error_for_analysis": 1.1797992976245701,
+  "rotation_error_deg_for_analysis": 81.22081640004694,
+  "accepted": false,
+  "judge": {
+    "Accept": "No",
+    "Error type": "wrong_side",
+    "Residual direction": "shift to the seat panel end (left end in top view) and align flush; rotate so the frame is square to the end face",
+    "Contact": "Incorrect",
+    "Orientation": "Incorrect",
+    "Reasoning": "In the selected after-state, side frame 2 is positioned along the long side of seat panel 1 (seen clearly in the top view) rather than attached to an end face. The frame is not seated flush against the panel end, and its attachment face is not aligned to the panel end surface.",
+    "Next candidate hints": [
+      "Choose a state where part 2 is centered on one short end of part 1, standing upright (perpendicular to the panel surface)",
+      "Ensure the inner faces/holes of frame 2 face toward and touch the end face of the seat panel, with no gap or overlap"
+    ],
+    "Confidence": 0.84
+  },
+  "operation_gt_rescued_after_failure": true
+}

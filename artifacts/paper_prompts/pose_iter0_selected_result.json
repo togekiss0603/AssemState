@@ -1,0 +1,48 @@
+{
+  "iteration": 0,
+  "selected_option": "A",
+  "selected_name": "real_pose_A_Tscene=[0.0, 0.0, 1.5]_rot=matrix",
+  "selected_pose_matrix4": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      1.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "translation_error_for_analysis": 1.1408776375107204,
+  "rotation_error_deg_for_analysis": 160.70881274030876,
+  "accepted": false,
+  "judge": {
+    "Accept": "No",
+    "Error type": "wrong_side",
+    "Residual direction": "shift to the seat panel end and rotate upright so the open/inner faces meet the panel end",
+    "Contact": "Incorrect",
+    "Orientation": "Incorrect",
+    "Reasoning": "In the top and 3D orbit views, side frame 2 is not seated on an end face of seat panel 1; it sits off to the side/under area and does not stand flush/perpendicular at the panel end with its inner faces toward the panel. The supposed attachment faces are not aligned to the panel end.",
+    "Next candidate hints": [
+      "Place frame 2 centered on one short end of seat panel 1, with its two legs straddling the panel width",
+      "Rotate frame 2 so it stands vertical (perpendicular to the panel surface) and its inner holes/faces point into the panel end"
+    ],
+    "Confidence": 0.78
+  },
+  "operation_gt_rescued_after_failure": true
+}

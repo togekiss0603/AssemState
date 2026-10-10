@@ -1,0 +1,48 @@
+{
+  "iteration": 1,
+  "selected_option": "A",
+  "selected_name": "real_pose_A_Tscene=[0.0, 0.0, -0.45]_rot=matrix",
+  "selected_pose_matrix4": [
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0,
+      1.05
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "translation_error_for_analysis": 1.5147683565161116,
+  "rotation_error_deg_for_analysis": 136.90380942727035,
+  "accepted": false,
+  "judge": {
+    "Accept": "No",
+    "Error type": "wrong_side",
+    "Residual direction": "shift toward the seat panel end and rotate upright/perpendicular",
+    "Contact": "Incorrect",
+    "Orientation": "Incorrect",
+    "Reasoning": "Across the top and 3D orbit views, side frame 2 is separated from seat panel 1 and not attached to the panel end. It is also not standing upright/perpendicular to the panel surface; it appears offset and oriented diagonally away from the seat.",
+    "Next candidate hints": [
+      "Place frame 2 flush against one short end of seat panel 1 (end-face contact, no gap)",
+      "Rotate frame 2 so it stands vertical (perpendicular to panel) with its inner faces/holes facing into the panel end"
+    ],
+    "Confidence": 0.84
+  },
+  "operation_gt_rescued_after_failure": true
+}
