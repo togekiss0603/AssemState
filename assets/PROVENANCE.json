@@ -1,0 +1,31 @@
+{
+  "scope": "Five user-authorized illustrative input images only; no full dataset or meshes.",
+  "rights": "IKEA / IKEA-Manual-derived input assets; not relicensed under Apache-2.0.",
+  "files": [
+    {
+      "published_file": "assets/scene.png",
+      "source_relative_to_assemblydata": "prescene/Bench/applaro/scene_annotated.png",
+      "sha256": "93306c8b9b9dd9d827cc1786a9c08c3e895e2165a94b6f9fbb7db7a077218974"
+    },
+    {
+      "published_file": "assets/scene-rot.png",
+      "source_relative_to_assemblydata": "prescene/Bench/applaro/scene_rot_annotated.png",
+      "sha256": "de86144a28c8220414740d8d5dcbdf74235aa719051d7cbecac060796fe9e052"
+    },
+    {
+      "published_file": "assets/manual.png",
+      "source_relative_to_assemblydata": "pdfs/Bench/applaro/page_1.png",
+      "sha256": "59f0f8546640d156d41248c5cbe5a761addd9cfe9a66aa7dc980234ca95f9fd2"
+    },
+    {
+      "published_file": "assets/step-0.png",
+      "source_relative_to_assemblydata": "mask/Bench/applaro/step_0_mask_overlay_cropped_numbered.png",
+      "sha256": "e26bf1afd55a39fd51e49f8a57cf9f6721a5b8e9da89fd1641f92e3801cad56b"
+    },
+    {
+      "published_file": "assets/step-1.png",
+      "source_relative_to_assemblydata": "mask/Bench/applaro/step_1_mask_overlay_cropped_numbered.png",
+      "sha256": "006235c637587b50ecacb1f3a46174b437094b8c02bbd2b796a0faa7b17e3dd8"
+    }
+  ]
+}
