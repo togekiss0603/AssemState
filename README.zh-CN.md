@@ -1,10 +1,18 @@
 # AssemState
 
-[项目主页](https://assemstate.wirymouse1.chatgpt.site) · [完整英文说明](README.md)
+[论文 · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [项目主页](https://assemstate.wirymouse1.chatgpt.site) · [完整英文说明](README.md)
 
 对应论文 **AssemState: Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly**。
 
-公开版包含 v2m 装配树推理代码、维护版位姿 agent、论文原始提示词、逐操作实验记录和项目主页。主页仅展示已确认的 5 张 Bench/applaro 输入样例图；完整数据集和家具网格不上传。
+作者：Zhiyuan Qi、Jierui Li、Yifan Shen、Cheng Qian、Jiateng Liu（2026）。
+
+公开版包含 v2m 装配树推理代码、维护版位姿 agent、论文原始提示词、逐操作实验记录和项目主页。主页展示正文与附录全部表格、7 张论文图，以及已确认的 5 张 Bench/applaro 输入样例图；完整数据集和家具网格不上传。
+
+## 与论文附录的对应
+
+装配树运行时的 M1–M4 提示词与论文原始文件逐字节一致；附录打印版只有明确记录的标点与符号替换。历史位姿提示词作为快照保留，与当前维护版 agent 的运行时提示词并不相同；完整历史 Judge 请求未找回，论文附录也说明了这一点。详见 [对应检查](docs/PAPER_ALIGNMENT.md)。
+
+运行 `python scripts/audit_paper_alignment.py` 可检查提示词、网页表格覆盖和图片哈希；加上 `--paper-zip /path/to/manuscript.zip` 可直接对照论文源文件。引用格式见 [英文 README](README.md#citation)。
 
 ## Clone 后直接复核论文表格
 

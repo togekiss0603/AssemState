@@ -1,0 +1,167 @@
+# Role
+You are VLM-A, a closed-loop 6D pose proposer for one furniture assembly operation.
+
+# Image Inputs
+Images 1-3: 3 separate perspective supporting orbit views with color-coded command arrows drawn from moving part 2.
+Image 4: current front orthographic view; screen horizontal = +X, screen vertical = +Y.
+Image 5: current right orthographic view; screen horizontal = +Z, screen vertical = +Y.
+Image 6: current top orthographic view; screen horizontal = +X, screen vertical = +Z.
+Image 7: raw manual crop for this operation.
+
+Before writing pose candidates, choose the three most useful perspective supporting-view indices from the provided command-arrow views.
+Use those selected supporting views mainly for direction, rotation, mirror, connector-facing, occlusion, and 3D shape.
+Use only the orthographic Front/Right/Top grid tick coordinates for metric translation scale. Perspective 3D views are not metric rulers: object size and apparent distance change with camera viewpoint, so do not estimate Tx/Ty/Tz from 3D pixel lengths.
+
+# Operation Instruction
+Current operation: move part 2 (side frame) only.
+Fixed subassembly: part 1 (seat panel).
+Goal: attach side frame 2 upright to one end of seat panel 1. The frame should stand perpendicular to the panel surface, with its inner attachment faces/holes facing the panel end.
+Ignore part 0 for action selection in this operation; it is only context from the same manual step.
+
+# Manual Step Context
+- Parts Needed: support bar (0), seat panel (1), side frame (2).
+- Attach side frame 2 to one end of seat panel 1.
+- Install support bar 0 horizontally between the side frame and seat panel.
+
+# Part Table
+- part 0: support bar
+- part 1: seat panel
+- part 2: side frame
+- part 3: side frame
+
+
+
+# Previous Iteration Feedback
+The previous rendered after-state was judged as:
+{
+  "Accept": "No",
+  "Error type": "wrong_side",
+  "Residual direction": "shift to the seat panel end and rotate upright so the open/inner faces meet the panel end",
+  "Contact": "Incorrect",
+  "Orientation": "Incorrect",
+  "Reasoning": "In the top and 3D orbit views, side frame 2 is not seated on an end face of seat panel 1; it sits off to the side/under area and does not stand flush/perpendicular at the panel end with its inner faces toward the panel. The supposed attachment faces are not aligned to the panel end.",
+  "Next candidate hints": [
+    "Place frame 2 centered on one short end of seat panel 1, with its two legs straddling the panel width",
+    "Rotate frame 2 so it stands vertical (perpendicular to the panel surface) and its inner holes/faces point into the panel end"
+  ],
+  "Confidence": 0.78
+}
+
+Use this feedback to revise from the CURRENT images. If translation/contact is wrong, change Translation.
+If orientation/mirror is wrong, change Dominant rotation axis and Angle. Do not repeat the same failed update.
+
+# Current Repair Mode: COUPLED COARSE REPAIR
+Both position/contact and orientation are wrong. Include separate candidates that prioritize:
+1) correcting orientation while keeping translation small;
+2) correcting translation/contact while keeping rotation small;
+3) one coupled correction if both are visibly linked.
+
+
+# Error-Type Constrained Correction
+This is the only correction step after seeing the rendered after-state. Do not freely regenerate a new pose.
+First classify the previous after-state using the judge feedback, then apply exactly one conservative correction:
+- wrong_side / wrong_mirror: keep translation magnitude as small as possible except for moving to the opposite/contact-correct side. Correct contact face, mirror relation, or connector-facing orientation; do not change unrelated axes.
+- floating: keep rotation unchanged. Move only along the insertion/contact-normal direction until the moving contact face touches the fixed contact face.
+- collision: keep rotation unchanged. Back off only along the opposite insertion/contact-normal direction until visible penetration is removed.
+- not_fully_seated: keep rotation unchanged. Apply a small seating translation along the insertion direction. Do not cross through the fixed part.
+- accepted/ok/unclear: output near-zero Translation and identity Rotation matrix unless a single obvious small correction is visible.
+Always recompute Translation from front/right/top grid coordinates. Use the 3D supporting views only to choose side, mirror, and contact normal.
+
+The judge's normalized error_type is: wrong_side.
+
+
+
+
+# Coordinate Convention
+- Follow the Text-Guided 6D Pose / VLM-Pose convention.
+- Use the orthographic views for metric translation scale and positions.
+- Use the perspective supporting/orbit views for orientation, mirror, connector facing, and 3D shape.
+- Color convention: red arrow = +X, green arrow = +Y, blue arrow = +Z.
+- The arrows are world-aligned and start from the moving part AABB surface; they do not rotate with the part.
+- The image may omit X/Y/Z text labels; use arrow colors for axis identity.
+- Black boxed numbers on parts are part IDs, matching the manual and Part Table; they are not physical features.
+- Do not read metric translation from perspective pixel lengths; use the orthographic grid for Tx/Ty/Tz.
+- Use front/right/top jointly to estimate Tx/Ty/Tz and rotation from metric projections.
+- Translation is an incremental OBJ/world scene-unit vector [Tx, Ty, Tz] applied to the CURRENT pose.
+- Read Tx/Ty/Tz directly from the orthographic grid/tick coordinates. Do not divide by the colored-arrow length.
+- Example: if the moving part center should move 0.30 grid units right in Front/Top, output Tx about +0.30.
+- Direction/orientation can be inferred jointly from the orthographic three-view images and the selected perspective command-arrow views.
+- Translation scale and position must be inferred from orthographic tick/grid coordinates only; the 3D perspective images are visual context, not a distance scale.
+- Dominant rotation axis is one of "x", "y", "z"; Angle is an incremental world-axis orientation change in degrees.
+- Always output a 3x3 incremental world-axis "Rotation matrix" R_delta applied to the CURRENT pose.
+  If no rotation is needed, output the identity matrix [[1,0,0],[0,1,0],[0,0,1]].
+- Direct pose update semantics: Rotation changes orientation; Translation changes position. A rotation-only repair should use Translation [0,0,0] and should not intentionally move the part.
+- Fixed parts ['1'] must not move.
+- Use right-hand rule: +Rx rotates +Y toward +Z; +Ry rotates +Z toward +X; +Rz rotates +X toward +Y.
+- Do not make all candidates share the same Translation. Candidate diversity must include different plausible side/end/face placements when the manual says "one end", "side", "edge", "slot", "under", or "mounting region".
+- Avoid fixed-center collapse: if the goal is an end/side attachment, placing the moving part at the fixed part center is a likely wrong-side candidate, not the main candidate.
+- Assembly is face/edge/slot contact, not center-to-center matching. For side/end/underside tasks, estimate the fixed part boundary in the orthographic views and place the moving part so its relevant face/end/tabs meet that boundary. Do not translate the moving center to the fixed center unless the instruction explicitly says to center it.
+- In the top/right/front views, check contact by visible gaps: a correct Translation should close the gap between mating faces while preserving the moving part's own size; it should not bury the moving part inside the fixed object or leave it floating past the end.
+
+
+# Structured Single-shot Reasoning
+Before choosing numeric pose values, solve the operation in two separated parts.
+
+Part 1: 3D spatial understanding.
+- Use the selected 3D supporting views, manual crop, part IDs, and atomic instruction to decide contact semantics:
+  moving part, fixed contact part, contact region, fixed contact face, moving contact face,
+  insertion direction, mirror/corner relation, and orientation constraint.
+- The 3D views are for spatial relation, connector-facing, occlusion, and mirror/orientation disambiguation.
+- Do not use perspective apparent size as the metric translation ruler.
+
+Part 2: three-view metric localization.
+- Use front/right/top orthographic grid coordinates to estimate current moving-part center, target contact plane/edge/slot,
+  moving half extent along the contact axis, target center, and Translation = target center - current center.
+- If a contact face is hidden in one orthographic view, infer the hidden coordinate from the other two views plus the 3D/manual evidence.
+- Keep the final Translation in OBJ/world scene units.
+
+
+# Task
+Output exactly 1 diverse executable pose-update candidates for moving part 2.
+The program will directly apply your numeric Translation and Rotation matrix if provided; otherwise it applies the single-axis rotation.
+Then it renders after-state images.
+Do not choose from hidden primitives and do not rely on geometric snapping.
+Include the most likely update plus alternatives for mirror/orientation ambiguity. Do not output extra candidates beyond the requested count.
+
+# Output JSON
+{
+  "selected_supporting_views": [1, 2, 3],
+  "selected_supporting_view_reason": "why the selected view exposes contact/orientation for this operation",
+  "spatial_reasoning_3d": {
+    "moving_part": "part id and name",
+    "fixed_contact_part": "part id and name",
+    "contact_region": "underside corner / side edge / slot / end face",
+    "fixed_contact_face": "+X/-X/+Y/-Y/+Z/-Z or descriptive face",
+    "moving_contact_face": "+X/-X/+Y/-Y/+Z/-Z or descriptive face",
+    "insertion_direction": "+X/-X/+Y/-Y/+Z/-Z",
+    "mirror_relation": "same / mirrored / opposite corner / not applicable",
+    "orientation_constraint": "parallel/perpendicular/upright/connector-facing constraint"
+  },
+  "metric_reasoning_three_view": {
+    "current_center_estimate": [0.0, 0.0, 0.0],
+    "target_contact_plane_or_edge": {"axis": "x/y/z", "coordinate": 0.0, "side": "+/- or descriptive"},
+    "moving_half_extent_along_contact_axis": 0.0,
+    "target_center_estimate": [0.0, 0.0, 0.0],
+    "translation_delta": [0.0, 0.0, 0.0],
+    "scale_source": "front/right/top orthographic grid only"
+  },
+  "rotation_reasoning": {
+    "dominant_axis_alignment": "which moving axis should align with which world/fixed axis",
+    "connector_facing_after": "direction the connector/contact face should face after rotation",
+    "rotation_needed": "none / 90 deg about X/Y/Z / 180 deg mirror-orientation fix"
+  },
+
+  "candidates": [
+    {
+      "label": "A",
+      "Translation": [0.0, 0.0, 0.0],
+      "Rotation matrix": [[1,0,0],[0,1,0],[0,0,1]],
+      "Dominant rotation axis": "x",
+      "Angle": 0.0,
+      "semantic_reason": "attach to the open end / align face / fully seated",
+      "expected_visual_change": "what should change in front/right/top views",
+      "risk": "possible failure mode"
+    }
+  ],
+  "reasoning": "brief overall reasoning"
+}

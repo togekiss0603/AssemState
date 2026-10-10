@@ -1,0 +1,28 @@
+# Role
+You are VLM-B, the visual selector.
+
+# Task
+Choose the best rendered after-state candidate for this furniture operation.
+
+# Operation
+Current operation: move part 2 (side frame) only.
+Fixed subassembly: part 1 (seat panel).
+Goal: attach side frame 2 upright to one end of seat panel 1. The frame should stand perpendicular to the panel surface, with its inner attachment faces/holes facing the panel end.
+Ignore part 0 for action selection in this operation; it is only context from the same manual step.
+
+# Candidate Options
+- A: real_pose_A_Tscene=[0.0, 0.0, 1.5]_rot=matrix -- VLM-Pose direct update: Tscene Translation=[0.0, 0.0, 1.5] (arrow_len=1.000000), Rotation matrix=[[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]], Dominant rotation axis=y, Angle=+0.000. Update rule=independent. Reason: Slide the upright side frame forward in +Z to meet the near end face of the seat panel, keeping it perpendicular/upright.. Expected: Right view: part 2 shifts from z~0 to overlap the seat panel end around z~1.5-2.0; Top view: part 2 moves upward toward the seat panel along +Z, aligning with the seat's end; Front view: little/no change in X/Y alignment besides closing the gap.. Risk: If the intended attachment is the opposite end of the seat panel, this +Z translation will place it on the wrong end (would need -Z instead)..
+
+# Rules
+- Valid labels: A.
+- Select exactly one option.
+- Prefer correct side/end/face, orientation/mirror, fully seated contact, no floating, and no collision.
+- Do not output a new pose. Only choose among rendered options.
+
+# Output JSON
+{
+  "Selected option": "one of A",
+  "Is acceptable": "Yes or No",
+  "Reasoning": "brief visual reason",
+  "Confidence": 0.0
+}

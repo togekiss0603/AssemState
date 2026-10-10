@@ -2,11 +2,13 @@
 
 **Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly**
 
-[Project page](https://assemstate.wirymouse1.chatgpt.site) · [中文说明](README.zh-CN.md) · [Evaluation protocol](docs/PROTOCOL.md) · [Data preparation](docs/DATA.md)
+[Paper · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [Project page](https://assemstate.wirymouse1.chatgpt.site) · [中文说明](README.zh-CN.md) · [Evaluation protocol](docs/PROTOCOL.md) · [Data preparation](docs/DATA.md)
+
+**Zhiyuan Qi, Jierui Li, Yifan Shen, Cheng Qian, Jiateng Liu** · 2026
 
 AssemState studies manual-grounded assembly hierarchy recovery and target-free 6D pose refinement through rendered after-state feedback. It uses pretrained vision-language models without task-specific training.
 
-This public release includes the **anchor-v2m tree planner**, a maintained visual pose agent, preserved paper prompts, seven archived pose/release settings, and code to reconstruct their aggregate results. The project page includes five illustrative **Bench/applaro** input images. **Furniture meshes and the full dataset are not uploaded.**
+This public release includes the **anchor-v2m tree planner**, a maintained visual pose agent, preserved paper prompts, seven archived pose/release settings, and code to reconstruct their aggregate results. The project page includes all main/appendix tables, seven paper figures, and five illustrative **Bench/applaro** input images. **Furniture meshes and the full dataset are not uploaded.**
 
 ## Quick start: reproduce archived tables
 
@@ -105,6 +107,12 @@ For a CPU software smoke test with your own data, add `--dry-run --max-iters 1 -
 
 The tree evaluation conditions on **precomputed numbered masks**. The pose evaluation conditions on **correct operations and preceding states** across 55 products/243 operations; it is not an end-to-end rollout from predicted trees. Predictions are scored before a ground-truth reset constructs later context. Target poses are not model inputs. See [known discrepancies](docs/PROTOCOL.md#known-discrepancies), including the unresolved tree-table P/R/F1 aggregation issue.
 
+## Paper / code alignment
+
+The four runtime tree prompts match the paper's raw M1–M4 snapshots byte for byte. The appendix introduces only documented display substitutions in two prompts. Historical pose prompts are preserved as snapshots; they are not the current maintained agent's runtime prompts. The complete historical Judge request is unavailable, as stated in the appendix.
+
+See the [full correspondence audit](docs/PAPER_ALIGNMENT.md), or run `python scripts/audit_paper_alignment.py`. Add `--paper-zip /path/to/manuscript.zip` to compare against a supplied source archive. This check requires only Python's standard library.
+
 ## Layout
 
 ```text
@@ -114,7 +122,7 @@ artifacts/pose/         Archived per-operation records for seven settings
 artifacts/paper_prompts/ Preserved manuscript prompts and illustrative responses
 scripts/               Inference wrapper, data preparation, table and integrity checks
 tests/                 Offline checks; asset-dependent tests are optional
-website/               Static project page and five authorized sample images
+website/               Project page, paper figures and five authorized sample images
 docs/                  Protocol, provenance, data preparation and attribution
 ```
 
@@ -124,4 +132,16 @@ docs/                  Protocol, provenance, data preparation and attribution
 
 Built on Manual2Skill and IKEA-Manual-derived inputs. The inherited Apache-2.0 code license is retained in [LICENSE](LICENSE). Third-party sample images retain their original rights and are not relicensed under Apache-2.0. See [THIRD_PARTY.md](THIRD_PARTY.md).
 
-Associated manuscript: *AssemState: Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly*. Final author/publication metadata and a public manuscript link will be added when available; this repository does not imply an acceptance or assign a DOI.
+## Citation
+
+```bibtex
+@misc{qi2026assemstate,
+  title={AssemState: Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly},
+  author={Zhiyuan Qi and Jierui Li and Yifan Shen and Cheng Qian and Jiateng Liu},
+  year={2026},
+  eprint={2610.08446},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2610.08446}
+}
+```

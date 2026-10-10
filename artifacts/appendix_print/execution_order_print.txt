@@ -1,0 +1,7 @@
+y_name  = MLLM(P_name; scene, scene_views, manual_preview)
+y_sem   = MLLM(P_sem; scene, scene_views, full_manual, y_name)
+y_plan  = MLLM(P_anchor; scene, ordered_step_masks, y_sem)
+if structured_parse(y_plan) succeeds:
+    G = Parse(y_plan)
+else:
+    G = MLLM(P_tree; y_plan)

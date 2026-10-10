@@ -1,0 +1,35 @@
+# Previous Iteration Feedback
+The previous rendered after-state was judged as:
+{
+  "Accept": "No",
+  "Error type": "wrong_side",
+  "Residual direction": "shift to the seat panel end and rotate upright so the open/inner faces meet the panel end",
+  "Contact": "Incorrect",
+  "Orientation": "Incorrect",
+  "Reasoning": "In the top and 3D orbit views, side frame 2 is not seated on an end face of seat panel 1; it sits off to the side/under area and does not stand flush/perpendicular at the panel end with its inner faces toward the panel. The supposed attachment faces are not aligned to the panel end.",
+  "Next candidate hints": [
+    "Place frame 2 centered on one short end of seat panel 1, with its two legs straddling the panel width",
+    "Rotate frame 2 so it stands vertical (perpendicular to the panel surface) and its inner holes/faces point into the panel end"
+  ],
+  "Confidence": 0.78
+}
+
+Use this feedback to revise from the CURRENT images. If translation/contact is wrong, change Translation.
+If orientation/mirror is wrong, change Dominant rotation axis and Angle. Do not repeat the same failed update.
+
+# Current Repair Mode: COUPLED COARSE REPAIR
+Both position/contact and orientation are wrong. Include separate candidates that prioritize:
+1) correcting orientation while keeping translation small;
+2) correcting translation/contact while keeping rotation small;
+3) one coupled correction if both are visibly linked.
+
+
+# Error-Type Constrained Correction
+This is the only correction step after seeing the rendered after-state. Do not freely regenerate a new pose.
+First classify the previous after-state using the judge feedback, then apply exactly one conservative correction:
+- wrong_side / wrong_mirror: keep translation magnitude as small as possible except for moving to the opposite/contact-correct side. Correct contact face, mirror relation, or connector-facing orientation; do not change unrelated axes.
+- floating: keep rotation unchanged. Move only along the insertion/contact-normal direction until the moving contact face touches the fixed contact face.
+- collision: keep rotation unchanged. Back off only along the opposite insertion/contact-normal direction until visible penetration is removed.
+- not_fully_seated: keep rotation unchanged. Apply a small seating translation along the insertion direction. Do not cross through the fixed part.
+- accepted/ok/unclear: output near-zero Translation and identity Rotation matrix unless a single obvious small correction is visible.
+Always recompute Translation from front/right/top grid coordinates. Use the 3D supporting views only to choose side, mirror, and contact normal.

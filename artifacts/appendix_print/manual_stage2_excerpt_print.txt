@@ -1,0 +1,14 @@
+<anchors>
+Step 1 anchor parts: [0, 1, 2]
+Step 2 anchor parts: [3]
+</anchors>
+
+<part_visibility>
+Step 1 introduces: [0, 1, 2] -- isolated sub-assembly
+  Subassembly formed: main bed assembly of parts [0, 1, 2]
+Step 2 introduces: [3] -- added to main body
+  Carried over: parts [0, 1, 2]
+  Assembly type: SEQUENTIAL_ADDITION
+  Subassembly formed: complete bed frame
+Verification: all 4 parts assigned exactly once.
+</part_visibility>

@@ -1,4 +1,3 @@
-const models={gpt:{label:'GPT',rows:[['Text-style',0,'15.7263',40],['Structured',0,'5.4111',90],['Self-check · 3 rounds',13,'1.7744',96]]},haiku:{label:'Haiku 4.5',rows:[['Text-style',2,'18.7281',30],['Structured',11,'10.8826',82],['Self-check · 3 rounds',28,'10.6708',82]]}};
 const samples={
 scene:{file:'scene.png',stage:'STAGE 1 + STAGE 2',title:'Ground the part IDs.',description:'The numbered scene establishes the visible rigid-part inventory. With the default original scene setting, this is also the scene image passed to anchor-v2m planning.',path:'prescene/Bench/applaro/scene_annotated.png',alt:'Four scattered bench parts labeled 0, 1, 2 and 3'},
 rotation:{file:'scene-rot.png',stage:'STAGE 1 · AVAILABLE MULTI-VIEW CONTEXT',title:'Observe another view.',description:'The semantic association stage loads available annotated views, including this rotated view. The v2m planning stage itself uses one scene image plus the ordered step masks.',path:'prescene/Bench/applaro/scene_rot_annotated.png',alt:'Rotated numbered view of the four bench parts'},
@@ -11,21 +10,10 @@ document.querySelectorAll('[data-sample]').forEach(button=>button.addEventListen
  const image=document.getElementById('sample-image');image.src='assets/'+item.file;image.alt=item.alt;document.getElementById('sample-link').href=image.src;
  for(const field of ['stage','title','description','path'])document.getElementById('sample-'+field).textContent=item[field];
 }));
-document.querySelectorAll('[data-model]').forEach(button=>button.addEventListener('click',()=>{
-  const data=models[button.dataset.model];
-  document.querySelectorAll('[data-model]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
-  document.getElementById('table-caption').textContent=`${data.label} archived records · 243 operations per setting`;
-  document.getElementById('results-body').replaceChildren(...data.rows.map((row,index)=>{const tr=document.createElement('tr');if(index===2)tr.className='highlight';row.forEach((value,i)=>{const cell=document.createElement(i===0?'th':'td');if(i===0)cell.scope='row';cell.textContent=(i===1||i===3)?`${value} / 243`:value;tr.append(cell)});return tr}));
-  for(const [id,value] of Object.entries({'cd-before':data.rows[1][2],'cd-after':data.rows[2][2],'judge-before':data.rows[1][1],'judge-after':data.rows[2][1]}))document.getElementById(id).textContent=value;
-}));
-document.getElementById('offset').addEventListener('input',event=>{
-  const x=Number(event.target.value),y=-x*.42;
-  document.getElementById('moving-part').setAttribute('transform',`translate(${x},${y})`);
-  document.getElementById('offset-line').setAttribute('d',`M333 273L${333+x} ${273+y}`);
-  document.getElementById('offset-value').textContent=x;
-});
-document.getElementById('copy-command').addEventListener('click',async()=>{
-  const status=document.getElementById('copy-status');
-  try{await navigator.clipboard.writeText(document.getElementById('quickstart').textContent);status.textContent='Commands copied.';}
-  catch{status.textContent='Select the commands above and copy them manually.';}
-});
+for(const [buttonId, textId, statusId] of [['copy-command','quickstart','copy-status'],['copy-citation','citation','citation-status']]) {
+ document.getElementById(buttonId).addEventListener('click',async()=>{
+  const status=document.getElementById(statusId);
+  try { await navigator.clipboard.writeText(document.getElementById(textId).textContent); status.textContent='Copied.'; }
+  catch { status.textContent='Select the text above and copy it manually.'; }
+ });
+}
