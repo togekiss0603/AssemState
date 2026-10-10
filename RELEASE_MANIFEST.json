@@ -436,8 +436,8 @@
   },
   {
     "path": "website/app.js",
-    "bytes": 3075,
-    "sha256": "af9867eb431ae93fcd3e23ce62c4314741cfd7c5accf1116a6a374ee12c11dcc"
+    "bytes": 1296,
+    "sha256": "a5083e107d5d0a12760c7db613bb91dc55b9192a06e5459f5bdf808acc27692a"
   },
   {
     "path": "website/assets/PROVENANCE.json",
@@ -516,12 +516,12 @@
   },
   {
     "path": "website/index.html",
-    "bytes": 23172,
-    "sha256": "f7438bcb3ffc250a473243dc3cccff6710f0db0d49425cbf016c6b0248688324"
+    "bytes": 21199,
+    "sha256": "c0d6eb00834ac895972b6cfcbfe5e06fb7c93c561f37952e0fd6c1300c6fd480"
   },
   {
     "path": "website/style.css",
-    "bytes": 6074,
-    "sha256": "28ab062bb642ebcb96a09d2329c654ce4527c3b61a455e4328d431a54620b237"
+    "bytes": 6098,
+    "sha256": "97f06a66affc1c0af38ec1540044fcfa72223bb0340e7a945478ee5faa7705cd"
   }
 ]
