@@ -11,8 +11,8 @@
   },
   {
     "path": "CITATION.cff",
-    "bytes": 928,
-    "sha256": "16faf77beb4531fbb1c28c3875b48d2d5a2262543a569656c25a054e79b9494d"
+    "bytes": 927,
+    "sha256": "936fa3431c909a78040d6dba76df95b1f0da632d4d6fa85cb8bee16b6ef41008"
   },
   {
     "path": "LICENSE",
@@ -21,13 +21,13 @@
   },
   {
     "path": "README.md",
-    "bytes": 9356,
-    "sha256": "24c479ee9244dcef8d6bd412095ea8859bdd84b178552d333febe1441130e000"
+    "bytes": 9355,
+    "sha256": "5387b23f857bcb0b39329db7f41d0203aaf16d0e5893cdbae5409b80d8b96e17"
   },
   {
     "path": "README.zh-CN.md",
-    "bytes": 2080,
-    "sha256": "2a3b3906e48214d59f8e278cee2a64249e48e88ee64a3fc73838d915422991ef"
+    "bytes": 2079,
+    "sha256": "1dd8a12c0dd25b43fc467d86b2ea522004f839a85f159ada77c27802f8dca7c9"
   },
   {
     "path": "THIRD_PARTY.md",
@@ -236,8 +236,8 @@
   },
   {
     "path": "docs/PAPER_ALIGNMENT.md",
-    "bytes": 6118,
-    "sha256": "da69bb307a16d2b56789172f6b6225c6b93fd7e3405c729b969bc088c488e291"
+    "bytes": 6117,
+    "sha256": "95524f7841e3615b6e3eed333cfee2327df94143464f838674ccfc2cb3cb07c7"
   },
   {
     "path": "docs/PROTOCOL.md",
@@ -248,6 +248,11 @@
     "path": "docs/PROVENANCE.md",
     "bytes": 1645,
     "sha256": "cbab279631e9684df3753b80671ad0cf5ad7c0f5438f19366c45b007a3038ad7"
+  },
+  {
+    "path": "docs/WEBSITE.md",
+    "bytes": 764,
+    "sha256": "c4ca2423505ddccccbe23e8b9ebbb82f3c27223adf0cecf62d330b287014c3fa"
   },
   {
     "path": "docs/source_manifest.json",
@@ -425,6 +430,11 @@
     "sha256": "f57bc8f4a5f8b97c2100e94f5058580f9b1d7b8ad0d3d6b2849cb68ef3fd2bc3"
   },
   {
+    "path": "website/.nojekyll",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
     "path": "website/app.js",
     "bytes": 3075,
     "sha256": "af9867eb431ae93fcd3e23ce62c4314741cfd7c5accf1116a6a374ee12c11dcc"
@@ -506,8 +516,8 @@
   },
   {
     "path": "website/index.html",
-    "bytes": 23173,
-    "sha256": "936464992372666c4d824df7ce10fdca0779f6dea16c186d1ab4b0341d612150"
+    "bytes": 23172,
+    "sha256": "f7438bcb3ffc250a473243dc3cccff6710f0db0d49425cbf016c6b0248688324"
   },
   {
     "path": "website/style.css",

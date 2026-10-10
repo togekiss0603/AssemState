@@ -6,7 +6,7 @@ This audit uses the author-supplied manuscript source archive dated October 10, 
 
 ## Website coverage
 
-The [project page](https://assemstate.wirymouse1.chatgpt.site) now contains all six table environments as seven HTML table panels. All rows and metric columns are included. Appendix material is visible by expanding the Appendix sections.
+The [project page](https://togekiss0603.github.io/AssemState) now contains all six table environments as seven HTML table panels. All rows and metric columns are included. Appendix material is visible by expanding the Appendix sections.
 
 | Manuscript label | Website anchor | Content |
 |---|---|---|

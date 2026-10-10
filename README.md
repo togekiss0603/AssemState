@@ -2,7 +2,7 @@
 
 **Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly**
 
-[Paper · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [Project page](https://assemstate.wirymouse1.chatgpt.site) · [中文说明](README.zh-CN.md) · [Evaluation protocol](docs/PROTOCOL.md) · [Data preparation](docs/DATA.md)
+[Paper · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [Project page](https://togekiss0603.github.io/AssemState) · [中文说明](README.zh-CN.md) · [Evaluation protocol](docs/PROTOCOL.md) · [Data preparation](docs/DATA.md)
 
 **Zhiyuan Qi, Jierui Li, Yifan Shen, Cheng Qian, Jiateng Liu** · 2026
 
@@ -47,7 +47,7 @@ The lockfile pins the tested environment. Tests requiring unbundled data are exp
 
 ![Numbered scene used by semantic association and default v2m planning](website/assets/scene.png)
 
-The sample has four rigid parts and two annotated steps. Its **reference** tree is `[[0,1,2],3]`; it is not a model prediction. The [project page](https://assemstate.wirymouse1.chatgpt.site/#example) lets you inspect the numbered scene, rotated view, manual preview, and both numbered step masks, with their source paths and consuming stages. Image provenance is recorded in `website/assets/PROVENANCE.json`.
+The sample has four rigid parts and two annotated steps. Its **reference** tree is `[[0,1,2],3]`; it is not a model prediction. The [project page](https://togekiss0603.github.io/AssemState/#examples) lets you inspect the numbered scene, rotated view, manual preview, and both numbered step masks, with their source paths and consuming stages. Image provenance is recorded in `website/assets/PROVENANCE.json`.
 
 These five images are illustrative, not a complete inference dataset. See [THIRD_PARTY.md](THIRD_PARTY.md) for attribution.
 

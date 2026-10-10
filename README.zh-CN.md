@@ -1,6 +1,6 @@
 # AssemState
 
-[论文 · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [项目主页](https://assemstate.wirymouse1.chatgpt.site) · [完整英文说明](README.md)
+[论文 · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [项目主页](https://togekiss0603.github.io/AssemState) · [完整英文说明](README.md)
 
 对应论文 **AssemState: Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly**。
 

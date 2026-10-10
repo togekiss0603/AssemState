@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use AssemState, please cite the paper below."
 type: software
 title: AssemState
-url: https://assemstate.wirymouse1.chatgpt.site
+url: https://togekiss0603.github.io/AssemState
 repository-code: https://github.com/togekiss0603/AssemState
 authors:
   - family-names: Qi
