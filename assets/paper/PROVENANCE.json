@@ -1,0 +1,50 @@
+{
+  "scope": "Seven figures included in the author-supplied AssemState manuscript; no dataset meshes.",
+  "paper": "https://arxiv.org/abs/2610.08446",
+  "rendering": "PDF figures rendered to PNG with pdftoppm, scale-to 2000; existing PNG copied unchanged.",
+  "rights": "Paper figures retain author and embedded third-party rights; not relicensed as Apache-2.0 code.",
+  "files": [
+    {
+      "published_file": "assets/paper/6D_ppl.png",
+      "source": "latex/fig/6D_ppl.png",
+      "source_sha256": "816f48ad90ce61b0c9f31f061d27508f125b3c9da817dc190a3d06f6dfcae160",
+      "published_sha256": "816f48ad90ce61b0c9f31f061d27508f125b3c9da817dc190a3d06f6dfcae160"
+    },
+    {
+      "published_file": "assets/paper/fig03_hierarchical_action_complexity.png",
+      "source": "latex/fig/fig03_hierarchical_action_complexity.pdf",
+      "source_sha256": "994dd2361bded66dda3999e9eb67acdc6e3f229ff646a54dd056c220f9d1c8c7",
+      "published_sha256": "6d18465962e298162ea45050d9f58f2ffd2d1740b05193c963139874d0e4edb4"
+    },
+    {
+      "published_file": "assets/paper/fig05_release_thresholds.png",
+      "source": "latex/fig/fig05_release_thresholds.pdf",
+      "source_sha256": "de6c05ced4122cb1eec46a536f753040fd5c4f46d62f79366ab8d90bb11a7da7",
+      "published_sha256": "bf295c4579a8f360409895db60138abcb1f626c55642703bf432fdf3ba57b947"
+    },
+    {
+      "published_file": "assets/paper/fig07_reported_failures.png",
+      "source": "latex/fig/fig07_reported_failures.pdf",
+      "source_sha256": "ea987aeb52ec650dc00d5eaef1aa256b30282dc99bef0836f8c5a9dcd1b80aad",
+      "published_sha256": "876db6617c2f49b8dbdac4796b7e826400725bae2d1b833689ad5b7d7be90693"
+    },
+    {
+      "published_file": "assets/paper/first.png",
+      "source": "latex/fig/first.pdf",
+      "source_sha256": "f5a492e16d2e902e9e37e934e54554a8f16e8ffef89a9dc6d1fcb7ad0102e34e",
+      "published_sha256": "58663f0b24b966db127cf75105f9fbaf00fcbcc18fecd0fe1e24f6eca569d7b2"
+    },
+    {
+      "published_file": "assets/paper/second.png",
+      "source": "latex/fig/second.pdf",
+      "source_sha256": "3c2ceca9f9a56967dbc76c4592708b25180d6a287986c70ab182de6289981e7c",
+      "published_sha256": "b5237f4e737b765834cac975f7f3586736d71ee2320a3849d9badb172c7ef8c2"
+    },
+    {
+      "published_file": "assets/paper/wrong.png",
+      "source": "latex/fig/wrong.pdf",
+      "source_sha256": "a8da24a8f3f1ece46554fc764f2e5d3f37ad5ca99a27a120b7cebd39dc14c62c",
+      "published_sha256": "1c4cb5852baa28eb20084dcecdebeac47005cd98a9fd2ab63b7ad4164b188e43"
+    }
+  ]
+}
