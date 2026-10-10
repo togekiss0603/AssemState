@@ -516,8 +516,8 @@
   },
   {
     "path": "website/index.html",
-    "bytes": 21705,
-    "sha256": "c7a08b15ac1eb7f885bf93e857894b889858d44b9813ca2414542a05b901ebb5"
+    "bytes": 21594,
+    "sha256": "42eb5b99369a66dddf2af72a4dc61195baee81bfc3bce5cbe1ac61b8d734544a"
   },
   {
     "path": "website/style.css",
