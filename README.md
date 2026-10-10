@@ -2,7 +2,7 @@
 
 **Manual and Physical-State-Guided Reasoning for Zero-shot Furniture Assembly**
 
-[Paper · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [Project page](https://togekiss0603.github.io/AssemState) · [中文说明](README.zh-CN.md) · [Evaluation protocol](docs/PROTOCOL.md) · [Data preparation](docs/DATA.md)
+[Paper · arXiv:2610.08446](https://arxiv.org/abs/2610.08446) · [Project page](https://togekiss0603.github.io/AssemState)
 
 **Zhiyuan Qi, Jierui Li, Yifan Shen, Cheng Qian, Jiateng Liu** · 2026
 
@@ -47,13 +47,34 @@ The lockfile pins the tested environment. Tests requiring unbundled data are exp
 
 ![Numbered scene used by semantic association and default v2m planning](website/assets/scene.png)
 
-The sample has four rigid parts and two annotated steps. Its **reference** tree is `[[0,1,2],3]`; it is not a model prediction. The [project page](https://togekiss0603.github.io/AssemState/#examples) lets you inspect the numbered scene, rotated view, manual preview, and both numbered step masks, with their source paths and consuming stages. Image provenance is recorded in `website/assets/PROVENANCE.json`.
+The sample has four rigid parts and two annotated steps. Its **reference** tree is `[[0,1,2],3]`; it is not a model prediction. The [project page](https://togekiss0603.github.io/AssemState/#examples) lets you inspect the numbered scene, rotated view, manual preview, and both numbered step masks. Image provenance is recorded in `website/assets/PROVENANCE.json`.
 
-These five images are illustrative, not a complete inference dataset. See [THIRD_PARTY.md](THIRD_PARTY.md) for attribution.
+These five images are illustrative, not a complete inference dataset.
 
 ## Live tree inference
 
-Prepare your own data using [docs/DATA.md](docs/DATA.md), then configure credentials:
+Prepare an authorized local dataset with this structure:
+
+```text
+assemblydata/
+  main_data.json
+  prescene/<category>/<name>/
+    scene_annotated.png
+    scene_rot_annotated.png
+    scene.obj
+    scene_parts/*.obj
+  parts/<category>/<name>/*.obj
+  pdfs/<category>/<name>/page_*.png
+  mask/<category>/<name>/*mask_overlay_cropped_numbered.png
+  preassembly_scenes/<category>/<name>/equiv_parts.txt  # when available
+```
+
+Manual pages are pre-rendered PNGs. Validate existing inputs with
+`python scripts/prepare_data.py --source /path/to/assemblydata --check`.
+To create a runtime subset, use `--source /path/to/original/assemblydata
+--destination data/assemblydata`; the destination must be new.
+
+Then configure credentials:
 
 ```bash
 cp .env.example .env
@@ -105,13 +126,13 @@ For a CPU software smoke test with your own data, add `--dry-run --max-iters 1 -
 | Full historical tree P/R/F1/EM from saved predictions | Historical v2m/no-anchor prediction sets are incomplete |
 | Exact historical pose/release rerun | Original runner and full independent Judge/support-view prompts were not recovered |
 
-The tree evaluation conditions on **precomputed numbered masks**. The pose evaluation conditions on **correct operations and preceding states** across 55 products/243 operations; it is not an end-to-end rollout from predicted trees. Predictions are scored before a ground-truth reset constructs later context. Target poses are not model inputs. See [known discrepancies](docs/PROTOCOL.md#known-discrepancies), including the unresolved tree-table P/R/F1 aggregation issue.
+The tree evaluation conditions on **precomputed numbered masks**. The pose evaluation conditions on **correct operations and preceding states** across 55 products/243 operations; it is not an end-to-end rollout from predicted trees. Predictions are scored before a ground-truth reset constructs later context. Target poses are not model inputs. The reported tree F1 (62.80) exceeds the P/R mean (62.40); the original aggregation remains unresolved.
 
 ## Paper / code alignment
 
 The four runtime tree prompts match the paper's raw M1–M4 snapshots byte for byte. The appendix introduces only documented display substitutions in two prompts. Historical pose prompts are preserved as snapshots; they are not the current maintained agent's runtime prompts. The complete historical Judge request is unavailable, as stated in the appendix.
 
-See the [full correspondence audit](docs/PAPER_ALIGNMENT.md), or run `python scripts/audit_paper_alignment.py`. Add `--paper-zip /path/to/manuscript.zip` to compare against a supplied source archive. This check requires only Python's standard library.
+Run `python scripts/audit_paper_alignment.py`. Add `--paper-zip /path/to/manuscript.zip` to compare against a supplied source archive. This check requires only Python's standard library.
 
 ## Layout
 
@@ -123,14 +144,11 @@ artifacts/paper_prompts/ Preserved manuscript prompts and illustrative responses
 scripts/               Inference wrapper, data preparation, table and integrity checks
 tests/                 Offline checks; asset-dependent tests are optional
 website/               Project page, paper figures and five authorized sample images
-docs/                  Protocol, provenance, data preparation and attribution
 ```
-
-`RELEASE_MANIFEST.json` hashes distributed files. After intentional edits, run `python scripts/verify_release.py --refresh`. Original imported-file hashes are separately recorded in `docs/source_manifest.json`.
 
 ## Attribution
 
-Built on Manual2Skill and IKEA-Manual-derived inputs. The inherited Apache-2.0 code license is retained in [LICENSE](LICENSE). Third-party sample images retain their original rights and are not relicensed under Apache-2.0. See [THIRD_PARTY.md](THIRD_PARTY.md).
+Built on [Manual2Skill](https://owensun2004.github.io/Furniture-Assembly-Web/) by Chenrui Tie, Shengxiang Sun, Jinxuan Zhu, Yiwei Liu, Jingxiang Guo, Yue Hu, Haonan Chen, Junting Chen, Ruihai Wu, and Lin Shao, and IKEA-Manual-derived inputs. The inherited Apache-2.0 code license is retained in [LICENSE](LICENSE). Third-party sample images retain their original rights and are not relicensed under Apache-2.0. Paper figures and embedded third-party imagery also retain their original rights.
 
 ## Citation
 

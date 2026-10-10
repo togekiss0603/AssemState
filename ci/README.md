@@ -11,4 +11,4 @@ python -m unittest discover -s tests -v
 python scripts/reproduce_tables.py
 ```
 
-If you move the workflow into `.github/workflows`, refresh the release manifest after reviewing that change.
+The release-file check scans for accidental credentials and machine-specific paths; it does not require a generated inventory.
