@@ -1,14 +1,14 @@
 {
-  "scope": "Seven figures included in the author-supplied AssemState manuscript; no dataset meshes.",
+  "scope": "Seven project-page figures from the author-supplied camera-ready source archive; no dataset meshes.",
   "paper": "https://arxiv.org/abs/2610.08446",
-  "rendering": "PDF figures rendered to PNG with pdftoppm, scale-to 2000; existing PNG copied unchanged.",
+  "rendering": "PDF figures rendered to PNG with pdftoppm, scale-to 2000. Overview and method figures follow the camera-ready manuscript includegraphics references.",
   "rights": "Paper figures retain author and embedded third-party rights; not relicensed as Apache-2.0 code.",
   "files": [
     {
       "published_file": "assets/paper/6D_ppl.png",
-      "source": "latex/fig/6D_ppl.png",
-      "source_sha256": "816f48ad90ce61b0c9f31f061d27508f125b3c9da817dc190a3d06f6dfcae160",
-      "published_sha256": "816f48ad90ce61b0c9f31f061d27508f125b3c9da817dc190a3d06f6dfcae160"
+      "source": "latex/fig/figure_3.pdf",
+      "source_sha256": "9bb2eae90203905b2bb9f358de449d4ea309afc180914421cc5270af25278de1",
+      "published_sha256": "afe7eb8f47d584dcc3aa5ecc70b91f7d425dcb8dfe2a982f46aba70ddce1c1f4"
     },
     {
       "published_file": "assets/paper/fig03_hierarchical_action_complexity.png",
@@ -30,15 +30,15 @@
     },
     {
       "published_file": "assets/paper/first.png",
-      "source": "latex/fig/first.pdf",
-      "source_sha256": "f5a492e16d2e902e9e37e934e54554a8f16e8ffef89a9dc6d1fcb7ad0102e34e",
-      "published_sha256": "58663f0b24b966db127cf75105f9fbaf00fcbcc18fecd0fe1e24f6eca569d7b2"
+      "source": "latex/fig/figure_1.pdf",
+      "source_sha256": "fa605d476eae9940b375d93ce43c9ff8a9de18df74dba506ee3696a452a826cd",
+      "published_sha256": "82b30f1a05001cee09c630abcb2a4b205da3af063f354f059ddcd7d4ee8b867a"
     },
     {
       "published_file": "assets/paper/second.png",
-      "source": "latex/fig/second.pdf",
-      "source_sha256": "3c2ceca9f9a56967dbc76c4592708b25180d6a287986c70ab182de6289981e7c",
-      "published_sha256": "b5237f4e737b765834cac975f7f3586736d71ee2320a3849d9badb172c7ef8c2"
+      "source": "latex/fig/figure_2.pdf",
+      "source_sha256": "a8e5e3b9d3051c51429377f203a62374bdd0cb2bee0c111a1b07e4695277a09a",
+      "published_sha256": "a7b2d2c986cedb60f358b84beef0fe2d7d62b66e318e7b465053cff173c0731f"
     },
     {
       "published_file": "assets/paper/wrong.png",
@@ -46,5 +46,6 @@
       "source_sha256": "a8da24a8f3f1ece46554fc764f2e5d3f37ad5ca99a27a120b7cebd39dc14c62c",
       "published_sha256": "1c4cb5852baa28eb20084dcecdebeac47005cd98a9fd2ab63b7ad4164b188e43"
     }
-  ]
+  ],
+  "source_archive": "_NeurIPS_2026_ws__Assemstate_cr_ (2).zip"
 }
